@@ -1,0 +1,49 @@
+{{/* Generated figure plates — no image assets required.
+     Pass a motif name: speckle | waves | grid | tissue
+     Replace with real <img> once hero images exist. */}}
+{{ $m := .motif | default "speckle" }}
+{{ $id := .id | default "0" }}
+<svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" role="presentation" aria-hidden="true">
+  {{ if eq $m "speckle" }}
+    <defs>
+      <filter id="sp{{ $id }}">
+        <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="11"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 .95  0 0 0 0 .70  0 0 0 0 .30  0 0 0 -1.3 .9"/>
+      </filter>
+    </defs>
+    <rect width="200" height="150" fill="#0F0B08"/>
+    <rect width="200" height="150" filter="url(#sp{{ $id }})" opacity=".7"/>
+  {{ else if eq $m "waves" }}
+    <rect width="200" height="150" fill="#0F0B08"/>
+    <g stroke-width="2" fill="none" opacity=".9">
+      <path d="M-10 40 Q60 10 110 46 T210 30" stroke="#7FD1B0"/>
+      <path d="M-10 76 Q56 46 108 82 T210 66" stroke="#E8A33D"/>
+      <path d="M-10 112 Q64 84 112 118 T210 102" stroke="#E4674A"/>
+    </g>
+    <circle cx="150" cy="112" r="26" fill="none" stroke="#F4EDE2" stroke-opacity=".22" stroke-width="1"/>
+    <circle cx="150" cy="112" r="15" fill="none" stroke="#F4EDE2" stroke-opacity=".16" stroke-width="1"/>
+  {{ else if eq $m "grid" }}
+    <rect width="200" height="150" fill="#0F0B08"/>
+    <g stroke="#F4EDE2" stroke-opacity=".14" stroke-width="1">
+      <path d="M0 25H200M0 50H200M0 75H200M0 100H200M0 125H200"/>
+      <path d="M25 0V150M50 0V150M75 0V150M100 0V150M125 0V150M150 0V150M175 0V150"/>
+    </g>
+    <path d="M8 128 C50 128 46 40 100 40 S150 116 192 22" fill="none" stroke="#E8A33D" stroke-width="2.2"/>
+    <circle cx="100" cy="40" r="4" fill="#E4674A"/>
+  {{ else }}
+    <defs>
+      <radialGradient id="ti{{ $id }}" cx="46%" cy="48%" r="58%">
+        <stop offset="0%" stop-color="#F4E3C6" stop-opacity=".9"/>
+        <stop offset="38%" stop-color="#E8A33D" stop-opacity=".45"/>
+        <stop offset="72%" stop-color="#8A4A22" stop-opacity=".3"/>
+        <stop offset="100%" stop-color="#0F0B08"/>
+      </radialGradient>
+    </defs>
+    <rect width="200" height="150" fill="#0F0B08"/>
+    <ellipse cx="92" cy="72" rx="86" ry="62" fill="url(#ti{{ $id }})"/>
+    <g fill="none" stroke="#0F0B08" stroke-opacity=".5">
+      <ellipse cx="92" cy="72" rx="30" ry="21"/>
+      <ellipse cx="92" cy="72" rx="52" ry="37"/>
+    </g>
+  {{ end }}
+</svg>

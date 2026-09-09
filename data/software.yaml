@@ -1,0 +1,27 @@
+# The Code page, in full. `install` is shown as a copyable command line.
+- name: "SerPy"
+  summary: "Single-exposure statistical retrieval of directional dark-field. Model-free: no Fokker–Planck assumption, no tensor fit, one image pair in."
+  repo: "https://github.com/MuguiwaraSamy/SerPy"
+  install: "pip install serpy-xray   # TODO confirm package name"
+  language: "Python"
+  licence: "TODO"
+  cite: "Kefs, Magnin, Brun et al., Optica 13(6), 2026"
+  axes: ["directional-dark-field"]
+
+- name: "mobi-pipeline"
+  summary: "End-to-end modulation-based imaging: registration across propagation distances, Tikhonov-regularised inversion, and pixel-wise SAXS curve reconstruction."
+  repo: ""
+  install: "git clone …/mobi-pipeline   # TODO repository URL"
+  language: "Python"
+  licence: "TODO"
+  cite: ""
+  axes: ["modulation-based-imaging"]
+
+- name: "napari-mobi"
+  summary: "The same tools with a handle on them: a napari plugin suite for phase retrieval, dark-field maps and registration, for people who would rather not write a script."
+  repo: ""
+  install: "pip install napari-mobi   # TODO confirm package name"
+  language: "Python"
+  licence: "TODO"
+  cite: ""
+  axes: ["modulation-based-imaging", "phase-retrieval"]

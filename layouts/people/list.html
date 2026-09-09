@@ -1,0 +1,66 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="pagehead">
+    <div class="crumb"><a href="{{ "/" | relURL }}">Home</a> / People</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+  </div>
+
+  {{ with .Content }}<div class="pagebody" style="grid-template-columns:minmax(0,1fr)"><article class="prose">{{ . }}</article></div>{{ end }}
+
+  {{ with site.Data.people }}
+  <section>
+    <div class="sechead"><h2>The group</h2></div>
+    <div class="members">
+      {{ range . }}
+      <article class="member">
+        <div class="ph">
+          {{ if .photo }}<img src="{{ .photo | relURL }}" alt="{{ .name }}" loading="lazy">
+          {{ else }}<span>{{ substr .name 0 1 }}</span>{{ end }}
+        </div>
+        <span class="role">{{ .role }}</span>
+        <h3>{{ .name }}</h3>
+        {{ with .topic }}<p>{{ . }}</p>{{ end }}
+        <p class="links">
+          {{ with .orcid }}<a href="https://orcid.org/{{ . }}">ORCID</a>{{ end }}
+          {{ if and .orcid .email }} · {{ end }}
+          {{ with .email }}<a href="mailto:{{ . }}">email</a>{{ end }}
+        </p>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <section id="openings">
+    <div class="sechead">
+      <h2>Open positions</h2>
+      <p class="side">If nothing fits, write anyway — tell us which of our papers you would want to argue with.</p>
+    </div>
+    <div class="openings">
+      {{ range site.Data.openings }}
+      <div class="open{{ if ne .status "open" }} closed{{ end }}">
+        <span class="dot"></span>
+        <span class="t">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</span>
+        <span class="d">{{ .detail }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <p class="note">Speculative applications to <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+  </section>
+
+  {{ with site.Data.alumni }}
+  <section>
+    <div class="sechead"><h2>Alumni</h2><p class="side">Where people went next is the most useful thing on this page.</p></div>
+    <div class="alumni">
+      {{ range . }}
+      <div class="alum">
+        <div>{{ .name }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ .years }}</span></div>
+        <div class="now">{{ .now }}</div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

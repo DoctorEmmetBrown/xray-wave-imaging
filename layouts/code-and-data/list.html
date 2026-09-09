@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="pagehead">
+    <div class="crumb"><a href="{{ "/" | relURL }}">Home</a> / Code &amp; Data</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+  </div>
+
+  {{ with .Content }}<div class="pagebody" style="grid-template-columns:minmax(0,1fr)"><article class="prose">{{ . }}</article></div>{{ end }}
+
+  {{ with site.Data.software }}
+  <section id="software">
+    <div class="sechead">
+      <h2>Software</h2>
+      <p class="side">If something here does not install cleanly, open an issue — that counts as a bug.</p>
+    </div>
+    <div class="code">
+      {{ range . }}
+      <div class="repo">
+        <h3>{{ if .repo }}<a href="{{ .repo }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</h3>
+        <p>{{ .summary }}</p>
+        {{ with .install }}<div class="inst">{{ . }}</div>{{ end }}
+        <div class="tags">
+          {{ with .language }}<span>{{ . }}</span>{{ end }}
+          {{ with .licence }}<span>{{ . }}</span>{{ end }}
+        </div>
+        {{ with .cite }}<p class="cite">Cite: {{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with site.Data.datasets }}
+  <section id="datasets">
+    <div class="sechead">
+      <h2>Datasets</h2>
+      <p class="side">Released with acquisition parameters, so the numbers can be reproduced rather than trusted.</p>
+    </div>
+    <div class="papers">
+      {{ range . }}
+      <article class="paper">
+        <div class="yr">{{ .year }}</div>
+        <div>
+          <div class="ti">{{ if .doi }}<a href="https://doi.org/{{ .doi }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</div>
+          <div class="jr">{{ .repository }}{{ with .licence }} · {{ . }}{{ end }}</div>
+          {{ with .summary }}<p class="tk">{{ . }}</p>{{ end }}
+          {{ with .acquisition }}<p class="tk mono" style="font-size:.76rem">{{ . }}</p>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

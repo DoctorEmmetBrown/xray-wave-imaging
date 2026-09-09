@@ -1,0 +1,140 @@
+{{ define "main" }}
+{{ $p := .Params }}
+<div class="wrap">
+
+  <div class="hero">
+    <div>
+      <h1>{{ $p.heroTitle | safeHTML }}</h1>
+      <p class="sub">{{ $p.heroLead | markdownify }}</p>
+      <div class="herometa">
+        {{ range $i, $v := $p.heroPills }}
+          <span class="pill{{ if eq $i 0 }} on{{ end }}">{{ $v }}</span>
+        {{ end }}
+      </div>
+    </div>
+    {{ partial "channel-viewer.html" . }}
+  </div>
+
+  <p class="note">{{ $p.viewerNote }}</p>
+
+  {{/* ---------------- research axes ---------------- */}}
+  {{ $axes := where (where .Site.RegularPages "Section" "research") "Params.ptype" "axis" }}
+  {{ with $axes.ByWeight }}
+  <section id="research">
+    <div class="sechead">
+      <h2>What we work on</h2>
+      <p class="side">{{ $p.researchSide }} <a href="{{ "/research/" | relURL }}">All research &rarr;</a></p>
+    </div>
+    <div class="axes">
+      {{ range $i, $a := . }}
+      <article class="axis">
+        <div class="plate">{{ partial "plate.html" (dict "motif" $a.Params.motif "id" $i) }}</div>
+        <span class="n">{{ printf "%02d" (add $i 1) }} / {{ $a.Params.short }}</span>
+        <h3><a href="{{ $a.RelPermalink }}">{{ $a.Title }}</a></h3>
+        <p>{{ $a.Params.blurb }}</p>
+        <a class="more" href="{{ $a.RelPermalink }}">Read more &rarr;</a>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ---------------- funded projects ---------------- */}}
+  {{ $projects := where .Site.RegularPages "Section" "research" }}
+  {{ $projects = where $projects "Params.ptype" "project" }}
+  {{ with $projects.ByWeight }}
+  <section id="projects">
+    <div class="sechead">
+      <h2>Funded projects</h2>
+      <p class="side">Grant numbers and consortia in full on each project page &mdash; panels look for exactly that.</p>
+    </div>
+    <div class="projects">
+      {{ range . }}
+      <article class="proj">
+        <div class="name">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <small>{{ .Params.funder }}{{ with .Params.role }} · {{ . }}{{ end }}</small>
+        </div>
+        <p>{{ .Params.blurb | markdownify }}</p>
+        <div class="facts">
+          {{ with .Params.grantId }}{{ . }}<br>{{ end }}
+          {{ with .Params.period }}{{ . }}<br>{{ end }}
+          {{ with .Params.partnersShort }}{{ . | markdownify }}{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ---------------- code ---------------- */}}
+  {{ with site.Data.software }}
+  <section id="code">
+    <div class="sechead">
+      <h2>Take the code</h2>
+      <p class="side">Every method we publish ships with an implementation and, where we can release it, the data it was validated on.</p>
+    </div>
+    <div class="code">
+      {{ range first 3 . }}
+      <div class="repo">
+        <h3>{{ if .repo }}<a href="{{ .repo }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</h3>
+        <p>{{ .summary }}</p>
+        {{ with .install }}<div class="inst">{{ . }}</div>{{ end }}
+        {{ with .cite }}<p class="cite">Cite: {{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ---------------- recent papers ---------------- */}}
+  {{ with site.Data.publications }}
+  <section id="papers">
+    <div class="sechead">
+      <h2>Recent papers</h2>
+      <p class="side">Pulled from ORCID <span class="mono">{{ site.Params.orcid }}</span> — the one-line takeaways are written by hand. <a href="{{ "/publications/" | relURL }}">All publications &rarr;</a></p>
+    </div>
+    <div class="papers">
+      {{ range first 5 (sort . "year" "desc") }}
+      <article class="paper">
+        <div class="yr">{{ .year }}</div>
+        <div>
+          <div class="ti">{{ if .doi }}<a href="https://doi.org/{{ .doi }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</div>
+          <div class="jr">{{ .venue }}{{ with .authors }} · {{ . }}{{ end }}</div>
+          {{ with .takeaway }}<p class="tk">{{ . }}</p>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ---------------- join ---------------- */}}
+  <section id="join">
+    <div class="join">
+      <div>
+        <h2>{{ $p.joinTitle }}</h2>
+        <p>{{ $p.joinLead | markdownify }}</p>
+        <p class="hand" style="margin-top:18px">{{ site.Params.email }}</p>
+      </div>
+      <div class="openings">
+        {{ range site.Data.openings }}
+        <div class="open{{ if ne .status "open" }} closed{{ end }}">
+          <span class="dot"></span>
+          <span class="t">{{ .title }}</span>
+          <span class="d">{{ .detail }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ with resources.Get "js/channels.js" }}
+    {{ $js := . | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  {{ end }}
+{{ end }}

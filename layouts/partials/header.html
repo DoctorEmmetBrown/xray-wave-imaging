@@ -1,0 +1,25 @@
+<header class="top">
+  <div class="topin">
+    <a class="logo" href="{{ "/" | relURL }}">
+      <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10.5" fill="none" stroke="#E8A33D" stroke-width="1.1"/>
+        <circle cx="12" cy="12" r="6.4" fill="none" stroke="#E8A33D" stroke-width="1.1" opacity=".62"/>
+        <circle cx="12" cy="12" r="2.4" fill="#E8A33D"/>
+      </svg>
+      <span>
+        <b>X-ray Wave Imaging</b>
+        <i>{{ .Site.Params.parentLine }}</i>
+      </span>
+    </a>
+    <nav class="main" aria-label="Main">
+      {{ $cur := .RelPermalink }}
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}"{{ if hasPrefix $cur (.URL | relURL) }} aria-current="true"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+      {{ if site.Data.openings }}
+        {{ $live := where site.Data.openings "status" "open" }}
+        {{ if $live }}<a class="cta" href="{{ "/people/#openings" | relURL }}">We&rsquo;re hiring</a>{{ end }}
+      {{ end }}
+    </nav>
+  </div>
+</header>

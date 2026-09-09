@@ -1,0 +1,50 @@
+# -------------------------------------------------------------------------
+# Publications.
+#
+# Regenerate from ORCID with:  python3 tools/orcid_to_yaml.py
+# That script overwrites the machine-readable fields but PRESERVES the
+# `takeaway`, `code` and `data` fields you write by hand, matching on DOI.
+#
+# Seeded by hand below — check every entry against ORCID on first sync.
+# -------------------------------------------------------------------------
+
+- title: "On the optimization of the geometric pattern for structured illumination based X-ray phase contrast and dark-field imaging: a simulation study and its experimental validation"
+  venue: "Journal of Synchrotron Radiation"
+  year: 2026
+  type: "article"
+  doi: "10.1107/S1600577526003176"
+  authors: ""
+  takeaway: "Which mask pattern actually maximises the signal — a question everyone building these setups asks, answered with numbers instead of folklore."
+
+- title: "Single-exposure statistical retrieval of the directional dark-field signal"
+  venue: "Optica 13(6)"
+  year: 2026
+  type: "article"
+  doi: ""
+  authors: "Kefs, Magnin, Brun et al."
+  takeaway: "Orientation and anisotropy from one image pair, without assuming what the scattering profile looks like. This is the method behind SerPy."
+  code: "https://github.com/MuguiwaraSamy/SerPy"
+
+- title: "How X-ray dark-field imaging relates to small-angle X-ray scattering measurements"
+  venue: "Journal of Applied Crystallography"
+  year: 2025
+  type: "article"
+  doi: ""
+  authors: ""
+  takeaway: "The bridge paper: what a dark-field pixel measures, expressed in the units a SAXS beamline already uses."
+
+- title: "Dark-field and directional dark-field on low-coherence X-ray sources with random mask modulations: validation with SAXS anisotropy measurements"
+  venue: "Optics Letters 48(22), 5839"
+  year: 2023
+  type: "article"
+  doi: "10.1364/OL.499604"
+  authors: ""
+  takeaway: "Validated against SAXS anisotropy on a laboratory source — the result that made the lab-based programme credible."
+
+- title: "Revealing letters in rolled Herculaneum papyri by X-ray phase-contrast imaging"
+  venue: "Nature Communications 6, 5895"
+  year: 2015
+  type: "article"
+  doi: "10.1038/ncomms6895"
+  authors: "Mocella, Brun, Ferrero & Delattre"
+  takeaway: "Text read inside a carbonised scroll that cannot be unrolled. Still the clearest demonstration of why phase, not absorption, is the useful contrast."

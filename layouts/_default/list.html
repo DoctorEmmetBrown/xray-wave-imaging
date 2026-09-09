@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="pagehead">
+    <div class="crumb"><a href="{{ "/" | relURL }}">Home</a> / {{ .Title }}</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+  </div>
+
+  <div class="pagebody">
+    <article class="prose">
+      {{ .Content }}
+      {{ with .RegularPages }}
+      <ul>
+        {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+      </ul>
+      {{ end }}
+    </article>
+    <aside class="rail">
+      <div class="railbox">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
+          <li><a href="https://orcid.org/{{ site.Params.orcid }}">ORCID</a></li>
+          <li><a href="{{ site.Params.scholar }}">Google Scholar</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+{{ end }}

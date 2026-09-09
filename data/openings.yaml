@@ -1,0 +1,14 @@
+# status: open | soon | closed  — the "We're hiring" nav link appears only
+# while at least one entry is `open`.
+- title: "Postdoc — virtual histology image processing (DREAMLAND)"
+  detail: "2 years"
+  status: open
+  url: ""
+- title: "PhD — SAXS tensor tomography (FANFARES)"
+  detail: "Oct 2026"
+  status: open
+  url: ""
+- title: "Internships M1 / M2"
+  detail: "rolling"
+  status: open
+  url: ""

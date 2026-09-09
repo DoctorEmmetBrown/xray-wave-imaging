@@ -1,0 +1,13 @@
+# One entry per member. `photo` is a path under static/, e.g. /img/people/manu.jpg
+- name: "Emmanuel Brun"
+  role: "Group leader · DR2 Inserm"
+  topic: "Wave-optical X-ray imaging, dark-field, inverse problems"
+  orcid: "0000-0002-0332-4903"
+  email: "emmanuel.brun@univ-grenoble-alpes.fr"
+  photo: ""
+# - name: ""
+#   role: "PhD student"
+#   topic: ""
+#   orcid: ""
+#   email: ""
+#   photo: ""

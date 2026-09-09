@@ -1,0 +1,27 @@
+{{ $caps := slice
+  "<strong>Transmission.</strong> What a conventional radiograph sees: dense inclusions absorb, everything else is a soft grey. The fibrous regions are effectively invisible."
+  "<strong>Phase.</strong> Refraction sharpens every interface, so weakly absorbing boundaries appear. Good for shape — still silent about what is inside the fibres."
+  "<strong>Dark-field.</strong> Only structure below the pixel scatters. The dense grains vanish and the fibre bundles light up, with no change to the hardware."
+  "<strong>Directional dark-field.</strong> Hue is the scattering orientation, brightness its strength. One acquisition, and you can read fibre direction across the whole field."
+}}
+<div class="viewer">
+  <div class="annot" aria-hidden="true">
+    <svg width="132" height="40" viewBox="0 0 132 40" fill="none">
+      <path d="M126 4C120 24 86 36 30 36" stroke="#E4674A" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+      <path d="M42 28L28 36L43 43" stroke="#E4674A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+    </svg>
+    <span class="hand">the fibres only show up<br>in the last two</span>
+  </div>
+  <div class="frame">
+    <canvas id="chan" width="440" height="440" role="img"
+      aria-label="A simulated sample shown as transmission, phase, dark-field and directional dark-field"></canvas>
+    <div class="scalebar"><i></i><span>200 µm</span></div>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Imaging channel">
+    <button id="tab0" role="tab" aria-selected="true"  aria-controls="chan">Transmission</button>
+    <button id="tab1" role="tab" aria-selected="false" aria-controls="chan">Phase</button>
+    <button id="tab2" role="tab" aria-selected="false" aria-controls="chan">Dark-field</button>
+    <button id="tab3" role="tab" aria-selected="false" aria-controls="chan">Directional</button>
+  </div>
+  <p class="cap" id="cap" data-captions="{{ $caps | jsonify }}">{{ index $caps 0 | safeHTML }}</p>
+</div>

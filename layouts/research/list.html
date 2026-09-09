@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="pagehead">
+    <div class="crumb"><a href="{{ "/" | relURL }}">Home</a> / Research</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+  </div>
+
+  {{ with .Content }}
+  <div class="pagebody" style="grid-template-columns:minmax(0,1fr)">
+    <article class="prose">{{ . }}</article>
+  </div>
+  {{ end }}
+
+  {{ $axes := where .RegularPagesRecursive "Params.ptype" "axis" }}
+  {{ with $axes.ByWeight }}
+  <section>
+    <div class="sechead"><h2>Research axes</h2></div>
+    <div class="axes">
+      {{ range $i, $a := . }}
+      <article class="axis">
+        <div class="plate">{{ partial "plate.html" (dict "motif" $a.Params.motif "id" $i) }}</div>
+        <span class="n">{{ printf "%02d" (add $i 1) }} / {{ $a.Params.short }}</span>
+        <h3><a href="{{ $a.RelPermalink }}">{{ $a.Title }}</a></h3>
+        <p>{{ $a.Params.blurb }}</p>
+        <a class="more" href="{{ $a.RelPermalink }}">Read more &rarr;</a>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ $projects := where .RegularPagesRecursive "Params.ptype" "project" }}
+  {{ with $projects.ByWeight }}
+  <section>
+    <div class="sechead">
+      <h2>Funded projects</h2>
+      <p class="side">Current grants. Finished projects move to the archive at the bottom of this list rather than disappearing.</p>
+    </div>
+    <div class="projects">
+      {{ range . }}
+      <article class="proj">
+        <div class="name">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <small>{{ .Params.funder }}{{ with .Params.role }} · {{ . }}{{ end }}</small>
+        </div>
+        <p>{{ .Params.blurb | markdownify }}</p>
+        <div class="facts">
+          {{ with .Params.grantId }}{{ . }}<br>{{ end }}
+          {{ with .Params.period }}{{ . }}<br>{{ end }}
+          {{ with .Params.partnersShort }}{{ . | markdownify }}{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

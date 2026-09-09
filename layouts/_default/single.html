@@ -1,0 +1,78 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="pagehead">
+    <div class="crumb">
+      <a href="{{ "/" | relURL }}">Home</a> / <a href="{{ "/research/" | relURL }}">Research</a>
+      {{ if eq .Params.ptype "project" }} / Projects{{ end }}
+    </div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+  </div>
+
+  <div class="pagebody">
+    <article class="prose">
+      {{ .Content }}
+    </article>
+
+    <aside class="rail">
+      {{ if eq .Params.ptype "project" }}
+      <div class="railbox">
+        <h4>At a glance</h4>
+        <dl>
+          {{ with .Params.funder }}<dt>Funder</dt><dd>{{ . }}</dd>{{ end }}
+          {{ with .Params.grantId }}<dt>Reference</dt><dd class="mono" style="font-size:.8rem">{{ . }}</dd>{{ end }}
+          {{ with .Params.period }}<dt>Period</dt><dd>{{ . }}</dd>{{ end }}
+          {{ with .Params.role }}<dt>Our role</dt><dd>{{ . }}</dd>{{ end }}
+        </dl>
+      </div>
+      {{ with .Params.partners }}
+      <div class="railbox">
+        <h4>Consortium</h4>
+        <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{ with .Params.axes }}
+      <div class="railbox">
+        <h4>Research axes</h4>
+        <ul>
+          {{ range . }}
+            {{ $slug := . }}
+            {{ with site.GetPage (printf "/research/%s" $slug) }}
+              <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ else }}
+              <li>{{ $slug }}</li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ $rel := where (where site.RegularPages "Section" "research") "Params.ptype" "project" }}
+      {{ if eq .Params.ptype "axis" }}
+        {{ $slug := path.Base .File.TranslationBaseName }}
+        {{ $hits := slice }}
+        {{ range $rel }}
+          {{ if in (.Params.axes | default slice) $slug }}{{ $hits = $hits | append . }}{{ end }}
+        {{ end }}
+        {{ with $hits }}
+        <div class="railbox">
+          <h4>Funded by</h4>
+          <ul>{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+        </div>
+        {{ end }}
+      {{ end }}
+
+      <div class="railbox">
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="{{ "/publications/" | relURL }}">Publications</a></li>
+          <li><a href="{{ "/code-and-data/" | relURL }}">Code &amp; data</a></li>
+          <li><a href="mailto:{{ site.Params.email }}">Get in touch</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+{{ end }}

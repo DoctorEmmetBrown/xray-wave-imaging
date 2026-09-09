@@ -1,0 +1,51 @@
+baseURL = 'https://doctoremmetbrown.github.io/xray-wave-imaging/'
+languageCode = 'en-gb'
+title = 'X-ray Wave Imaging Group'
+enableRobotsTXT = true
+enableEmoji = false
+summaryLength = 24
+
+[params]
+  shortName    = 'XWI'
+  parentLine   = 'a group in the 3T team · IAB Grenoble'
+  tagline      = 'Wave-optical X-ray imaging at the Institute for Advanced Biosciences, Grenoble.'
+  email        = 'emmanuel.brun@univ-grenoble-alpes.fr'
+  orcid        = '0000-0002-0332-4903'
+  scholar      = 'https://scholar.google.com/citations?user=5QmSCc4AAAAJ&hl=fr'
+  address      = 'Allée des Alpes, 38700 La Tronche, France'
+  institutions = 'Inserm U1209 / CNRS UMR 5309 / Université Grenoble Alpes'
+
+[menu]
+  [[menu.main]]
+    name = 'Research'
+    url = '/research/'
+    weight = 10
+  [[menu.main]]
+    name = 'Publications'
+    url = '/publications/'
+    weight = 20
+  [[menu.main]]
+    name = 'Code & Data'
+    url = '/code-and-data/'
+    weight = 30
+  [[menu.main]]
+    name = 'People'
+    url = '/people/'
+    weight = 40
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 50
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[taxonomies]
+  axis = 'axes'
+
+[build]
+  writeStats = false

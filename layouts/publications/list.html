@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="pagehead">
+    <div class="crumb"><a href="{{ "/" | relURL }}">Home</a> / Publications</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+  </div>
+
+  {{ with .Content }}<div class="pagebody" style="grid-template-columns:minmax(0,1fr)"><article class="prose">{{ . }}</article></div>{{ end }}
+
+  {{ $pubs := sort site.Data.publications "year" "desc" }}
+  {{ $years := slice }}
+  {{ range $pubs }}{{ if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}{{ end }}
+
+  {{ range $years }}
+    {{ $y := . }}
+    <section>
+      <div class="sechead"><h2>{{ $y }}</h2>
+        <p class="side">{{ len (where $pubs "year" $y) }} item{{ if gt (len (where $pubs "year" $y)) 1 }}s{{ end }}</p>
+      </div>
+      <div class="papers">
+        {{ range where $pubs "year" $y }}
+        <article class="paper">
+          <div class="yr">{{ .type | default "article" }}</div>
+          <div>
+            <div class="ti">{{ if .doi }}<a href="https://doi.org/{{ .doi }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</div>
+            <div class="jr">{{ with .authors }}{{ . }} · {{ end }}{{ .venue }}</div>
+            {{ with .takeaway }}<p class="tk">{{ . }}</p>{{ end }}
+            {{ if or .code .data }}
+            <p class="tk" style="margin-top:6px">
+              {{ with .code }}<a href="{{ . }}">code</a>{{ end }}
+              {{ if and .code .data }} · {{ end }}
+              {{ with .data }}<a href="{{ . }}">data</a>{{ end }}
+            </p>
+            {{ end }}
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</div>
+{{ end }}

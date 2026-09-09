@@ -1,0 +1,19 @@
+<div class="wrap">
+  <footer class="site">
+    <div class="addr">
+      <b>X-ray Wave Imaging Group</b>
+      A group within the Translational Theranostics team (3T)<br>
+      Institute for Advanced Biosciences — {{ .Site.Params.institutions }}<br>
+      {{ .Site.Params.address }}<br>
+      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+    </div>
+    <div class="funders">
+      {{ range site.Data.funders }}<span>{{ . }}</span>{{ end }}
+    </div>
+    <div class="colophon">
+      <span>&copy; {{ now.Year }} X-ray Wave Imaging Group</span>
+      <span>Publications from ORCID {{ .Site.Params.orcid }}</span>
+      <span>Built with Hugo · source on GitHub</span>
+    </div>
+  </footer>
+</div>

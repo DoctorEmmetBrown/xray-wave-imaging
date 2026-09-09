@@ -1,0 +1,260 @@
+/* ==================================================================
+   X-ray Wave Imaging Group
+   Single-theme by design: a warm dark ground (hutch light, film on a
+   lightbox). Every colour is painted explicitly — nothing inherits.
+   ================================================================== */
+
+:root{
+  --ground:#17120E;
+  --ground2:#1F1811;
+  --plate:#241C15;
+  --line:rgba(244,237,226,.13);
+  --line-solid:#2E251C;
+  --ink:#F4EDE2;
+  --mut:#B3A28C;
+  --dim:#8A7A66;
+  --gold:#E8A33D;
+  --coral:#E4674A;
+  --mint:#7FD1B0;
+
+  --disp:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --hand:"Caveat", "Bradley Hand", cursive;
+
+  --gut:22px;
+  --maxw:1120px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.62;
+  margin:0;
+  padding-inline:var(--gut);
+  padding-block:0;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw); margin:0 auto}
+
+h1,h2,h3,h4{
+  margin:0; font-family:var(--disp); font-weight:500;
+  text-wrap:balance; letter-spacing:-.015em;
+  font-variation-settings:"SOFT" 40,"WONK" 1,"opsz" 96;
+}
+p{margin:0}
+img,canvas,svg{max-width:100%}
+a{color:var(--gold); text-underline-offset:3px; text-decoration-thickness:1px}
+a:focus-visible, button:focus-visible{outline:2px solid var(--coral); outline-offset:3px; border-radius:3px}
+.skip{position:absolute; left:-9999px}
+.skip:focus{left:12px; top:10px; z-index:99; background:var(--gold); color:var(--ground); padding:8px 14px; border-radius:3px}
+
+.eyebrow{font-family:var(--mono); font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--dim)}
+.hand{font-family:var(--hand); font-size:1.32rem; color:var(--coral); line-height:1.15}
+.mono{font-family:var(--mono)}
+
+/* ------------------------------- header ------------------------------- */
+header.top{
+  position:sticky; top:0; z-index:50;
+  background:rgba(23,18,14,.93); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  margin-inline:calc(var(--gut) * -1); padding-inline:var(--gut);
+}
+.topin{max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding-block:13px}
+.logo{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink)}
+.logo .glyph{width:22px; height:22px; flex:none}
+.logo b{font-family:var(--disp); font-size:1.02rem; font-weight:600; letter-spacing:-.01em; white-space:nowrap; display:block}
+.logo i{font-family:var(--mono); font-size:.6rem; font-style:normal; letter-spacing:.16em; text-transform:uppercase; color:var(--dim); display:block; margin-top:-2px}
+nav.main{margin-left:auto; display:flex; gap:20px; flex-wrap:wrap}
+nav.main a{font-size:.87rem; color:var(--mut); text-decoration:none}
+nav.main a:hover, nav.main a[aria-current="true"]{color:var(--ink)}
+nav.main a.cta{color:var(--gold)}
+
+/* ------------------------------- hero --------------------------------- */
+.hero{display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center; padding-block:64px 20px}
+@media (max-width:900px){ .hero{grid-template-columns:1fr; gap:36px; padding-block:44px 12px} }
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.05rem); line-height:1.02; font-weight:500}
+.hero h1 em{font-style:italic; color:var(--gold); font-variation-settings:"SOFT" 80,"WONK" 1,"opsz" 120}
+.hero .sub{margin-top:20px; font-size:1.06rem; color:var(--mut); max-width:44ch; line-height:1.6}
+.hero .sub strong{color:var(--ink); font-weight:500}
+.herometa{display:flex; gap:10px; flex-wrap:wrap; margin-top:26px}
+.pill{font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase;
+  border:1px solid var(--line); color:var(--mut); padding:6px 11px; border-radius:100px}
+.pill.on{border-color:rgba(232,163,61,.5); color:var(--gold)}
+
+/* --------------------------- channel viewer --------------------------- */
+.viewer{background:var(--plate); border:1px solid var(--line); border-radius:5px; padding:14px;
+  position:relative; box-shadow:0 26px 60px rgba(0,0,0,.5)}
+.viewer .frame{position:relative; aspect-ratio:1/1; background:#0C0906; border-radius:3px; overflow:hidden}
+.viewer canvas{width:100%; height:100%; display:block}
+.viewer .scalebar{position:absolute; left:12px; bottom:12px; display:flex; flex-direction:column; gap:4px; z-index:2;
+  background:rgba(12,9,6,.62); padding:6px 8px; border-radius:2px; backdrop-filter:blur(2px)}
+.viewer .scalebar i{display:block; width:58px; height:3px; background:#F4EDE2}
+.viewer .scalebar span{font-family:var(--mono); font-size:.6rem; letter-spacing:.1em; color:#F4EDE2}
+.tabs{display:flex; gap:1px; margin-top:12px; background:var(--line); border:1px solid var(--line); border-radius:3px; overflow:hidden}
+.tabs button{flex:1; appearance:none; border:0; cursor:pointer; background:var(--plate); color:var(--mut);
+  font-family:var(--mono); font-size:.63rem; letter-spacing:.09em; text-transform:uppercase;
+  padding:9px 4px; transition:background .15s,color .15s; min-width:0}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--gold); color:#17120E; font-weight:500}
+.viewer .cap{margin-top:11px; font-size:.85rem; color:var(--mut); line-height:1.5; min-height:3.6em}
+.viewer .cap strong{color:var(--ink); font-weight:500}
+.annot{position:absolute; right:6px; bottom:-74px; text-align:right; max-width:250px; pointer-events:none; z-index:3}
+.annot svg{display:block; margin-left:auto; margin-bottom:1px}
+@media (max-width:1080px){ .annot{display:none} }
+.note{margin-top:26px; font-family:var(--mono); font-size:.66rem; letter-spacing:.09em; color:var(--dim); text-transform:uppercase}
+
+/* ------------------------------ sections ------------------------------ */
+section{padding-block:70px 0}
+.sechead{display:flex; align-items:flex-end; gap:22px; flex-wrap:wrap; margin-bottom:30px;
+  border-bottom:1px solid var(--line); padding-bottom:16px}
+.sechead h2{font-size:clamp(1.7rem,3.2vw,2.35rem); line-height:1.1}
+.sechead .side{margin-left:auto; font-size:.87rem; color:var(--dim); max-width:34ch}
+
+/* -------------------------------- axes -------------------------------- */
+.axes{display:grid; grid-template-columns:repeat(auto-fit,minmax(238px,1fr)); gap:26px}
+.axis{display:flex; flex-direction:column; gap:12px; height:100%}
+.axis .plate{aspect-ratio:4/3; border:1px solid var(--line); overflow:hidden; background:#0F0B08; border-radius:3px}
+.axis .plate svg{width:100%; height:100%; display:block}
+.axis .n{font-family:var(--mono); font-size:.63rem; letter-spacing:.14em; color:var(--gold)}
+.axis h3{font-family:var(--sans); font-size:1.01rem; font-weight:600; letter-spacing:0}
+.axis h3 a{color:var(--ink); text-decoration:none}
+.axis h3 a:hover{color:var(--gold)}
+.axis p{font-size:.89rem; color:var(--mut); line-height:1.55}
+.axis .more{margin-top:auto; padding-top:4px; font-size:.8rem; color:var(--dim);
+  font-family:var(--mono); letter-spacing:.06em; text-decoration:none}
+.axis:hover .more{color:var(--gold)}
+
+/* ------------------------------ projects ------------------------------ */
+.projects{display:flex; flex-direction:column}
+.proj{display:grid; grid-template-columns:158px 1fr 190px; gap:26px; padding:22px 0;
+  border-top:1px solid var(--line); align-items:start}
+.projects .proj:last-child{border-bottom:1px solid var(--line)}
+.proj .name{font-family:var(--disp); font-size:1.35rem; font-weight:600;
+  font-variation-settings:"SOFT" 30,"WONK" 0,"opsz" 40; line-height:1.1}
+.proj .name a{color:var(--ink); text-decoration:none}
+.proj .name a:hover{color:var(--gold)}
+.proj .name small{display:block; font-family:var(--mono); font-size:.6rem; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--gold); font-weight:400; margin-top:5px}
+.proj p{font-size:.92rem; color:var(--mut); line-height:1.58}
+.proj .facts{font-family:var(--mono); font-size:.7rem; line-height:1.75; color:var(--dim)}
+@media (max-width:820px){ .proj{grid-template-columns:1fr; gap:10px} }
+
+/* a visible marker for text still to be written */
+.todo{color:var(--coral); border-bottom:1px dashed rgba(228,103,74,.6)}
+
+/* -------------------------------- code -------------------------------- */
+.code{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px}
+.repo{background:var(--ground2); border:1px solid var(--line); border-radius:4px; padding:20px;
+  display:flex; flex-direction:column; gap:10px}
+.repo h3{font-family:var(--mono); font-size:.95rem; font-weight:500; letter-spacing:0}
+.repo h3 a{color:var(--ink); text-decoration:none}
+.repo h3 a:hover{color:var(--gold)}
+.repo p{font-size:.87rem; color:var(--mut); line-height:1.5; flex:1}
+.repo .inst{font-family:var(--mono); font-size:.73rem; background:#0F0B08; border:1px solid var(--line);
+  padding:8px 10px; border-radius:3px; color:var(--mint); overflow-x:auto; white-space:nowrap}
+.repo .cite{font-size:.76rem; color:var(--dim)}
+.repo .tags{display:flex; gap:6px; flex-wrap:wrap}
+.repo .tags span{font-family:var(--mono); font-size:.6rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--dim); border:1px solid var(--line); padding:3px 7px; border-radius:2px}
+
+/* ------------------------------- papers ------------------------------- */
+.papers{display:flex; flex-direction:column}
+.paper{display:grid; grid-template-columns:66px 1fr; gap:22px; padding:18px 0;
+  border-top:1px solid var(--line); align-items:baseline}
+.papers .paper:last-child{border-bottom:1px solid var(--line)}
+.paper .yr{font-family:var(--mono); font-size:.78rem; color:var(--gold); font-variant-numeric:tabular-nums}
+.paper .ti{font-family:var(--disp); font-size:1.06rem; line-height:1.3; font-weight:500;
+  font-variation-settings:"SOFT" 40,"WONK" 0,"opsz" 30}
+.paper .ti a{color:var(--ink); text-decoration:none}
+.paper .ti a:hover{color:var(--gold); text-decoration:underline}
+.paper .jr{font-family:var(--mono); font-size:.7rem; color:var(--dim); margin-top:5px; letter-spacing:.04em}
+.paper .tk{font-size:.89rem; color:var(--mut); margin-top:8px; max-width:62ch; line-height:1.55}
+@media (max-width:600px){ .paper{grid-template-columns:1fr; gap:4px} }
+
+/* ------------------------------- people ------------------------------- */
+.members{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:26px}
+.member{display:flex; flex-direction:column; gap:8px}
+.member .ph{aspect-ratio:1/1; background:var(--plate); border:1px solid var(--line); border-radius:3px;
+  overflow:hidden; display:grid; place-items:center}
+.member .ph img{width:100%; height:100%; object-fit:cover; display:block}
+.member .ph span{font-family:var(--disp); font-size:2rem; color:var(--dim)}
+.member h3{font-family:var(--sans); font-size:.97rem; font-weight:600; letter-spacing:0}
+.member .role{font-family:var(--mono); font-size:.63rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold)}
+.member p{font-size:.85rem; color:var(--mut); line-height:1.5}
+.member .links{font-family:var(--mono); font-size:.68rem}
+.alumni{display:flex; flex-direction:column}
+.alum{display:grid; grid-template-columns:1fr 1fr; gap:20px; padding:11px 0; border-top:1px solid var(--line); font-size:.9rem}
+.alum .now{color:var(--mut)}
+@media (max-width:600px){ .alum{grid-template-columns:1fr; gap:2px} }
+
+/* -------------------------------- join -------------------------------- */
+.join{display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center;
+  background:var(--ground2); border:1px solid var(--line); border-radius:5px; padding:34px 36px; margin-top:14px}
+@media (max-width:820px){ .join{grid-template-columns:1fr; gap:24px; padding:26px 24px} }
+.join h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+.join p{color:var(--mut); font-size:.94rem; margin-top:12px; max-width:48ch}
+.openings{display:flex; flex-direction:column; gap:1px; background:var(--line);
+  border:1px solid var(--line); border-radius:3px; overflow:hidden}
+.open{background:var(--ground2); padding:12px 14px; display:flex; gap:12px; align-items:baseline}
+.open .t{font-size:.88rem; font-weight:500}
+.open .d{font-family:var(--mono); font-size:.66rem; color:var(--dim); margin-left:auto; white-space:nowrap}
+.open .dot{width:6px; height:6px; border-radius:50%; background:var(--mint); flex:none; transform:translateY(-2px)}
+.open.closed .dot{background:var(--dim)}
+
+/* ------------------------- interior page shell ------------------------ */
+.pagehead{padding-block:56px 26px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:14px}
+.pagehead h1{font-size:clamp(2.1rem,4.6vw,3.2rem); line-height:1.05}
+.pagehead .lead{font-family:var(--disp); font-size:clamp(1.02rem,2vw,1.28rem); line-height:1.5;
+  color:var(--mut); max-width:56ch; font-variation-settings:"SOFT" 50,"WONK" 0,"opsz" 40}
+.crumb{font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--dim)}
+.crumb a{color:var(--dim); text-decoration:none}
+.crumb a:hover{color:var(--gold)}
+
+.pagebody{display:grid; grid-template-columns:minmax(0,1fr) 250px; gap:52px; padding-block:44px 0; align-items:start}
+@media (max-width:900px){ .pagebody{grid-template-columns:1fr; gap:32px} }
+.prose{max-width:68ch; font-size:1rem; line-height:1.72; color:var(--ink)}
+.prose > * + *{margin-top:1.15em}
+.prose h2{font-size:1.5rem; margin-top:2em}
+.prose h3{font-family:var(--sans); font-size:1.05rem; font-weight:600; letter-spacing:0; margin-top:1.8em}
+.prose p{color:var(--mut)}
+.prose strong{color:var(--ink); font-weight:500}
+.prose ul,.prose ol{color:var(--mut); padding-left:1.2em; display:flex; flex-direction:column; gap:.4em}
+.prose blockquote{border-left:2px solid var(--gold); padding-left:18px; color:var(--ink);
+  font-family:var(--disp); font-size:1.1rem; font-style:italic}
+.prose code{font-family:var(--mono); font-size:.86em; background:var(--plate); padding:1px 5px; border-radius:2px; color:var(--mint)}
+.prose pre{background:var(--plate); border:1px solid var(--line); border-radius:3px; padding:14px 16px; overflow-x:auto}
+.prose pre code{background:none; padding:0}
+.prose img{border:1px solid var(--line); border-radius:3px}
+.prose figure{margin:0}
+.prose figcaption{font-family:var(--mono); font-size:.68rem; color:var(--dim); margin-top:8px; letter-spacing:.04em}
+
+.rail{display:flex; flex-direction:column; gap:22px; position:sticky; top:86px}
+@media (max-width:900px){ .rail{position:static} }
+.railbox{border:1px solid var(--line); border-radius:4px; padding:16px 18px; background:var(--ground2)}
+.railbox h4{font-family:var(--mono); font-size:.63rem; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--dim); font-weight:400; margin-bottom:10px}
+.railbox dl{margin:0; display:flex; flex-direction:column; gap:9px}
+.railbox dt{font-family:var(--mono); font-size:.6rem; letter-spacing:.11em; text-transform:uppercase; color:var(--dim)}
+.railbox dd{margin:0; font-size:.87rem; color:var(--ink)}
+.railbox ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:7px; font-size:.87rem}
+.railbox a{color:var(--mut); text-decoration:none}
+.railbox a:hover{color:var(--gold)}
+
+/* ------------------------------- footer ------------------------------- */
+footer.site{margin-top:78px; border-top:1px solid var(--line); padding-block:34px 54px;
+  display:grid; grid-template-columns:1.3fr 1fr; gap:34px}
+@media (max-width:760px){ footer.site{grid-template-columns:1fr; gap:22px} }
+footer .addr{font-size:.88rem; color:var(--mut); line-height:1.7}
+footer .addr b{color:var(--ink); font-weight:500; font-family:var(--disp); font-size:1.05rem; display:block}
+.funders{display:flex; flex-wrap:wrap; gap:8px; align-content:flex-start}
+.funders span{font-family:var(--mono); font-size:.63rem; letter-spacing:.11em; color:var(--dim);
+  border:1px solid var(--line); padding:5px 9px; border-radius:2px}
+.colophon{grid-column:1/-1; font-family:var(--mono); font-size:.63rem; letter-spacing:.08em;
+  color:var(--dim); border-top:1px solid var(--line); padding-top:16px; display:flex; gap:18px; flex-wrap:wrap}
