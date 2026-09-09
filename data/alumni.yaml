@@ -1,42 +1,64 @@
-# Former postdocs and doctoral students. Interns, Master and medical-elective
-# students are deliberately not listed.
+# Former members. `role` groups them on the People page — the template renders
+# the groups in this order: Postdocs, Doctoral students, Medical research year.
 #
-# `now` is the most useful field on the whole People page for a candidate —
-# it is worth chasing people up to fill it in.
+# `now` is the most useful field on the whole page for a candidate weighing up
+# whether to join, so it is worth chasing people up to fill it in. Until it is
+# filled, the site shows a visible marker rather than a blank.
 
-# ---- former postdocs ----
+# ---- postdocs ----
 - name: "Jérôme Lesaint"
+  role: "postdoc"
   years: ""
-  now: ""      # TODO
+  now: ""
 - name: "Luca Fardin"
+  role: "postdoc"
   years: ""
-  now: ""      # TODO
+  now: ""
 - name: "Shifali Singh"
+  role: "postdoc"
   years: ""
-  now: ""      # TODO
+  now: ""
 - name: "Jayde Livingstone"
+  role: "postdoc"
   years: ""
-  now: ""      # TODO
+  now: ""
 - name: "Ludovic Broche"
+  role: "postdoc"
   years: ""
-  now: ""      # TODO
+  now: ""
 - name: "Jussi-Petteri Suuronen"
+  role: "postdoc"
   years: ""
-  now: ""      # TODO
+  now: ""
 
-# ---- former doctoral students ----
+# ---- doctoral students ----
 - name: "Clara Magnin"
+  role: "phd"
   years: ""
-  now: ""      # TODO — still current? co-founder of arXimed
+  now: ""      # co-founder of arXimed
 - name: "Christopher Ninham"
+  role: "phd"
   years: ""
-  now: ""      # TODO
+  now: ""
 - name: "Laurène Quenot"
+  role: "phd"
   years: ""
-  now: ""      # TODO
+  now: ""
 - name: "Clément Tavakoli"
+  role: "phd"
   years: ""
-  now: ""      # TODO
+  now: ""
 - name: "Hélène Rougé-Labriet"
+  role: "phd"
   years: ""
-  now: ""      # TODO
+  now: ""
+
+# ---- medical research year ----
+- name: "Kim Pasquier"
+  role: "med"
+  years: ""
+  now: ""
+- name: "Pierre-Louis Verot"
+  role: "med"
+  years: ""
+  now: ""

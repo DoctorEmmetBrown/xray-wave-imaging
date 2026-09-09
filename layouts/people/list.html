@@ -50,16 +50,30 @@
   </section>
 
   {{ with site.Data.alumni }}
+  {{ $people := . }}
   <section>
-    <div class="sechead"><h2>Alumni</h2><p class="side">Where people went next is the most useful thing on this page.</p></div>
-    <div class="alumni">
-      {{ range . }}
-      <div class="alum">
-        <div>{{ .name }}{{ with .years }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ . }}</span>{{ end }}</div>
-        <div class="now">{{ with .now }}{{ . }}{{ else }}<span class="todo">where are they now?</span>{{ end }}</div>
+    <div class="sechead">
+      <h2>Alumni</h2>
+      <p class="side">Where people went next is the most useful thing on this page.</p>
+    </div>
+    {{ range slice (slice "postdoc" "Postdocs") (slice "phd" "Doctoral students") (slice "med" "Medical research year") }}
+      {{ $key := index . 0 }}
+      {{ $label := index . 1 }}
+      {{ $members := where $people "role" $key }}
+      {{ with $members }}
+      <div class="alumgroup">
+        <h3>{{ $label }}</h3>
+        <div class="alumni">
+          {{ range . }}
+          <div class="alum">
+            <div>{{ .name }}{{ with .years }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ . }}</span>{{ end }}</div>
+            <div class="now">{{ with .now }}{{ . }}{{ else }}<span class="todo">where are they now?</span>{{ end }}</div>
+          </div>
+          {{ end }}
+        </div>
       </div>
       {{ end }}
-    </div>
+    {{ end }}
   </section>
   {{ end }}
 </div>

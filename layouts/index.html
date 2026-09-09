@@ -95,7 +95,8 @@
       <p class="side">Pulled from ORCID <span class="mono">{{ site.Params.orcid }}</span> — the one-line takeaways are written by hand. <a href="{{ "/publications/" | relURL }}">All publications &rarr;</a></p>
     </div>
     <div class="papers">
-      {{ range first 5 (sort . "year" "desc") }}
+      {{ $recent := where (where . "hidden" "!=" true) "featured" true }}
+      {{ range first 5 (sort $recent "year" "desc") }}
       <article class="paper">
         <div class="yr">{{ .year }}</div>
         <div>
