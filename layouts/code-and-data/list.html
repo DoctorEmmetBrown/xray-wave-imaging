@@ -31,14 +31,16 @@
   </section>
   {{ end }}
 
-  {{ with site.Data.datasets }}
+  {{ $curated := site.Data.datasets | default slice }}
+  {{ $deposited := where (where site.Data.publications "type" "data-set") "hidden" "!=" true }}
+  {{ if or $curated $deposited }}
   <section id="datasets">
     <div class="sechead">
       <h2>Datasets</h2>
-      <p class="side">Released with acquisition parameters, so the numbers can be reproduced rather than trusted.</p>
+      <p class="side">Released with their acquisition parameters, so the numbers can be reproduced rather than trusted.</p>
     </div>
     <div class="papers">
-      {{ range . }}
+      {{ range $curated }}
       <article class="paper">
         <div class="yr">{{ .year }}</div>
         <div>
@@ -46,6 +48,17 @@
           <div class="jr">{{ .repository }}{{ with .licence }} · {{ . }}{{ end }}</div>
           {{ with .summary }}<p class="tk">{{ . }}</p>{{ end }}
           {{ with .acquisition }}<p class="tk mono" style="font-size:.76rem">{{ . }}</p>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+
+      {{ range sort $deposited "year" "desc" }}
+      <article class="paper">
+        <div class="yr">{{ if gt .year now.Year }}&mdash;{{ else }}{{ .year }}{{ end }}</div>
+        <div>
+          <div class="ti">{{ if .doi }}<a href="https://doi.org/{{ .doi }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</div>
+          <div class="jr">{{ .venue }}{{ if gt .year now.Year }}<span class="embargo">embargoed until {{ .year }}</span>{{ end }}</div>
+          {{ with .takeaway }}<p class="tk">{{ . }}</p>{{ end }}
         </div>
       </article>
       {{ end }}

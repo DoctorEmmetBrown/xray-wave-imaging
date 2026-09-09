@@ -55,8 +55,8 @@
     <div class="alumni">
       {{ range . }}
       <div class="alum">
-        <div>{{ .name }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ .years }}</span></div>
-        <div class="now">{{ .now }}</div>
+        <div>{{ .name }}{{ with .years }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ . }}</span>{{ end }}</div>
+        <div class="now">{{ with .now }}{{ . }}{{ else }}<span class="todo">where are they now?</span>{{ end }}</div>
       </div>
       {{ end }}
     </div>

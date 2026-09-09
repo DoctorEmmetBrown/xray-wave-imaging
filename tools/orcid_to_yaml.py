@@ -35,7 +35,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "publications.yaml"
 API = "https://pub.orcid.org/v3.0"
-KEEP = ("takeaway", "code", "data", "axes")
+KEEP = ("takeaway", "code", "data", "axes", "featured", "hidden")
 
 
 def orcid_from_config():
@@ -90,7 +90,7 @@ def main():
     groups = works.get("group", [])
     print(f"  {len(groups)} work groups")
 
-    records, seen = [], set()
+    records, seen, titles = [], set(), {}
     for g in groups:
         summaries = g.get("work-summary") or []
         if not summaries:
@@ -98,6 +98,22 @@ def main():
         rec = extract(summaries[0])
         if not rec["title"]:
             continue
+
+        # OpenAlex mirrors every paper a second time with a junk DOI; skip those.
+        if rec["venue"].strip().lower() == "openalex":
+            continue
+
+        # Same paper deposited twice (preprint + journal, or two sources):
+        # keep whichever record carries the most metadata.
+        key = norm(rec["title"])
+        if key in titles:
+            kept = titles[key]
+            score = lambda r: (bool(r.get("venue")), bool(r.get("doi")), r.get("type") == "article")
+            if score(rec) > score(kept):
+                records[records.index(kept)] = rec
+                titles[key] = rec
+            continue
+        titles[key] = rec
 
         prior = by_doi.get(rec["doi"].lower()) if rec["doi"] else None
         if prior is None:

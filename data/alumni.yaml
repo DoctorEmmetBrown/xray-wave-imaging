@@ -1,3 +1,42 @@
-# - name: ""
-#   years: "2022–2026"
-#   now: "Postdoc at …"
+# Former postdocs and doctoral students. Interns, Master and medical-elective
+# students are deliberately not listed.
+#
+# `now` is the most useful field on the whole People page for a candidate —
+# it is worth chasing people up to fill it in.
+
+# ---- former postdocs ----
+- name: "Jérôme Lesaint"
+  years: ""
+  now: ""      # TODO
+- name: "Luca Fardin"
+  years: ""
+  now: ""      # TODO
+- name: "Shifali Singh"
+  years: ""
+  now: ""      # TODO
+- name: "Jayde Livingstone"
+  years: ""
+  now: ""      # TODO
+- name: "Ludovic Broche"
+  years: ""
+  now: ""      # TODO
+- name: "Jussi-Petteri Suuronen"
+  years: ""
+  now: ""      # TODO
+
+# ---- former doctoral students ----
+- name: "Clara Magnin"
+  years: ""
+  now: ""      # TODO — still current? co-founder of arXimed
+- name: "Christopher Ninham"
+  years: ""
+  now: ""      # TODO
+- name: "Laurène Quenot"
+  years: ""
+  now: ""      # TODO
+- name: "Clément Tavakoli"
+  years: ""
+  now: ""      # TODO
+- name: "Hélène Rougé-Labriet"
+  years: ""
+  now: ""      # TODO

@@ -1,13 +1,93 @@
-# One entry per member. `photo` is a path under static/, e.g. /img/people/manu.jpg
+# Current members, down to doctoral level. Interns and Master students are
+# deliberately not listed.
+#
+# `photo` is a path under static/, e.g. /img/people/brun.jpg — until those
+# exist, the initial is shown in a plate instead.
+# `role` is the public-facing job title, not the administrative grade.
+
+# ---- permanent staff ----
 - name: "Emmanuel Brun"
-  role: "Group leader · DR2 Inserm"
+  role: "Group leader · Research Director, Inserm"
   topic: "Wave-optical X-ray imaging, dark-field, inverse problems"
   orcid: "0000-0002-0332-4903"
-  email: "emmanuel.brun@univ-grenoble-alpes.fr"
+  email: "emmanuel.brun@inserm.fr"
   photo: ""
-# - name: ""
-#   role: "PhD student"
-#   topic: ""
-#   orcid: ""
-#   email: ""
-#   photo: ""
+
+- name: "Sam Bayat"
+  role: "Professor of Medicine, UGA · CHU Grenoble Alpes"
+  topic: "Lung imaging and respiratory physiology"
+  orcid: ""
+  email: "sbayat@chu-grenoble.fr"
+  photo: ""
+
+- name: "Sylvain Bohic"
+  role: "Research Scientist, Inserm"
+  topic: "X-ray fluorescence and nanoprobe imaging of metals in tissue"
+  orcid: ""
+  email: "sylvain.bohic@inserm.fr"
+  photo: ""
+
+- name: "François Le Naour"
+  role: "Research Director, Inserm"
+  topic: "Infrared and X-ray imaging of liver tissue"
+  orcid: ""
+  email: "francois.le-naour@inserm.fr"
+  photo: ""
+
+- name: "Pierre-Yves Rabattu"
+  role: "Associate Professor · Surgeon, CHU Grenoble Alpes"
+  topic: "Paediatric surgery, anatomical applications of virtual histology"
+  orcid: ""
+  email: "PYRabattu@chu-grenoble.fr"
+  photo: ""
+
+# ---- engineers ----
+- name: "Cécile Olivier"
+  role: "Research Engineer, Inserm"
+  topic: "Virtual histology pipelines, synchrotron acquisition and processing"
+  orcid: ""
+  email: "cecile.olivier@inserm.fr"
+  photo: ""
+
+- name: "Manuel Fernández-Martínez"
+  role: "Research Engineer"
+  topic: "Modulation-based imaging instrumentation and transfer"
+  orcid: ""
+  email: "manuel.fernandez-martinez@inserm.fr"
+  photo: ""
+
+- name: "Cécile Pohar"
+  role: "Research Engineer"
+  topic: "Deep-learning segmentation for virtual histology"
+  orcid: ""
+  email: ""          # TODO institutional address — the one on file is personal
+  photo: ""
+
+# ---- doctoral students ----
+- name: "Samy Kefs"
+  role: "PhD student"
+  topic: "Statistical retrieval of the directional dark-field signal — MUSITOX"
+  orcid: ""
+  email: "samy.kefs@inserm.fr"
+  photo: ""
+
+- name: "Kim Bazot"
+  role: "PhD student"
+  topic: "Directional dark-field beyond the tensor model — ROOTS"
+  orcid: ""
+  email: "kim.bazot@inserm.fr"
+  photo: ""
+
+- name: "Rémi Dupraz-Roget"
+  role: "PhD student"
+  topic: "Learned reconstruction — MIAI, co-supervised with TIMC"
+  orcid: ""
+  email: "remi.legars@univ-grenoble-alpes.fr"
+  photo: ""
+
+- name: "Vicente Estopier-Castillo"
+  role: "PhD student"
+  topic: "Lung imaging — Kinetips"
+  orcid: ""
+  email: "vicente.estopier-castillo@univ-grenoble-alpes.fr"
+  photo: ""
