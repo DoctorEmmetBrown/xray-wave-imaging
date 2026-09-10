@@ -24,7 +24,7 @@
         {{ $links := slice }}
         {{ with .linkedin }}{{ $links = $links | append (printf `<a href="%s">LinkedIn</a>` .) }}{{ end }}
         {{ with .scholar }}{{ $links = $links | append (printf `<a href="%s">Scholar</a>` .) }}{{ end }}
-        {{ with .orcid }}{{ $links = $links | append (printf `<a href="https://orcid.org/%s">ORCID</a>` .) }}{{ end }}
+        {{ with .orcid }}{{ $oid := replaceRE `^https?://(www\.)?orcid\.org/` "" . }}{{ $links = $links | append (printf `<a href="https://orcid.org/%s">ORCID</a>` $oid) }}{{ end }}
         {{ with .email }}{{ $links = $links | append (printf `<a href="mailto:%s">email</a>` .) }}{{ end }}
         <p class="links">
           {{ if $links }}{{ delimit $links " · " | safeHTML }}

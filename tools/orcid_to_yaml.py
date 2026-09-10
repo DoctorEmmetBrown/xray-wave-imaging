@@ -7,7 +7,8 @@ Regenerate data/publications.yaml from the ORCID records of the whole group.
 
 Where the ids come from
 -----------------------
-Every entry in `data/people.yaml` that has a non-empty `orcid`. Put a member's
+Every entry in `data/people.yaml` that has a non-empty `orcid`. Either form
+works — the bare 0000-0002-1234-5678 or the full https://orcid.org/… URL. Put a member's
 ORCID there and their publications appear on the site — including papers no one
 else in the group co-authored. Remove it (or add `pubs: false` next to it) and
 they drop out again. The id in hugo.toml is always included, as the group's
@@ -46,6 +47,12 @@ PEOPLE = ROOT / "data" / "people.yaml"
 API = "https://pub.orcid.org/v3.0"
 KEEP = ("takeaway", "code", "data", "axes", "featured", "hidden")
 ORCID_RE = re.compile(r"^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$")
+ORCID_URL = re.compile(r"^https?://(?:www\.)?orcid\.org/", re.I)
+
+
+def clean_orcid(value):
+    """Accept 0000-0002-… or https://orcid.org/0000-0002-… ; return the bare id."""
+    return ORCID_URL.sub("", (value or "").strip()).strip("/")
 
 
 def orcid_sources():
@@ -53,17 +60,19 @@ def orcid_sources():
     found, seen = [], set()
 
     text = (ROOT / "hugo.toml").read_text(encoding="utf-8")
-    m = re.search(r"orcid\s*=\s*['\"]([0-9X-]+)['\"]", text)
+    m = re.search(r"orcid\s*=\s*['\"]([^'\"]+)['\"]", text)
     if m:
-        found.append((m.group(1), "site owner")); seen.add(m.group(1))
+        oid = clean_orcid(m.group(1))
+        if oid:
+            found.append((oid, "site owner")); seen.add(oid)
 
     if PEOPLE.exists():
         for p in yaml.safe_load(PEOPLE.read_text(encoding="utf-8")) or []:
-            oid = (p.get("orcid") or "").strip()
+            oid = clean_orcid(p.get("orcid"))
             if not oid or oid in seen or p.get("pubs") is False:
                 continue
             if not ORCID_RE.match(oid):
-                print(f"  ! skipping malformed ORCID for {p.get('name')}: {oid}")
+                print(f"  ! skipping malformed ORCID for {p.get('name')}: {p.get('orcid')!r}")
                 continue
             found.append((oid, p.get("name") or oid)); seen.add(oid)
     return found
@@ -157,7 +166,7 @@ def merge(all_records):
 
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("-")]
-    sources = [(a, a) for a in args] if args else orcid_sources()
+    sources = [(clean_orcid(a), a) for a in args] if args else orcid_sources()
     if not sources:
         sys.exit("No ORCID ids found — add them to data/people.yaml or pass them as arguments.")
 

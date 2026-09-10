@@ -11,7 +11,7 @@
 #    photo     "/img/people/<file>.jpg" — the file lives in static/img/people/
 #    linkedin  full profile URL
 #    scholar   full Google Scholar profile URL
-#    orcid     bare identifier, e.g. 0000-0002-0332-4903 (no URL).
+#    orcid     the identifier or the full https://orcid.org/… URL — either works.
 #              This is ALSO the publication source: tools/orcid_to_yaml.py reads
 #              every id in this file, so filling it in adds that person's papers
 #              to the publications page — including ones nobody else here wrote.
@@ -33,9 +33,9 @@
   role: "Professor of Medicine, UGA · CHU Grenoble Alpes"
   topic: "Lung imaging and respiratory physiology"
   photo: "/img/people/bayat-sam.jpg"
-  linkedin: ""
-  scholar: ""
-  orcid: ""
+  linkedin: "https://www.linkedin.com/in/linkd-sam-bayat/"
+  scholar: "https://scholar.google.com/citations?user=Eisw4DYAAAAJ&hl=fr&oi=ao"
+  orcid: "0000-0002-8565-0293"
   email: ""
 
 - name: "François Le Naour"
@@ -58,15 +58,15 @@
 
 # ---- engineers and postdocs ----
 - name: "Cécile Olivier"
-  role: "Research Engineer, Inserm"
+  role: "Engineer, Inserm"
   topic: "Virtual histology pipelines, synchrotron acquisition and processing"
   photo: "/img/people/olivier-cecile.jpg"
   linkedin: ""
-  scholar: ""
+  scholar: "https://scholar.google.com/citations?hl=fr&user=xDgzUXsAAAAJ"
   orcid: "0009-0003-1041-4231"
   email: ""
 
-- name: "Manuel Fernández-Martínez"
+- name: "Manuel Fernández Martínez"
   role: "Research Engineer"
   topic: "Modulation-based imaging instrumentation and transfer"
   photo: "/img/people/fernandez-martinez-manuel.jpg"
@@ -89,7 +89,7 @@
   role: "PhD student"
   topic: "Statistical retrieval of the directional dark-field signal — MUSITOX"
   photo: "/img/people/kefs-samy.jpg"
-  linkedin: ""
+  linkedin: "https://www.linkedin.com/in/samy-k-78a953142/"
   scholar: ""
   orcid: ""
   email: ""

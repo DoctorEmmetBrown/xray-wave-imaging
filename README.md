@@ -49,7 +49,8 @@ The list is built from **every ORCID in `data/people.yaml`**, not just one
 person's. Fill in a member's `orcid` and their publications join the page,
 including papers no one else in the group co-authored; clear it and they leave
 again. To show someone's ORCID link without pulling in their bibliography, add
-`pubs: false` under it.
+`pubs: false` under it. The `orcid` value can be the bare identifier or the
+full `https://orcid.org/…` URL; both are accepted.
 
 Papers appearing in more than one member's record are merged into a single
 entry — matched on DOI, falling back to a normalised title — and the fuller
