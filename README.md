@@ -38,12 +38,19 @@ touch `layouts/` to keep the site current.
 
 ### A publication
 
-Don't add it by hand — resync from ORCID:
+Don't add it by hand — resync from ORCID, then commit the result:
 
 ```bash
-pip install pyyaml
-python3 tools/orcid_to_yaml.py
+pip install pyyaml                # once
+python3 tools/orcid_to_yaml.py    # rewrites data/publications.yaml locally
+git add -A && git commit -m "Resync publications"
+git push                          # one push, one CI build
 ```
+
+Resync first, push second. The script reads your working copy and never talks
+to GitHub, so pushing beforehand gains nothing and costs a wasted build that
+publishes the old list. If a resync goes wrong, `git checkout
+data/publications.yaml` undoes it — nothing has left your machine yet.
 
 The list is built from **every ORCID in `data/people.yaml`**, not just one
 person's. Fill in a member's `orcid` and their publications join the page,
