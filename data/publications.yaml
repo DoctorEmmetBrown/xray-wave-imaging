@@ -49,7 +49,7 @@
   year: 2026
   type: article
   doi: 10.1109/tim.2026.3674280
-  authors: ''
+  authors: Bizzotto et al.
   sources:
   - Sam Bayat
 - title: Characterizing heterogeneity and subphenotyping acute respiratory distress syndrome with computed
@@ -58,7 +58,7 @@
   year: 2026
   type: article
   doi: 10.1186/s40635-026-00880-x
-  authors: ''
+  authors: Garberi et al.
   sources:
   - Sam Bayat
 - title: Clinical potential of phase contrast imaging in dentomaxillofacial radiology compared to cone
@@ -67,7 +67,7 @@
   year: 2026
   type: article
   doi: 10.1016/j.diii.2026.05.004
-  authors: ''
+  authors: Bazot et al.
   sources:
   - site owner
   takeaway: Phase contrast measured head to head against cone-beam CT on real dental questions — the comparison
@@ -90,7 +90,7 @@
   year: 2026
   type: article
   doi: 10.1107/s1600577526003176
-  authors: ''
+  authors: Magnin et al.
   sources:
   - site owner
   takeaway: Which mask pattern actually maximises the signal — a question everyone building these setups
@@ -104,7 +104,7 @@
   year: 2026
   type: article
   doi: 10.1088/1361-6560/ae4164
-  authors: ''
+  authors: Verelst et al.
   sources:
   - Sam Bayat
 - title: Single-exposure statistical retrieval of the directional dark-field signal
@@ -125,7 +125,7 @@
   year: 2026
   type: article
   doi: 10.1186/s40635-026-00896-3
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: A self-healing radiopaque hyaluronic acid hydrogel as a new injectable biomaterial for precision
@@ -134,7 +134,7 @@
   year: 2025
   type: article
   doi: 10.7150/thno.104551
-  authors: ''
+  authors: Said et al.
   sources:
   - site owner
 - title: Air artifact suppression in phase contrast micro-CT using conditional generative adversarial
@@ -143,7 +143,7 @@
   year: 2025
   type: article
   doi: 10.1107/s1600577525001511
-  authors: ''
+  authors: Sagar et al.
   sources:
   - Sam Bayat
 - title: How X-ray dark-field imaging relates to small-angle X-ray scattering measurements.
@@ -151,7 +151,7 @@
   year: 2025
   type: article
   doi: 10.1107/s1600576725004017
-  authors: ''
+  authors: Magnin et al.
   sources:
   - site owner
   takeaway: 'The bridge paper: what a dark-field pixel measures, expressed in the units a SAXS beamline
@@ -174,7 +174,7 @@
   year: 2025
   type: article
   doi: 10.1097/aln.0000000000005807
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: Review and experimental comparison of speckle-tracking algorithms for X-ray phase contrast imaging
@@ -182,7 +182,7 @@
   year: 2025
   type: article
   doi: 10.1107/s1600577524010117
-  authors: ''
+  authors: Celestre et al.
   sources:
   - site owner
   takeaway: A like-for-like comparison of every speckle-tracking algorithm in circulation, so the choice
@@ -205,7 +205,7 @@
   year: 2024
   type: article
   doi: 10.1016/j.jsb.2024.108111
-  authors: ''
+  authors: Yu et al.
   sources:
   - Cécile Olivier
 - title: Combining Wave and Particle Effects in the Simulation of X-ray Phase Contrast—A Review
@@ -213,7 +213,7 @@
   year: 2024
   type: article
   doi: 10.3390/instruments8010008
-  authors: ''
+  authors: Pietersoone et al.
   sources:
   - site owner
 - title: 'In vivo monitoring of stem cells and their encapsulating scaffold using dual-contrast agent
@@ -238,7 +238,7 @@
   year: 2023
   type: article
   doi: 10.1038/s41467-023-38380-1
-  authors: ''
+  authors: Shirani et al.
   sources:
   - site owner
   takeaway: Cement setting watched in three dimensions as it happens, at the nanoscale — the same wave-optical
@@ -252,7 +252,7 @@
   year: 2023
   type: preprint
   doi: 10.1101/2023.04.20.537520
-  authors: ''
+  authors: Said et al.
   sources:
   - site owner
 - title: DISPOSITIF D'IMAGERIE, APPAREIL D'IMAGERIE OU DE CARACTERISATION DE MATERIAUX LE COMPRENANT ET
@@ -270,7 +270,7 @@
   year: 2023
   type: article
   doi: 10.1364/ol.501716
-  authors: ''
+  authors: Magnin et al.
   sources:
   - site owner
   takeaway: Validated against SAXS anisotropy on a laboratory source — the result that made the lab-based
@@ -284,7 +284,7 @@
   year: 2023
   type: article
   doi: 10.1152/japplphysiol.00051.2023
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: High-resolution synchrotron K-edge subtraction CT allows tracking and quantifying therapeutic
@@ -294,7 +294,7 @@
   year: 2023
   type: article
   doi: 10.7150/ntno.79575
-  authors: ''
+  authors: Tavakoli et al.
   sources:
   - site owner
 - title: Human femoral lacuno-canalicular network by X-ray nano-CT
@@ -310,7 +310,7 @@
   year: 2023
   type: preprint
   doi: 10.1101/2023.04.18.537316
-  authors: ''
+  authors: Vérot et al.
   sources:
   - site owner
 - title: 'Imagerie cutanée par rayonnement synchrotron : application aux pseudo-engelures COVID-19'
@@ -318,7 +318,7 @@
   year: 2023
   type: conference-paper
   doi: 10.1016/j.fander.2023.09.220
-  authors: ''
+  authors: Mouret et al.
   sources:
   - site owner
 - title: 'In vivo monitoring of hydrogel-embedded stem cells: combination of Synchrotron X-ray phase-contrast
@@ -336,7 +336,7 @@
   year: 2023
   type: article
   doi: 10.2217/nnm-2022-0252
-  authors: ''
+  authors: Lerouge et al.
   sources:
   - Cécile Olivier
 - title: Quantification of cartilage and subchondral bone cysts on knee specimens based on a spectral
@@ -345,7 +345,7 @@
   year: 2023
   type: article
   doi: 10.1038/s41598-023-38238-y
-  authors: ''
+  authors: Garcelon et al.
   sources:
   - Cécile Olivier
 - title: Taking into account wave effects in Monte Carlo simulation of phase contrast imaging using the
@@ -354,7 +354,7 @@
   year: 2023
   type: conference-paper
   doi: 10.1117/12.3017759
-  authors: ''
+  authors: Pietersoone et al.
   sources:
   - site owner
 - title: Use of metal-based contrast agents for in vivo MR and CT imaging of phagocytic cells in neurological
@@ -363,7 +363,7 @@
   year: 2023
   type: article
   doi: 10.1016/j.jneumeth.2022.109729
-  authors: ''
+  authors: Wiart et al.
   sources:
   - site owner
 - title: 'Virtual histology of Alzheimer''s disease: Biometal entrapment within amyloid-β plaques allows
@@ -372,7 +372,7 @@
   year: 2023
   type: article
   doi: 10.1016/j.actbio.2023.07.046
-  authors: ''
+  authors: Chourrout et al.
   sources:
   - site owner
   - Cécile Olivier
@@ -382,7 +382,7 @@
   year: 2022
   type: newspaper-article
   doi: 10.1364/boe.438832
-  authors: ''
+  authors: Chourrout et al.
   sources:
   - site owner
   takeaway: Myelin mapped across a whole brain with no sectioning and no stain, in models of white-matter
@@ -396,7 +396,7 @@
   year: 2022
   type: newspaper-article
   doi: 10.1101/2021.03.25.436908
-  authors: ''
+  authors: Chourrout et al.
   sources:
   - site owner
 - title: CARTILAGE THICKNESS MEASUREMENTS FROM PHOTO-COUNTING SPECTRAL COMPUTED TOMOGRAPHY IMAGES COMPARED
@@ -414,7 +414,7 @@
   year: 2022
   type: conference-paper
   doi: 10.1117/12.2633894
-  authors: ''
+  authors: Singh et al.
   sources:
   - site owner
 - title: In Vitro Preparation of Actively Maturing Bovine Articular Cartilage Explants for X-Ray Phase
@@ -423,7 +423,7 @@
   year: 2022
   type: newspaper-article
   doi: 10.3791/61607
-  authors: ''
+  authors: Bissardon et al.
   sources:
   - site owner
 - title: Monitoring the fate of stem cells and encapsulating hydrogel intraarticularly injected in mice
@@ -449,7 +449,7 @@
   year: 2022
   type: article
   doi: 10.30802/aalas-cm-21-000043
-  authors: ''
+  authors: Drevet et al.
   sources:
   - site owner
 - title: New imaging tools for mouse models of osteoarthritis
@@ -457,7 +457,7 @@
   year: 2022
   type: article
   doi: 10.1007/s11357-022-00525-3
-  authors: ''
+  authors: Drevet et al.
   sources:
   - site owner
 - title: VenaeCavae
@@ -474,7 +474,7 @@
   year: 2022
   type: article
   doi: 10.1186/s41747-021-00261-x
-  authors: ''
+  authors: Chappard et al.
   sources:
   - Cécile Olivier
 - title: 'X-ray Phase Contrast Imaging from Synchrotron to Conventional Sources: A Review of the Existing
@@ -483,7 +483,7 @@
   year: 2022
   type: article
   doi: 10.3390/app12199539
-  authors: ''
+  authors: Quenot et al.
   sources:
   - site owner
 - title: osteoarthritis X-ray PCI
@@ -517,7 +517,7 @@
   year: 2021
   type: article
   doi: 10.1016/j.ocarto.2021.100168
-  authors: ''
+  authors: Broche et al.
   sources:
   - site owner
 - title: 'Contributions à l’Imagerie Synchrotron : Applications et Transfert sur Sources Conventionnelles'
@@ -534,7 +534,7 @@
   year: 2021
   type: article
   doi: 10.1103/physreva.104.053505
-  authors: ''
+  authors: Pavlov et al.
   sources:
   - site owner
   takeaway: The Fokker–Planck route to directional dark-field — the model-based approach our own statistical
@@ -555,7 +555,7 @@
   year: 2021
   type: article
   doi: 10.1088/1361-6560/ac1f38
-  authors: ''
+  authors: Quénot et al.
   sources:
   - site owner
 - title: Imagerie en contraste de phase par source synchrotron appliquée à l’étude anatomique de la vascularisation
@@ -564,7 +564,7 @@
   year: 2021
   type: article
   doi: 10.1016/j.morpho.2021.05.058
-  authors: ''
+  authors: Cruz et al.
   sources:
   - site owner
 - title: Imaging atelectrauma in Ventilator-Induced Lung Injury using 4D X-ray microscopy
@@ -572,7 +572,7 @@
   year: 2021
   type: article
   doi: 10.1038/s41598-020-77300-x
-  authors: ''
+  authors: Fardin et al.
   sources:
   - Sam Bayat
 - title: Implicit tracking approach for X-ray phase-contrast imaging with a random mask and a conventional
@@ -581,7 +581,7 @@
   year: 2021
   type: article
   doi: 10.1364/optica.434954
-  authors: ''
+  authors: Quénot et al.
   sources:
   - site owner
   takeaway: 'The founding MoBI paper: a random mask and an ordinary laboratory source are enough to retrieve
@@ -594,7 +594,7 @@
   year: 2021
   type: article
   doi: 10.1016/j.cageo.2021.104908
-  authors: ''
+  authors: Kakouie et al.
   sources:
   - site owner
 - title: Micrometer-resolution X-ray tomographic full-volume reconstruction of an intact post-mortem juvenile
@@ -603,7 +603,7 @@
   year: 2021
   type: article
   doi: 10.1007/s00418-020-01868-8
-  authors: ''
+  authors: Borisova et al.
   sources:
   - Sam Bayat
 - title: Multimodal Imaging with NanoGd Reveals Spatiotemporal Features of Neuroinflammation after Experimental
@@ -612,7 +612,7 @@
   year: 2021
   type: article
   doi: 10.1002/advs.202101433
-  authors: ''
+  authors: Hubert et al.
   sources:
   - site owner
 - title: 'Nasal High Flow at 25 L/min or Expiratory Resistive Load Do Not Improve Regional Lung Function
@@ -621,7 +621,7 @@
   year: 2021
   type: article
   doi: 10.3389/fphys.2021.683316
-  authors: ''
+  authors: Cohen et al.
   sources:
   - Sam Bayat
 - title: Synchrotron phase-contrast imaging applied to the anatomical study of the hand and its vascularization
@@ -629,7 +629,7 @@
   year: 2021
   type: article
   doi: 10.1111/joa.13427
-  authors: ''
+  authors: Solé Cruz et al.
   sources:
   - site owner
 - title: 'Towards x-ray phase contrast tomography in clinical conditions: simulation and phase retrieval
@@ -638,7 +638,7 @@
   year: 2021
   type: conference-paper
   doi: 10.1117/12.2580876
-  authors: ''
+  authors: Quénot et al.
   sources:
   - site owner
 - title: Tracking cells in the brain of small animals using synchrotron multi-spectral phase contrast
@@ -647,7 +647,7 @@
   year: 2021
   type: conference-paper
   doi: 10.1117/12.2580841
-  authors: ''
+  authors: Tavakoli et al.
   sources:
   - site owner
 - title: A novel approach for automated alveolar morphometry using synchrotron X-ray microtomography in
@@ -656,7 +656,7 @@
   year: 2020
   type: article
   doi: 10.1183/13993003.congress-2020.1932
-  authors: ''
+  authors: Maury et al.
   sources:
   - Sam Bayat
 - title: Comparison of X-ray speckle based imaging deflection retrieval algorithms for the optimization
@@ -665,7 +665,7 @@
   year: 2020
   type: article
   doi: 10.1088/1361-6560/ab87f7
-  authors: ''
+  authors: Rouge-Labriet et al.
   sources:
   - site owner
 - title: 'Functional lung imaging with synchrotron radiation: Methods and preclinical applications'
@@ -673,7 +673,7 @@
   year: 2020
   type: article
   doi: 10.1016/j.ejmp.2020.10.001
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: Multiscale pink-beam microCT imaging at the ESRF-ID17 biomedical beamline
@@ -681,7 +681,7 @@
   year: 2020
   type: article
   doi: 10.1107/s160057752000911x
-  authors: ''
+  authors: Mittone et al.
   sources:
   - Sam Bayat
 - title: Synchrotron X-ray boost delivered by Microbeam Radiation Therapy after conventional X-ray therapy
@@ -690,7 +690,7 @@
   year: 2020
   type: article
   doi: 10.1016/j.ijrobp.2020.02.023
-  authors: ''
+  authors: Potez et al.
   sources:
   - site owner
 - title: 'X-ray Phase Contrast osteo-articular imaging: a pilot study on cadaveric human hands'
@@ -698,7 +698,7 @@
   year: 2020
   type: article
   doi: 10.1038/s41598-020-58168-3
-  authors: ''
+  authors: Rougé-Labriet et al.
   sources:
   - site owner
 - title: X-ray Tomographic In Situ Imaging of an Entire Post Mortem Juvenile Rat Lung at Microscopical
@@ -707,7 +707,7 @@
   year: 2020
   type: article
   doi: 10.1164/ajrccm-conference.2020.201.1_meetingabstracts.a2342
-  authors: ''
+  authors: Schittny et al.
   sources:
   - Sam Bayat
 - title: X-ray multi-modal intrinsic-speckle-tracking
@@ -715,7 +715,7 @@
   year: 2020
   type: article
   doi: 10.1088/2040-8986/abc313
-  authors: ''
+  authors: Pavlov et al.
   sources:
   - site owner
   takeaway: 'Attenuation, phase and dark-field pulled from the same speckle images at once: the multi-channel
@@ -729,7 +729,7 @@
   year: 2019
   type: conference-paper
   doi: 10.1117/12.2511944
-  authors: ''
+  authors: Labriet et al.
   sources:
   - site owner
   - Sam Bayat
@@ -739,7 +739,7 @@
   year: 2019
   type: article
   doi: 10.1097/ccm.0000000000003838
-  authors: ''
+  authors: Broche et al.
   sources:
   - Sam Bayat
 - title: Regional distribution of lung inflammation in a multiple-hit model of ARDS assessed by micro-PET-CT
@@ -748,7 +748,7 @@
   year: 2019
   type: article
   doi: 10.1183/13993003.congress-2019.pa3166
-  authors: ''
+  authors: Kassai et al.
   sources:
   - Sam Bayat
 - title: Regional distribution of lung inflammation in an animal model of multiple-hit ARDS assessed by
@@ -765,7 +765,7 @@
   year: 2019
   type: preprint
   doi: 10.1103/physrevapplied.13.054023
-  authors: ''
+  authors: Pavlov et al.
   sources:
   - site owner
 - title: The Effect of Positive End-Expiratory Pressure on Lung Micromechanics Assessed by Synchrotron
@@ -774,7 +774,7 @@
   year: 2019
   type: article
   doi: 10.3390/jcm8081117
-  authors: ''
+  authors: Scaramuzzo et al.
   sources:
   - Sam Bayat
 - title: t Regional Behavior of Airspaces During Positive Pressure Reduction Assessed by Synchrotron Radiation
@@ -783,7 +783,7 @@
   year: 2019
   type: article
   doi: 10.3389/fphys.2019.00719
-  authors: ''
+  authors: Scaramuzzo et al.
   sources:
   - Sam Bayat
 - title: Dosimetry for synchrotron imaging techniques
@@ -809,7 +809,7 @@
   year: 2018
   type: article
   doi: 10.2214/ajr.17.18286
-  authors: ''
+  authors: Geith et al.
   sources:
   - site owner
 - title: Quantitative Imaging of Regional Aerosol Deposition, Lung Ventilation and Morphology by Synchrotron
@@ -818,7 +818,7 @@
   year: 2018
   type: article
   doi: 10.1038/s41598-018-20986-x
-  authors: ''
+  authors: Porra et al.
   sources:
   - Sam Bayat
 - title: Rule-based model for smart building supervision and management
@@ -837,7 +837,7 @@
   year: 2018
   type: article
   doi: 10.1038/s41598-018-30902-y
-  authors: ''
+  authors: Labriet et al.
   sources:
   - site owner
   takeaway: The first clinical case imaged by synchrotron CT at a substantially reduced dose — evidence
@@ -850,7 +850,7 @@
   year: 2018
   type: article
   doi: 10.1103/physreva.98.053813
-  authors: ''
+  authors: Paganin et al.
   sources:
   - site owner
 - title: Synchrotron X-Ray-Based Functional and Anatomical Lung Imaging Techniques
@@ -858,7 +858,7 @@
   year: 2018
   type: article
   doi: 10.1007/978-3-030-00368-5_10
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: Virtual histology of animal and human brains with Alzheimer's disease
@@ -875,7 +875,7 @@
   year: 2017
   type: other
   doi: 10.1055/s-0037-1600894
-  authors: ''
+  authors: Horng et al.
   sources:
   - site owner
 - title: 'Enhancing Lung Tumor Visibility Using In-Vivo Analyzer-Based X-Ray Phase Contrast Imaging In
@@ -892,7 +892,7 @@
   year: 2017
   type: article
   doi: 10.3233/fi-2017-1590
-  authors: ''
+  authors: Brun et al.
   sources:
   - site owner
 - title: 'IRM 3D Haute Resolution de cartilage articulaire : premiere comparaison avec l’imagerie 3D X-Ray
@@ -929,7 +929,7 @@
   year: 2017
   type: article
   doi: 10.1165/rcmb.2017-0007oc
-  authors: ''
+  authors: Porra et al.
   sources:
   - Sam Bayat
 - title: 'The ID21 X-ray and infrared microscopy beamline at the ESRF: Status and recent applications
@@ -938,7 +938,7 @@
   year: 2017
   type: article
   doi: 10.1039/c6ja00356g
-  authors: ''
+  authors: Cotte et al.
   sources:
   - site owner
 - title: X-ray tomography investigations of mono-sized sphere packing structures in cylindrical containers
@@ -946,7 +946,7 @@
   year: 2017
   type: article
   doi: 10.1016/j.powtec.2017.05.033
-  authors: ''
+  authors: Reimann et al.
   sources:
   - site owner
 - title: A Novel and Sensitive Approach for the Evaluation of Liver Ischemia-Reperfusion Injury After
@@ -955,7 +955,7 @@
   year: 2016
   type: article
   doi: 10.1097/rli.0000000000000220
-  authors: ''
+  authors: Brandlhuber et al.
   sources:
   - site owner
 - title: A method for high-energy, low-dose mammography using edge illumination x-ray phase-contrast imaging
@@ -963,7 +963,7 @@
   year: 2016
   type: article
   doi: 10.1088/1361-6560/61/24/8750
-  authors: ''
+  authors: Diemoz et al.
   sources:
   - site owner
 - title: Detection of Post-Therapeutic Effects in Breast Carcinoma Using Hard X-Ray Index of Refraction
@@ -972,7 +972,7 @@
   year: 2016
   type: article
   doi: 10.1371/journal.pone.0158306
-  authors: ''
+  authors: Grandl et al.
   sources:
   - site owner
 - title: Imaging dynamic lung strain and specific elastance by K-edge subtraction computed tomography
@@ -988,7 +988,7 @@
   year: 2016
   type: article
   doi: 10.1107/s1600577515018561
-  authors: ''
+  authors: Nemoz et al.
   sources:
   - site owner
 - title: Oscillatory Measurements Of Upper Airway Casts Reconstructed From CT Images
@@ -1004,7 +1004,7 @@
   year: 2016
   type: article
   doi: 10.1073/pnas.1519958113
-  authors: ''
+  authors: Brun et al.
   sources:
   - site owner
   takeaway: Lead found in the ink of the Herculaneum scrolls, overturning the assumption that ancient
@@ -1018,7 +1018,7 @@
   year: 2016
   type: article
   doi: 10.1038/srep20763
-  authors: ''
+  authors: Tack et al.
   sources:
   - site owner
 - title: A single-image method for x-ray refractive index CT
@@ -1026,7 +1026,7 @@
   year: 2015
   type: article
   doi: 10.1088/0031-9155/60/9/3433
-  authors: ''
+  authors: Mittone et al.
   sources:
   - site owner
 - title: Alveolar deflation dynamics before and after lung injury assessed by synchrotron radiation computed
@@ -1035,7 +1035,7 @@
   year: 2015
   type: article
   doi: 10.1186/2197-425x-3-s1-a567
-  authors: ''
+  authors: Perchiazzi et al.
   sources:
   - Sam Bayat
 - title: 'CT Density Distribution Analysis in Patients with Cystic Fibrosis: Correlation with Pulmonary
@@ -1044,7 +1044,7 @@
   year: 2015
   type: article
   doi: 10.1016/j.acra.2014.09.003
-  authors: ''
+  authors: de Lavernhe et al.
   sources:
   - Sam Bayat
 - title: High contrast microstructural visualization of natural acellular matrices by means of phase-based
@@ -1053,7 +1053,7 @@
   year: 2015
   type: article
   doi: 10.1038/srep18156
-  authors: ''
+  authors: Hagen et al.
   sources:
   - site owner
 - title: Microstructure of out-of-pile annealed neutron irradiated beryllium studied by X-ray tomography
@@ -1061,7 +1061,7 @@
   year: 2015
   type: article
   doi: 10.1016/j.actamat.2015.01.045
-  authors: ''
+  authors: Vladimirov et al.
   sources:
   - site owner
 - title: Pebble bed structures in the vicinity of concave and convex walls
@@ -1069,7 +1069,7 @@
   year: 2015
   type: article
   doi: 10.1016/j.fusengdes.2015.05.026
-  authors: ''
+  authors: Reimann et al.
   sources:
   - site owner
 - title: Revealing letters in rolled Herculaneum papyri by X-ray phase-contrast imaging
@@ -1090,7 +1090,7 @@
   year: 2015
   type: article
   doi: 10.1107/s1600577515008978
-  authors: ''
+  authors: Diemoz et al.
   sources:
   - site owner
 - title: Synchrotron X-ray boost delivered by Microbeam Radiation Therapy improves glioma control after
@@ -1108,7 +1108,7 @@
   year: 2014
   type: article
   doi: 10.1186/2197-425x-2-s1-o23
-  authors: ''
+  authors: Perchiazzi et al.
   sources:
   - Sam Bayat
 - title: A dictionary learning approach with overlap for the low dose computed tomography reconstruction
@@ -1117,7 +1117,7 @@
   year: 2014
   type: article
   doi: 10.1371/journal.pone.0114325
-  authors: ''
+  authors: Mirone et al.
   sources:
   - site owner
 - title: 'Alveolar Recruitment And Distension During Mechanical Ventilation: Synchrotron Radiation Computed
@@ -1134,7 +1134,7 @@
   year: 2014
   type: article
   doi: 10.1118/1.4896124
-  authors: ''
+  authors: Brun et al.
   sources:
   - site owner
 - title: 'Cartilage and soft tissue imaging using X-rays: Propagation-based phase-contrast computed tomography
@@ -1143,7 +1143,7 @@
   year: 2014
   type: article
   doi: 10.1097/rli.0000000000000063
-  authors: ''
+  authors: Horng et al.
   sources:
   - site owner
 - title: Individual Airway Narrowing And Closure Studied By Phase-Contrast CT Imaging In Injured Rabbit
@@ -1170,7 +1170,7 @@
   year: 2014
   type: article
   doi: 10.1107/s160057751401697x
-  authors: ''
+  authors: Strengell et al.
   sources:
   - Sam Bayat
 - title: Short-Term Recruitment/derecruitment Demonstrated By Phase-Contrast CT Imaging In Injured Rabbit
@@ -1189,7 +1189,7 @@
   year: 2014
   type: article
   doi: 10.1016/j.nimb.2013.09.030
-  authors: ''
+  authors: Mirone et al.
   sources:
   - site owner
 - title: 'Tomographic reconstruction of the refractive index with hard X-rays: An efficient method based
@@ -1198,7 +1198,7 @@
   year: 2014
   type: article
   doi: 10.1364/oe.22.005216
-  authors: ''
+  authors: Gasilov et al.
   sources:
   - site owner
 - title: An efficient numerical tool for dose deposition prediction applied to synchrotron medical imaging
@@ -1207,7 +1207,7 @@
   year: 2013
   type: article
   doi: 10.1107/s0909049513017184
-  authors: ''
+  authors: Mittone et al.
   sources:
   - site owner
 - title: 'Conjugate heat transfer in metal foam: Gravity driven and forced flowheat exchange coefficients
@@ -1216,7 +1216,7 @@
   year: 2013
   type: article
   doi: 10.1615/jpormedia.v16.i1.50
-  authors: ''
+  authors: Hugo et al.
   sources:
   - site owner
 - title: New imaging technology lowers radiation dose in breast scans
@@ -1224,7 +1224,7 @@
   year: 2013
   type: article
   doi: 10.1117/2.1201304.004852
-  authors: ''
+  authors: Coan et al.
   sources:
   - site owner
 - title: On the possibility of quantitative refractive-index tomography of large biomedical samples with
@@ -1233,7 +1233,7 @@
   year: 2013
   type: article
   doi: 10.1364/boe.4.001512
-  authors: ''
+  authors: Gasilov et al.
   sources:
   - site owner
 - title: Synchrotron microbeam radiation therapy induces hypoxia in intracerebral gliosarcoma but not
@@ -1242,7 +1242,7 @@
   year: 2013
   type: article
   doi: 10.1016/j.radonc.2013.05.013
-  authors: ''
+  authors: Bouchet et al.
   sources:
   - site owner
 - title: A local level-set method using a hash table data structure
@@ -1250,7 +1250,7 @@
   year: 2012
   type: article
   doi: 10.1016/j.jcp.2011.12.001
-  authors: ''
+  authors: Brun et al.
   sources:
   - site owner
 - title: 'Determination of effective transport properties of metallic foams: Morphology and flow laws'
@@ -1267,7 +1267,7 @@
   year: 2012
   type: article
   doi: 10.1164/ajrccm-conference.2012.185.1_meetingabstracts.a5577
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: 'High-resolution breast tomography at high energy: A feasibility study of phase contrast imaging
@@ -1276,7 +1276,7 @@
   year: 2012
   type: article
   doi: 10.1088/0031-9155/57/10/2931
-  authors: ''
+  authors: Sztrókay et al.
   sources:
   - site owner
 - title: High-resolution, low-dose phase contrast X-ray tomography for 3D diagnosis of human breast cancers
@@ -1284,7 +1284,7 @@
   year: 2012
   type: article
   doi: 10.1073/pnas.1204460109
-  authors: ''
+  authors: Zhao et al.
   sources:
   - site owner
   takeaway: Whole human breast tumours diagnosed in three dimensions at a dose compatible with screening
@@ -1298,7 +1298,7 @@
   year: 2012
   type: article
   doi: 10.1016/j.ces.2011.12.034
-  authors: ''
+  authors: Vicente et al.
   sources:
   - site owner
 - title: In-Vivo Synchrotron Imaging Of Regional Ventilation And Blood Volume After Methacholine Provocation
@@ -1307,7 +1307,7 @@
   year: 2012
   type: conference-paper
   doi: 10.1164/ajrccm-conference.2012.185.1_meetingabstracts.a3679
-  authors: ''
+  authors: Porra et al.
   sources:
   - Sam Bayat
 - title: Numerical prediction of the radiative behavior of metallic foams from the microscopic to macroscopic
@@ -1316,7 +1316,7 @@
   year: 2012
   type: conference-paper
   doi: 10.1088/1742-6596/369/1/012003
-  authors: ''
+  authors: Rousseau et al.
   sources:
   - site owner
 - title: Quasi-simultaneous in-vivo synchrotron imaging of regional ventilation and blood volume distributions
@@ -1334,7 +1334,7 @@
   year: 2012
   type: article
   doi: 10.1063/1.4720172
-  authors: ''
+  authors: Veronesi et al.
   sources:
   - site owner
 - title: Effect of positive end-expiratory pressure on regional ventilation distribution during bronchoconstriction
@@ -1343,7 +1343,7 @@
   year: 2011
   type: article
   doi: 10.1097/ccm.0b013e318218a375
-  authors: ''
+  authors: Porra et al.
   sources:
   - Sam Bayat
 - title: 'Imaging of the angular-dependent coherent-scatter cross section with analyzer crystal: A Monte
@@ -1360,7 +1360,7 @@
   year: 2011
   type: other
   doi: 10.5772/21321
-  authors: ''
+  authors: Hugo et al.
   sources:
   - site owner
 - title: 'SU‐E‐I‐144: Radiation Dose Reduction in Monochromatic Phase Contrast X‐Ray Mammography Using
@@ -1369,7 +1369,7 @@
   year: 2011
   type: article
   doi: 10.1118/1.3611718
-  authors: ''
+  authors: Zhao et al.
   sources:
   - site owner
 - title: Airway Response To Inhaled Allergen Assessed By High-Resolution Synchrotron Imaging And Forced
@@ -1378,7 +1378,7 @@
   year: 2010
   type: conference-paper
   doi: 10.1164/ajrccm-conference.2010.181.1_meetingabstracts.a5029
-  authors: ''
+  authors: BAYAT et al.
   sources:
   - Sam Bayat
 - title: 'Conjugate heat and mass transfer in metal foams: A numerical study for heat exchangers design'
@@ -1386,7 +1386,7 @@
   year: 2010
   type: article
   doi: 10.4028/www.scientific.net/ddf.297-301.960
-  authors: ''
+  authors: Hugo et al.
   sources:
   - site owner
 - title: From pore scale numerical simulation of conjugate heat transfer in cellular material to effectives
@@ -1395,7 +1395,7 @@
   year: 2010
   type: conference-paper
   doi: 10.1115/ihtc14-22692
-  authors: ''
+  authors: Hugo et al.
   sources:
   - site owner
 - title: High-resolution in-vivo synchrotron imaging of lung structure and regional ventilation in rat
@@ -1404,7 +1404,7 @@
   year: 2010
   type: article
   doi: 10.1164/ajrccm-conference.2010.181.1_meetingabstracts.a6626
-  authors: ''
+  authors: Porra et al.
   sources:
   - Sam Bayat
 - title: 'Volumetric segmentation of trabecular bone into rods and plates: A new method based on local
@@ -1413,7 +1413,7 @@
   year: 2010
   type: conference-paper
   doi: 10.1117/12.843804
-  authors: ''
+  authors: Brun et al.
   sources:
   - site owner
 - title: Distinctive Bronchoconstriction Induced by Intravenous or Inhaled Methacholine in Rabbits Studied
@@ -1448,7 +1448,7 @@
   year: 2009
   type: article
   doi: 10.1164/rccm.200808-1211oc
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: 'Microstructure and transport properties of cellular materials: Representative volume element'
@@ -1456,7 +1456,7 @@
   year: 2009
   type: article
   doi: 10.1002/adem.200900131
-  authors: ''
+  authors: Brun et al.
   sources:
   - site owner
 - title: Paradoxical conducting airway responses and heterogeneous regional ventilation after histamine
@@ -1465,7 +1465,7 @@
   year: 2009
   type: article
   doi: 10.1152/japplphysiol.90550.2008
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: QUANTITATIVE FUNCTIONAL IMAGING AND KINETIC STUDIES WITH HIGH-Z CONTRAST AGENTS USING SYNCHROTRON
@@ -1474,7 +1474,7 @@
   year: 2009
   type: article
   doi: 10.1111/j.1440-1681.2008.05043.x
-  authors: ''
+  authors: Adam et al.
   sources:
   - Sam Bayat
 - title: Characterization of the full thermal conductivity tensor of anisotropic metal foams - influence
@@ -1509,7 +1509,7 @@
   year: 2008
   type: article
   doi: 10.1016/j.ejrad.2008.04.043
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: Simultaneous in vivo synchrotron radiation computed tomography of regional ventilation and blood
@@ -1518,7 +1518,7 @@
   year: 2008
   type: article
   doi: 10.1088/0031-9155/53/3/016
-  authors: ''
+  authors: Suhonen et al.
   sources:
   - Sam Bayat
 - title: Restoration of variable area soundtracks
@@ -1526,7 +1526,7 @@
   year: 2007
   type: conference-paper
   doi: 10.1109/icip.2007.4379944
-  authors: ''
+  authors: Brun et al.
   sources:
   - site owner
 - title: Synchrotron radiation computed tomography station at the ESRF biomedical beamline
@@ -1534,7 +1534,7 @@
   year: 2007
   type: conference-paper
   doi: 10.1063/1.2436440
-  authors: ''
+  authors: Nemoz et al.
   sources:
   - Sam Bayat
 - title: Differences in the time course of proximal and distal airway response to inhaled histamine studied
@@ -1543,7 +1543,7 @@
   year: 2006
   type: article
   doi: 10.1152/japplphysiol.00594.2005
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: In vivo imaging of bone micro-architecture in mice with 3D synchrotron radiation micro-tomography
@@ -1552,7 +1552,7 @@
   year: 2005
   type: article
   doi: 10.1016/j.nima.2005.03.097
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: Quantitative measurement of regional lung gas volume by synchrotron radiation computed tomography
@@ -1560,7 +1560,7 @@
   year: 2005
   type: article
   doi: 10.1088/0031-9155/50/1/001
-  authors: ''
+  authors: Monfraix et al.
   sources:
   - Sam Bayat
 - title: Effect of tidal volume on distribution of ventilation assessed by synchrotron radiation CT in
@@ -1569,7 +1569,7 @@
   year: 2004
   type: article
   doi: 10.1152/japplphysiol.00866.2003
-  authors: ''
+  authors: Porra et al.
   sources:
   - Sam Bayat
 - title: Effect of histamine on regional lung ventilation studied by synchrotron radiation computed tomography
@@ -1597,7 +1597,7 @@
   year: 2001
   type: article
   doi: 10.1088/0031-9155/46/12/315
-  authors: ''
+  authors: Bayat et al.
   sources:
   - Sam Bayat
 - title: Alteration of a single tryptophan residue of the cellulose-binding domain blocks secretion of
