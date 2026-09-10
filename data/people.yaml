@@ -1,89 +1,118 @@
-# Current members, down to doctoral level. Interns and Master students are
-# deliberately not listed.
+# ============================================================================
+#  CURRENT MEMBERS — this file drives the "The group" section of /people/
 #
-# Contact goes through the group leader — individual addresses are kept off the
-# site. `scholar` is the full Google Scholar profile URL; leave it empty and the
-# card shows a visible marker until someone fills it in.
-# `photo` is a path under static/, e.g. /img/people/brun.jpg — until those
-# exist, the initial is shown in a plate instead.
+#  Down to doctoral level. Interns and Master students are deliberately absent.
+#  Order in this file = order on the page.
+#
+#  Fields (leave "" for anything you don't have — the card just omits it):
+#    name      full name as it should be displayed
+#    role      public-facing job title, not the administrative grade
+#    topic     one line: what this person actually works on
+#    photo     "/img/people/<file>.jpg" — the file lives in static/img/people/
+#    linkedin  full profile URL
+#    scholar   full Google Scholar profile URL
+#    orcid     bare identifier, e.g. 0000-0002-0332-4903 (no URL)
+#    email     only for whoever should receive enquiries; everyone else "" 
+# ============================================================================
 
 # ---- permanent staff ----
 - name: "Emmanuel Brun"
   role: "Group leader · Research Director, Inserm"
   topic: "Wave-optical X-ray imaging, dark-field, inverse problems"
-  orcid: "0000-0002-0332-4903"
-  scholar: "https://scholar.google.com/citations?user=5QmSCc4AAAAJ"
-  email: "emmanuel.brun@inserm.fr"
   photo: "/img/people/brun-emmanuel.jpg"
+  linkedin: "https://www.linkedin.com/in/emmanuel-brun-8157a418/"
+  scholar: "https://scholar.google.com/citations?user=5QmSCc4AAAAJ"
+  orcid: "0000-0002-0332-4903"
+  email: "emmanuel.brun@inserm.fr"
 
 - name: "Sam Bayat"
   role: "Professor of Medicine, UGA · CHU Grenoble Alpes"
   topic: "Lung imaging and respiratory physiology"
-  orcid: ""
+  photo: "/img/people/bayat-sam.jpg"
+  linkedin: ""
   scholar: ""
-  photo: ""
+  orcid: ""
+  email: ""
 
 - name: "François Le Naour"
   role: "Research Director, Inserm"
   topic: "Infrared and X-ray imaging of liver tissue"
-  orcid: ""
-  scholar: ""
   photo: ""
+  linkedin: ""
+  scholar: ""
+  orcid: ""
+  email: ""
 
 - name: "Pierre-Yves Rabattu"
   role: "Associate Professor · Surgeon, CHU Grenoble Alpes"
   topic: "Paediatric surgery, anatomical applications of virtual histology"
-  orcid: ""
-  scholar: ""
   photo: ""
+  linkedin: ""
+  scholar: ""
+  orcid: ""
+  email: ""
 
-# ---- engineers ----
+# ---- engineers and postdocs ----
 - name: "Cécile Olivier"
   role: "Research Engineer, Inserm"
   topic: "Virtual histology pipelines, synchrotron acquisition and processing"
-  orcid: ""
+  photo: "/img/people/olivier-cecile.jpg"
+  linkedin: ""
   scholar: ""
-  photo: ""
+  orcid: ""
+  email: ""
 
 - name: "Manuel Fernández-Martínez"
   role: "Research Engineer"
   topic: "Modulation-based imaging instrumentation and transfer"
-  orcid: ""
+  photo: "/img/people/fernandez-martinez-manuel.jpg"
+  linkedin: ""
   scholar: ""
-  photo: ""
+  orcid: ""
+  email: ""
 
 - name: "Cécile Pohar"
-  role: "Research Engineer"
+  role: "Postdoctoral researcher"
   topic: "Deep-learning segmentation for virtual histology"
-  orcid: ""
-  scholar: ""
   photo: ""
+  linkedin: ""
+  scholar: ""
+  orcid: ""
+  email: ""
 
 # ---- doctoral students ----
 - name: "Samy Kefs"
   role: "PhD student"
   topic: "Statistical retrieval of the directional dark-field signal — MUSITOX"
-  orcid: ""
-  scholar: ""
   photo: "/img/people/kefs-samy.jpg"
+  linkedin: ""
+  scholar: ""
+  orcid: ""
+  email: ""
 
 - name: "Kim Bazot"
   role: "PhD student"
   topic: "Directional dark-field beyond the tensor model — ROOTS"
-  orcid: ""
-  scholar: ""
   photo: "/img/people/bazot-kim.jpg"
+  linkedin: ""
+  scholar: ""
+  orcid: ""
+  email: ""
 
 - name: "Rémi Dupraz-Roget"
   role: "PhD student"
   topic: "Learned reconstruction — MIAI, co-supervised with TIMC"
-  orcid: ""
-  scholar: ""
   photo: "/img/people/dupraz-roget-remi.jpg"
+  linkedin: ""
+  scholar: ""
+  orcid: ""
+  email: ""
 
 - name: "Vicente Estopier-Castillo"
   role: "PhD student"
   topic: "Lung imaging — Kinetips"
-  orcid: ""
-  scholar: ""
   photo: ""
+  linkedin: ""
+  scholar: ""
+  orcid: ""
+  email: ""

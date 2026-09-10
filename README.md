@@ -113,16 +113,31 @@ screens. A `src` starting with `/` is used verbatim, for anything you would
 rather keep in `static/`.
 
 **3 — member photographs.** Put them in `static/img/people/` and reference them
-in `data/people.yaml` as `photo: "/img/people/brun.jpg"`. Square crops; the card
-shows the person's initial until a file is there.
+in `data/people.yaml` (or `data/alumni.yaml`) as `photo: "/img/people/brun.jpg"`.
+Square crops on a **white** background — a PNG with transparency composites to
+black. The card shows the person's initial until a file is there.
 
 If a referenced file is missing, the build fails with the path and the page
 name rather than shipping a broken image.
 
-### Software, datasets, people, openings
+### People
 
-`data/software.yaml`, `data/datasets.yaml`, `data/people.yaml`,
-`data/alumni.yaml`, `data/openings.yaml`. Plain lists of entries; the comments
+Two files, both under `data/`, both plain lists in page order:
+
+- **`data/people.yaml`** — current members, down to doctoral level. Per person:
+  `name`, `role` (the public job title, not the grade), `topic` (one line on
+  what they work on), `photo`, `linkedin`, `scholar`, `orcid` (bare identifier,
+  no URL) and `email`. Leave any field as `""` and the card simply omits it —
+  except that a person with no link at all shows a coral marker, so the gaps
+  stay visible.
+- **`data/alumni.yaml`** — former members. Same idea plus `role`, which must be
+  `postdoc`, `phd` or `med`; that is what groups them on the page. `now` is
+  where they went next; `linkedin` turns the name into a link and is the easy
+  way to answer the same question.
+
+### Software, datasets, openings
+
+`data/software.yaml`, `data/datasets.yaml`, `data/openings.yaml`. The comments
 in each file document the fields. The **We're hiring** link in the navigation
 appears only while at least one opening has `status: open`.
 

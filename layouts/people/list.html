@@ -21,11 +21,14 @@
         <span class="role">{{ .role }}</span>
         <h3>{{ .name }}</h3>
         {{ with .topic }}<p>{{ . }}</p>{{ end }}
+        {{ $links := slice }}
+        {{ with .linkedin }}{{ $links = $links | append (printf `<a href="%s">LinkedIn</a>` .) }}{{ end }}
+        {{ with .scholar }}{{ $links = $links | append (printf `<a href="%s">Scholar</a>` .) }}{{ end }}
+        {{ with .orcid }}{{ $links = $links | append (printf `<a href="https://orcid.org/%s">ORCID</a>` .) }}{{ end }}
+        {{ with .email }}{{ $links = $links | append (printf `<a href="mailto:%s">email</a>` .) }}{{ end }}
         <p class="links">
-          {{ with .scholar }}<a href="{{ . }}">Scholar</a>
-          {{ else }}<span class="todo">scholar link?</span>{{ end }}
-          {{ with .orcid }} · <a href="https://orcid.org/{{ . }}">ORCID</a>{{ end }}
-          {{ with .email }} · <a href="mailto:{{ . }}">email</a>{{ end }}
+          {{ if $links }}{{ delimit $links " · " | safeHTML }}
+          {{ else }}<span class="todo">no link yet</span>{{ end }}
         </p>
       </article>
       {{ end }}
@@ -66,10 +69,11 @@
         <h3>{{ $label }}</h3>
         <div class="alumni">
           {{ range . }}
+          {{ $a := . }}
           <div class="alum">
             <div class="who">
               {{ with .photo }}<img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="" loading="lazy">{{ end }}
-              <span>{{ .name }}{{ with .years }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ . }}</span>{{ end }}</span>
+              <span>{{ with .linkedin }}<a href="{{ . }}">{{ $a.name }}</a>{{ else }}{{ .name }}{{ end }}{{ with .years }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ . }}</span>{{ end }}</span>
             </div>
             <div class="now">{{ with .now }}{{ . }}{{ else }}<span class="todo">where are they now?</span>{{ end }}</div>
           </div>
