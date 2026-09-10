@@ -4,6 +4,8 @@ Regenerate data/publications.yaml from the ORCID records of the whole group.
 
     python3 tools/orcid_to_yaml.py                    # every ORCID in data/people.yaml
     python3 tools/orcid_to_yaml.py 0000-0002-... ...  # only the ids given
+    python3 tools/orcid_to_yaml.py --show-dropped     # list what a filter removed
+    python3 tools/orcid_to_yaml.py --no-authors       # skip the Crossref author lookup
 
 Where the ids come from
 -----------------------
@@ -33,6 +35,7 @@ import re
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -45,7 +48,8 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "publications.yaml"
 PEOPLE = ROOT / "data" / "people.yaml"
 API = "https://pub.orcid.org/v3.0"
-KEEP = ("takeaway", "code", "data", "axes", "featured", "hidden")
+KEEP = ("takeaway", "code", "data", "axes", "featured", "hidden", "image", "authors")
+CROSSREF = "https://api.crossref.org/works/"
 ORCID_RE = re.compile(r"^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$")
 ORCID_URL = re.compile(r"^https?://(?:www\.)?orcid\.org/", re.I)
 
@@ -150,6 +154,46 @@ def extract(summary):
         "doi": doi,
         "authors": "",
     }
+
+
+def fetch_authors(doi, mailto=""):
+    """First author + 'et al.' from Crossref. ORCID's works endpoint has no
+    author list, so the names have to come from somewhere else."""
+    url = CROSSREF + urllib.parse.quote(doi, safe="")
+    ua = f"xray-wave-imaging-site/1.0 (mailto:{mailto})" if mailto else "xray-wave-imaging-site/1.0"
+    req = urllib.request.Request(url, headers={"Accept": "application/json", "User-Agent": ua})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        msg = json.load(r).get("message", {})
+    authors = msg.get("author") or []
+    if not authors:
+        return ""
+    first = authors[0]
+    name = (first.get("family") or first.get("name") or "").strip()
+    if not name:
+        return ""
+    return f"{name} et al." if len(authors) > 1 else name
+
+
+def enrich_authors(records, mailto=""):
+    """Fill in `authors` wherever it is missing. Cached by being preserved
+    across runs, so this only costs a request the first time a paper appears."""
+    todo = [r for r in records if r.get("doi") and not r.get("authors")]
+    if not todo:
+        return
+    print(f"\nLooking up first authors for {len(todo)} paper(s) on Crossref …")
+    ok = failed = 0
+    for i, rec in enumerate(todo, 1):
+        try:
+            name = fetch_authors(rec["doi"], mailto)
+            if name:
+                rec["authors"] = name
+                ok += 1
+        except Exception:
+            failed += 1
+        if i % 25 == 0 or i == len(todo):
+            print(f"  {i}/{len(todo)} …")
+        time.sleep(0.12)                 # stay inside Crossref's polite rate
+    print(f"  {ok} found, {failed} not available")
 
 
 def richness(rec):
@@ -267,8 +311,6 @@ def main():
             for k in KEEP:
                 if prior.get(k):
                     rec[k] = prior[k]
-            if not rec["authors"] and prior.get("authors"):
-                rec["authors"] = prior["authors"]
             seen.add(id(prior))
 
     hand_written = ("takeaway", "code", "data", "featured", "hidden")
@@ -283,6 +325,10 @@ def main():
               f"no longer in anyone's ORCID")
     if orphans:
         print(f"  kept {len(orphans)} local-only entr{'y' if len(orphans) == 1 else 'ies'}")
+
+    if "--no-authors" not in sys.argv:
+        m = re.search(r"email\s*=\s*['\"]([^'\"]+)['\"]", (ROOT / "hugo.toml").read_text(encoding="utf-8"))
+        enrich_authors([r for r in records if not r.get("hidden")], m.group(1) if m else "")
 
     records.sort(key=lambda r: (-(r.get("year") or 0), r.get("title", "")))
 

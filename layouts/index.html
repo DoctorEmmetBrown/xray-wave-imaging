@@ -101,7 +101,7 @@
         <div class="yr">{{ .year }}</div>
         <div>
           <div class="ti">{{ if .doi }}<a href="https://doi.org/{{ .doi }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</div>
-          <div class="jr">{{ .venue }}{{ with .authors }} · {{ . }}{{ end }}</div>
+          <div class="jr">{{ with .authors }}{{ . }} · {{ end }}{{ .venue }}</div>
           {{ with .takeaway }}<p class="tk">{{ . }}</p>{{ end }}
         </div>
       </article>

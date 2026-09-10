@@ -83,8 +83,22 @@ between deposits, a normalised title is the fallback. Each entry keeps a
 why something is on the list, and the run prints how many duplicates it merged
 so you can see it working.
 
+First authors come from Crossref, since ORCID's works endpoint carries no
+author list: the first author's surname, plus "et al." when there are more.
+It is looked up once per paper and then preserved, so only new entries cost a
+request. `--no-authors` skips the lookup entirely.
+
+To put a snapshot beside a featured paper — a key figure, the setup, a render —
+drop the file in `assets/img/pubs/` and name it on that entry:
+
+```yaml
+  featured: true
+  image: "saxs-dentin.jpg"      # any size; cropped to 4:3 and converted at build
+```
+
 The script **preserves** everything written by hand — `takeaway`, `featured`,
-`hidden`, `axes`, `code`, `data` — matching on DOI, so resyncing is always safe.
+`hidden`, `axes`, `code`, `data`, `image`, `authors` — matching on DOI, so
+resyncing is always safe.
 Entries that exist locally but in nobody's ORCID (a paper submitted but not yet
 deposited) are kept and flagged `orcid: false`.
 

@@ -18,10 +18,19 @@
       <h2>Selected work</h2>
       <p class="side">Fifteen papers that between them describe what the group does and why.</p>
     </div>
-    <div class="papers">
+    {{ $anyfig := false }}
+    {{ range . }}{{ if .image }}{{ $anyfig = true }}{{ end }}{{ end }}
+    <div class="papers{{ if $anyfig }} hasfigs{{ end }}">
       {{ range sort . "year" "desc" }}
       <article class="paper">
         <div class="yr">{{ .year }}</div>
+        {{ if $anyfig }}{{ if not .image }}<div class="snap-empty" aria-hidden="true"></div>{{ end }}{{ end }}
+        {{ with .image }}
+          {{ $res := resources.Get (printf "img/pubs/%s" (strings.TrimPrefix "/" .)) }}
+          {{ if $res }}{{ $t := $res.Fill "320x240 webp q80 Center" }}
+            <img class="snap" src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="" loading="lazy">
+          {{ else }}{{ errorf "publication image not found: assets/img/pubs/%s" . }}{{ end }}
+        {{ end }}
         <div>
           <div class="ti">{{ if .doi }}<a href="https://doi.org/{{ .doi }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</div>
           <div class="jr">{{ with .authors }}{{ . }} · {{ end }}{{ .venue }}</div>
@@ -56,7 +65,7 @@
           {{ range where $papers "year" $y }}
           <li>
             <span class="t">{{ if .doi }}<a href="https://doi.org/{{ .doi }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</span>
-            <span class="v">{{ with .venue }}{{ . }}{{ else }}—{{ end }}{{ if ne .type "article" }} · {{ replace .type "-" " " }}{{ end }}</span>
+            <span class="v">{{ with .authors }}{{ . }} · {{ end }}{{ with .venue }}{{ . }}{{ else }}—{{ end }}{{ if ne .type "article" }} · {{ replace .type "-" " " }}{{ end }}</span>
           </li>
           {{ end }}
         </ol>
