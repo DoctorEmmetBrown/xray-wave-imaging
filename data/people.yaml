@@ -11,7 +11,11 @@
 #    photo     "/img/people/<file>.jpg" — the file lives in static/img/people/
 #    linkedin  full profile URL
 #    scholar   full Google Scholar profile URL
-#    orcid     bare identifier, e.g. 0000-0002-0332-4903 (no URL)
+#    orcid     bare identifier, e.g. 0000-0002-0332-4903 (no URL).
+#              This is ALSO the publication source: tools/orcid_to_yaml.py reads
+#              every id in this file, so filling it in adds that person's papers
+#              to the publications page — including ones nobody else here wrote.
+#              Add `pubs: false` under it to show the link but skip the papers.
 #    email     only for whoever should receive enquiries; everyone else "" 
 # ============================================================================
 
@@ -59,7 +63,7 @@
   photo: "/img/people/olivier-cecile.jpg"
   linkedin: ""
   scholar: ""
-  orcid: ""
+  orcid: "0009-0003-1041-4231"
   email: ""
 
 - name: "Manuel Fernández-Martínez"

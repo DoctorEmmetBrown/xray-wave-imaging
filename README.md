@@ -45,11 +45,25 @@ pip install pyyaml
 python3 tools/orcid_to_yaml.py
 ```
 
-This rewrites `data/publications.yaml` from ORCID `0000-0002-0332-4903`, and
-**preserves** the `takeaway`, `code`, `data` and `axes` fields you wrote by
-hand, matching them on DOI. Then write a takeaway for anything new — that
-one plain-language sentence per paper is the reason someone reads the list
-instead of skimming Google Scholar.
+The list is built from **every ORCID in `data/people.yaml`**, not just one
+person's. Fill in a member's `orcid` and their publications join the page,
+including papers no one else in the group co-authored; clear it and they leave
+again. To show someone's ORCID link without pulling in their bibliography, add
+`pubs: false` under it.
+
+Papers appearing in more than one member's record are merged into a single
+entry — matched on DOI, falling back to a normalised title — and the fuller
+metadata wins. Each entry keeps a `sources` field naming whose record it came
+from, which is how you find out why something is on the list.
+
+The script **preserves** everything written by hand — `takeaway`, `featured`,
+`hidden`, `axes`, `code`, `data` — matching on DOI, so resyncing is always safe.
+Entries that exist locally but in nobody's ORCID (a paper submitted but not yet
+deposited) are kept and flagged `orcid: false`.
+
+Then write a takeaway for anything new worth featuring — that one plain-language
+sentence is the reason someone reads the list instead of skimming Google
+Scholar. The run prints how many visible papers still lack one.
 
 ### A funded project
 
