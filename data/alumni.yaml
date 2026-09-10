@@ -62,9 +62,9 @@
 - name: "Clara Magnin"
   role: "phd"
   years: ""
-  now: ""      # co-founder of arXimed
-  linkedin: ""
-  scholar: ""
+  now: ""      
+  linkedin: "https://www.linkedin.com/in/claramagnin-/"
+  scholar: "https://scholar.google.com/citations?hl=fr&user=C4xdtLYAAAAJ"
   orcid: ""
   photo: "/img/people/magnin-clara.jpg"
 - name: "Christopher Ninham"
