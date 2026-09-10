@@ -15,7 +15,8 @@
 #              This is ALSO the publication source: tools/orcid_to_yaml.py reads
 #              every id in this file, so filling it in adds that person's papers
 #              to the publications page — including ones nobody else here wrote.
-#              Add `pubs: false` under it to show the link but skip the papers.
+#              Add `pubs: false` under it to show the link but skip the papers,
+#              or `pubs: xray` to keep only their X-ray imaging work.
 #    email     only for whoever should receive enquiries; everyone else "" 
 # ============================================================================
 
@@ -32,6 +33,11 @@
 - name: "Sam Bayat"
   role: "Professor of Medicine, UGA · CHU Grenoble Alpes"
   topic: "Lung imaging and respiratory physiology"
+  # Sam's bibliography is largely respiratory physiology and epidemiology. Only
+  # the work involving an X-ray image belongs on this site.
+  # `python3 tools/orcid_to_yaml.py --show-dropped` lists what the filter removes.
+  pubs: xray
+  pubs_also: []          # DOIs to keep anyway, for X-ray work whose title hides it
   photo: "/img/people/bayat-sam.jpg"
   linkedin: "https://www.linkedin.com/in/linkd-sam-bayat/"
   scholar: "https://scholar.google.com/citations?user=Eisw4DYAAAAJ&hl=fr&oi=ao"

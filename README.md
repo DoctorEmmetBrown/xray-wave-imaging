@@ -59,6 +59,20 @@ again. To show someone's ORCID link without pulling in their bibliography, add
 `pubs: false` under it. The `orcid` value can be the bare identifier or the
 full `https://orcid.org/…` URL; both are accepted.
 
+For a member whose bibliography is mostly outside the group's subject, `pubs:
+xray` keeps only the work where an X-ray image was involved, judged on the
+title and journal. The vocabulary is one regular expression at the top of
+`tools/orcid_to_yaml.py` — widen it there if it holds something back. Audit it
+with:
+
+```bash
+python3 tools/orcid_to_yaml.py --show-dropped
+```
+
+A keyword filter cannot read a paper, so some genuinely X-ray work has a title
+that never says so. List those DOIs under `pubs_also:` next to the person and
+they are kept whatever the filter decides.
+
 Papers appearing in more than one member's record are merged into a single
 entry and the fuller metadata wins. Matching is on the DOI, normalised first —
 members deposit through different tools, so the same paper arrives as

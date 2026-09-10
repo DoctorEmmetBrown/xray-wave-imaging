@@ -49,6 +49,33 @@ KEEP = ("takeaway", "code", "data", "axes", "featured", "hidden")
 ORCID_RE = re.compile(r"^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$")
 ORCID_URL = re.compile(r"^https?://(?:www\.)?orcid\.org/", re.I)
 
+# ---------------------------------------------------------------------------
+# Per-person publication filters, chosen with `pubs:` in data/people.yaml.
+#
+#   pubs: true    (or absent)  every work in that ORCID record
+#   pubs: false                none — keeps the ORCID link, drops the papers
+#   pubs: xray                 only works whose title or journal shows that an
+#                              X-ray image was involved
+#
+# A keyword filter cannot read a paper. Some genuinely X-ray work has a title
+# that never says so — list those DOIs under `pubs_also:` and they are kept
+# regardless of the filter.
+#
+# Useful for a member whose bibliography is mostly outside the group's subject:
+# their X-ray work belongs on the page, the rest does not. Edit the vocabulary
+# below if it lets something through or holds something back.
+# ---------------------------------------------------------------------------
+PUBS_FILTERS = {
+    "xray": re.compile(
+        r"x[-\s]?ray|xray|radiograph|tomograph|tomosynth"
+        r"|micro[-\s]?ct|µct|\bct\b|\bdect\b|\bhrct\b|\bcbct\b|dual[-\s]?energy"
+        r"|\bkes\b|k[-\s]?edge"
+        r"|synchrotron|phase[-\s]?contrast|dark[-\s]?field|speckle"
+        r"|angiograph|fluoroscop|densitometr|\bsaxs\b|ptychograph",
+        re.I,
+    ),
+}
+
 
 def clean_orcid(value):
     """Accept 0000-0002-… or https://orcid.org/0000-0002-… ; return the bare id."""
@@ -64,7 +91,7 @@ def orcid_sources():
     if m:
         oid = clean_orcid(m.group(1))
         if oid:
-            found.append((oid, "site owner")); seen.add(oid)
+            found.append((oid, "site owner", True, [])); seen.add(oid)
 
     if PEOPLE.exists():
         for p in yaml.safe_load(PEOPLE.read_text(encoding="utf-8")) or []:
@@ -74,7 +101,12 @@ def orcid_sources():
             if not ORCID_RE.match(oid):
                 print(f"  ! skipping malformed ORCID for {p.get('name')}: {p.get('orcid')!r}")
                 continue
-            found.append((oid, p.get("name") or oid)); seen.add(oid)
+            pubs = p.get("pubs", True)
+            if isinstance(pubs, str) and pubs not in PUBS_FILTERS:
+                print(f"  ! unknown pubs filter {pubs!r} for {p.get('name')} — using all works")
+                pubs = True
+            found.append((oid, p.get("name") or oid, pubs, p.get("pubs_also") or []))
+            seen.add(oid)
     return found
 
 
@@ -125,11 +157,13 @@ def richness(rec):
     return (bool(rec.get("venue")), bool(rec.get("doi")), rec.get("type") == "article")
 
 
-def fetch_records(orcid, who):
+def fetch_records(orcid, who, pubs=True, always=()):
     """Every usable work in one ORCID record, already de-duplicated internally."""
+    keep_re = PUBS_FILTERS.get(pubs) if isinstance(pubs, str) else None
+    always = {norm_doi(d) for d in (always or ())}
     works = get(f"{API}/{orcid}/works")
     groups = works.get("group", [])
-    out, by_key = [], {}
+    out, by_key, dropped = [], {}, []
     for g in groups:
         summaries = g.get("work-summary") or []
         if not summaries:
@@ -139,6 +173,10 @@ def fetch_records(orcid, who):
             continue
         # OpenAlex mirrors every paper a second time with a junk DOI; skip those.
         if rec["venue"].strip().lower() == "openalex":
+            continue
+        if (keep_re and norm_doi(rec["doi"]) not in always
+                and not keep_re.search(f"{rec['title']} {rec['venue']}")):
+            dropped.append(rec)
             continue
         rec["sources"] = [who]
         key = norm_doi(rec["doi"]) or norm(rec["title"])
@@ -150,7 +188,11 @@ def fetch_records(orcid, who):
             continue
         by_key[key] = rec
         out.append(rec)
-    print(f"  {who:28} {len(groups):4} groups -> {len(out)} works")
+    note = f" ({len(dropped)} filtered out by pubs: {pubs})" if dropped else ""
+    print(f"  {who:28} {len(groups):4} groups -> {len(out)} works{note}")
+    if dropped and "--show-dropped" in sys.argv:
+        for d in sorted(dropped, key=lambda r: -(r["year"] or 0)):
+            print(f"        dropped  {d['year']}  {d['title'][:82]}")
     return out
 
 
@@ -184,7 +226,7 @@ def merge(all_records):
 
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("-")]
-    sources = [(clean_orcid(a), a) for a in args] if args else orcid_sources()
+    sources = [(clean_orcid(a), a, True, []) for a in args] if args else orcid_sources()
     if not sources:
         sys.exit("No ORCID ids found — add them to data/people.yaml or pass them as arguments.")
 
@@ -196,9 +238,12 @@ def main():
 
     print(f"Reading {len(sources)} ORCID record(s) …")
     collected, failed = [], []
-    for i, (oid, who) in enumerate(sources):
+    for i, (oid, who, pubs, always) in enumerate(sources):
+        if pubs is False:
+            print(f"  {who:28} skipped (pubs: false)")
+            continue
         try:
-            collected.extend(fetch_records(oid, who))
+            collected.extend(fetch_records(oid, who, pubs, always))
         except (urllib.error.URLError, urllib.error.HTTPError, ValueError) as exc:
             print(f"  ! {who} ({oid}) failed: {exc}")
             failed.append(who)
@@ -226,10 +271,16 @@ def main():
                 rec["authors"] = prior["authors"]
             seen.add(id(prior))
 
-    orphans = [e for e in existing if id(e) not in seen]
+    hand_written = ("takeaway", "code", "data", "featured", "hidden")
+    orphans = [e for e in existing if id(e) not in seen
+               and (e.get("orcid") is False or any(e.get(k) for k in hand_written))]
+    forgotten = sum(1 for e in existing if id(e) not in seen) - len(orphans)
     for e in orphans:
         e["orcid"] = False
         records.append(e)
+    if forgotten:
+        print(f"  dropped {forgotten} entr{'y' if forgotten == 1 else 'ies'} "
+              f"no longer in anyone's ORCID")
     if orphans:
         print(f"  kept {len(orphans)} local-only entr{'y' if len(orphans) == 1 else 'ies'}")
 
