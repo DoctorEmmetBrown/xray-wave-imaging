@@ -323,3 +323,10 @@ footer .addr b{color:var(--ink); font-weight:500; font-family:var(--disp); font-
 /* ---- alumni portraits, larger ---- */
 .alum .who img{width:60px; height:60px}
 .alum{padding:14px 0}
+
+/* alumni rows: name above its link row, portrait alongside */
+.alum .who{align-items:center}
+.alum .nm{display:flex; flex-direction:column; gap:3px}
+.alum .links{font-family:var(--mono); font-size:.66rem; letter-spacing:.03em}
+.alum .links a{color:var(--dim); text-decoration:none}
+.alum .links a:hover{color:var(--gold); text-decoration:underline}

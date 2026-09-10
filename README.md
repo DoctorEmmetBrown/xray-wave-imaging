@@ -187,8 +187,14 @@ Two files, both under `data/`, both plain lists in page order:
   stay visible.
 - **`data/alumni.yaml`** — former members. Same idea plus `role`, which must be
   `postdoc`, `phd` or `med`; that is what groups them on the page. `now` is
-  where they went next; `linkedin` turns the name into a link and is the easy
-  way to answer the same question.
+  where they went next — the most useful field on the page for a candidate, and
+  worth chasing people up for. `linkedin`, `scholar` and `orcid` render as a
+  link row under the name; a row with none simply shows none, unlike a member
+  card which flags the gap.
+
+Both files draw that link row from the same template partial
+(`layouts/partials/personlinks.html`), so the two lists cannot drift apart, and
+`orcid` accepts either the bare identifier or the full URL in both.
 
 ### Software, datasets, openings
 

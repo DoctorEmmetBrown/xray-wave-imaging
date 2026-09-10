@@ -1,0 +1,20 @@
+{{/* The link row under a person's name, used by both the member cards and the
+     alumni rows so the two never drift apart.
+
+       {{ partial "personlinks.html" (dict "p" $person) }}
+       {{ partial "personlinks.html" (dict "p" $person "quiet" true) }}
+
+     Order is LinkedIn · Scholar · ORCID · email, skipping whatever is empty.
+     `quiet` renders nothing when a person has no link at all; without it, a
+     coral marker shows the gap. `orcid` may be the bare id or the full URL. */}}
+{{ $p := .p }}
+{{ $links := slice }}
+{{ with $p.linkedin }}{{ $links = $links | append (printf `<a href="%s">LinkedIn</a>` .) }}{{ end }}
+{{ with $p.scholar }}{{ $links = $links | append (printf `<a href="%s">Scholar</a>` .) }}{{ end }}
+{{ with $p.orcid }}
+  {{ $oid := replaceRE `^https?://(www\.)?orcid\.org/` "" . }}
+  {{ $links = $links | append (printf `<a href="https://orcid.org/%s">ORCID</a>` $oid) }}
+{{ end }}
+{{ with $p.email }}{{ $links = $links | append (printf `<a href="mailto:%s">email</a>` .) }}{{ end }}
+{{ if $links }}<p class="links">{{ delimit $links " · " | safeHTML }}</p>
+{{ else if not .quiet }}<p class="links"><span class="todo">no link yet</span></p>{{ end }}
