@@ -7,9 +7,11 @@ lead: "Who we are, where we sit, and what we can measure for you."
 ## The group
 
 The X-ray Wave Imaging Group develops wave-optical X-ray imaging methods — phase contrast,
-dark-field, and the inverse problems needed to turn either into a measurement. We are part of the
-**Translational Theranostics team (3T)** at the Institute for Advanced Biosciences in Grenoble
-(Inserm U1209 / CNRS UMR 5309 / Université Grenoble Alpes).
+dark-field, and the inverse problems needed to turn either into a measurement. Physicists, applied
+mathematicians, image-processing specialists, biologists and medical doctors work side by side here,
+which is the only way a method ever makes it from an optical bench to a question someone actually
+asked. We are part of the **Translational Theranostics team (3T)** at the Institute for Advanced
+Biosciences in Grenoble (Inserm U1209 / CNRS UMR 5309 / Université Grenoble Alpes).
 
 The relationship is deliberate. Methods developed here are meant to answer biomedical questions
 posed inside 3T and at CHU Grenoble Alpes, not to remain instrumentation for its own sake.

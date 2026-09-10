@@ -1,0 +1,29 @@
+{{/* An illustration inside a page, with a caption in the house style.
+
+     {{< figure src="research/dentin-ddf.jpg"
+                caption="Directional dark-field of human dentin. Hue is fibre orientation."
+                alt="orientation map of dentinal tubules" >}}
+
+     `src` is relative to assets/img/ — the file is resized to 1600 px wide and
+     converted to webp at build time, so you can drop a full-resolution export
+     straight from the beamline. A path starting with / is used verbatim
+     (for anything you put in static/ instead).
+*/}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default (.Get "caption") | default "" }}
+{{ $wide := .Get "wide" }}
+<figure class="fig{{ if $wide }} fig-wide{{ end }}">
+  {{ if hasPrefix $src "/" }}
+    <img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy">
+  {{ else }}
+    {{ $res := resources.Get (printf "img/%s" $src) }}
+    {{ if $res }}
+      {{ $img := $res.Resize "1600x webp q82" }}
+      <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+           alt="{{ $alt }}" loading="lazy">
+    {{ else }}
+      {{ errorf "figure shortcode: assets/img/%s not found (page %s)" $src .Page.File.Path }}
+    {{ end }}
+  {{ end }}
+  {{ with .Get "caption" }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

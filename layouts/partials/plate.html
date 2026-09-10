@@ -1,6 +1,32 @@
-{{/* Generated figure plates — no image assets required.
-     Pass a motif name: speckle | waves | grid | tissue
-     Replace with real <img> once hero images exist. */}}
+{{/* A figure plate.
+
+     If the page carries `image:` in its front matter, that image is used —
+     resized and converted to webp on the fly. Otherwise a generated motif
+     stands in, so the site is never full of grey boxes.
+
+     front matter:
+       image: "research/mobi-membrane.jpg"   # relative to assets/img/
+       imageAlt: "what the picture shows"
+     motifs: speckle | waves | grid | tissue
+*/}}
+{{ $page := .page }}
+{{ $src := "" }}
+{{ $alt := "" }}
+{{ with $page }}
+  {{ $src = .Params.image | default "" }}
+  {{ $alt = .Params.imageAlt | default .Title }}
+{{ end }}
+
+{{ if $src }}
+  {{ $res := resources.Get (printf "img/%s" $src) }}
+  {{ if $res }}
+    {{ $img := $res.Resize "900x webp q82" }}
+    <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+         alt="{{ $alt }}" loading="lazy">
+  {{ else }}
+    <img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy">
+  {{ end }}
+{{ else }}
 {{ $m := .motif | default "speckle" }}
 {{ $id := .id | default "0" }}
 <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice" role="presentation" aria-hidden="true">
@@ -47,3 +73,4 @@
     </g>
   {{ end }}
 </svg>
+{{ end }}

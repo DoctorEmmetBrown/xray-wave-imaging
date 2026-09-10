@@ -9,6 +9,13 @@
     {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
   </div>
 
+  {{ with .Params.image }}
+  <figure class="pagehero">
+    {{ partial "plate.html" (dict "page" $) }}
+    {{ with $.Params.imageCaption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+  {{ end }}
+
   <div class="pagebody">
     <article class="prose">
       {{ .Content }}

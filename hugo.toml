@@ -9,7 +9,7 @@ summaryLength = 24
   shortName    = 'XWI'
   parentLine   = 'a group in the 3T team · IAB Grenoble'
   tagline      = 'Wave-optical X-ray imaging at the Institute for Advanced Biosciences, Grenoble.'
-  email        = 'emmanuel.brun@univ-grenoble-alpes.fr'
+  email        = 'emmanuel.brun@inserm.fr'
   orcid        = '0000-0002-0332-4903'
   scholar      = 'https://scholar.google.com/citations?user=5QmSCc4AAAAJ&hl=fr'
   address      = 'Allée des Alpes, 38700 La Tronche, France'

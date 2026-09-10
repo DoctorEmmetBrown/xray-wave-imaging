@@ -80,6 +80,45 @@ figure plate: `speckle`, `waves`, `grid` or `tissue`. Replace these with real
 images as soon as you have them — they exist so the site is not full of grey
 boxes on day one.
 
+### Illustrations
+
+Put image files under `assets/img/`, in whatever sub-folders you like. Hugo
+resizes them and converts to webp at build time, so commit the full-resolution
+export straight from the beamline — do not hand-optimise first.
+
+Three places take an image:
+
+**1 — the plate on a research axis or project card.** Add to that page's front
+matter:
+
+```yaml
+image: "research/dentin-ddf.jpg"     # path relative to assets/img/
+imageAlt: "orientation map of dentinal tubules"
+imageCaption: "Directional dark-field of human dentin, hue is fibre orientation."
+```
+
+The generated motif disappears the moment `image:` is set — on the card, and as
+a wide plate under the page title.
+
+**2 — anywhere in the body text**, with the figure shortcode:
+
+```markdown
+{{< figure src="research/membrane-sem.jpg"
+           caption="SEM of the Vogel-spiral membrane. Dots are 30 µm across."
+           alt="scanning electron micrograph of a patterned absorber" >}}
+```
+
+Add `wide="true"` to let a figure break out of the reading column on wide
+screens. A `src` starting with `/` is used verbatim, for anything you would
+rather keep in `static/`.
+
+**3 — member photographs.** Put them in `static/img/people/` and reference them
+in `data/people.yaml` as `photo: "/img/people/brun.jpg"`. Square crops; the card
+shows the person's initial until a file is there.
+
+If a referenced file is missing, the build fails with the path and the page
+name rather than shipping a broken image.
+
 ### Software, datasets, people, openings
 
 `data/software.yaml`, `data/datasets.yaml`, `data/people.yaml`,

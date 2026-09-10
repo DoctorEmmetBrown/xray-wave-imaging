@@ -1,5 +1,5 @@
 ---
 title: "People"
 weight: 40
-lead: "A small group at the Institute for Advanced Biosciences, working somewhere between X-ray physics, applied mathematics and image processing."
+lead: "A group at the Institute for Advanced Biosciences where X-ray physicists, applied mathematicians, image-processing people, biologists and medical doctors work on the same samples."
 ---

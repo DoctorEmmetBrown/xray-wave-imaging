@@ -22,9 +22,10 @@
         <h3>{{ .name }}</h3>
         {{ with .topic }}<p>{{ . }}</p>{{ end }}
         <p class="links">
-          {{ with .orcid }}<a href="https://orcid.org/{{ . }}">ORCID</a>{{ end }}
-          {{ if and .orcid .email }} · {{ end }}
-          {{ with .email }}<a href="mailto:{{ . }}">email</a>{{ end }}
+          {{ with .scholar }}<a href="{{ . }}">Scholar</a>
+          {{ else }}<span class="todo">scholar link?</span>{{ end }}
+          {{ with .orcid }} · <a href="https://orcid.org/{{ . }}">ORCID</a>{{ end }}
+          {{ with .email }} · <a href="mailto:{{ . }}">email</a>{{ end }}
         </p>
       </article>
       {{ end }}

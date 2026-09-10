@@ -68,7 +68,7 @@ header.top{
 }
 .topin{max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding-block:13px}
 .logo{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink)}
-.logo .glyph{width:22px; height:22px; flex:none}
+.logo .glyph{width:26px; height:26px; flex:none}
 .logo b{font-family:var(--disp); font-size:1.02rem; font-weight:600; letter-spacing:-.01em; white-space:nowrap; display:block}
 .logo i{font-family:var(--mono); font-size:.6rem; font-style:normal; letter-spacing:.16em; text-transform:uppercase; color:var(--dim); display:block; margin-top:-2px}
 nav.main{margin-left:auto; display:flex; gap:20px; flex-wrap:wrap}
@@ -282,3 +282,19 @@ footer .addr b{color:var(--ink); font-weight:500; font-family:var(--disp); font-
 .alumgroup + .alumgroup{margin-top:26px}
 .alumgroup h3{font-family:var(--mono); font-size:.65rem; letter-spacing:.16em; text-transform:uppercase;
   color:var(--gold); font-weight:400; margin-bottom:6px}
+
+/* ------------------------------ illustrations --------------------------- */
+/* A page's own hero plate, from `image:` in the front matter. */
+.pagehero{margin:34px 0 0; display:flex; flex-direction:column; gap:10px}
+.pagehero img, .pagehero svg{width:100%; height:auto; display:block; border:1px solid var(--line);
+  border-radius:3px; background:#0F0B08; max-height:420px; object-fit:cover}
+.pagehero figcaption{font-family:var(--mono); font-size:.68rem; letter-spacing:.04em; color:var(--dim)}
+
+/* {{< figure >}} inside body text. */
+.fig{margin:0; display:flex; flex-direction:column; gap:10px}
+.fig img{width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:3px}
+.fig figcaption{font-family:var(--mono); font-size:.68rem; line-height:1.6; letter-spacing:.04em; color:var(--dim)}
+/* `wide` breaks out of the reading column on roomy screens */
+@media (min-width:1000px){
+  .fig-wide{width:min(112%, calc(100vw - 44px)); max-width:none}
+}

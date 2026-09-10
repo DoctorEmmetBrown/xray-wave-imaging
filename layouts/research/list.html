@@ -19,7 +19,7 @@
     <div class="axes">
       {{ range $i, $a := . }}
       <article class="axis">
-        <div class="plate">{{ partial "plate.html" (dict "motif" $a.Params.motif "id" $i) }}</div>
+        <div class="plate">{{ partial "plate.html" (dict "motif" $a.Params.motif "id" $i "page" $a) }}</div>
         <span class="n">{{ printf "%02d" (add $i 1) }} / {{ $a.Params.short }}</span>
         <h3><a href="{{ $a.RelPermalink }}">{{ $a.Title }}</a></h3>
         <p>{{ $a.Params.blurb }}</p>
