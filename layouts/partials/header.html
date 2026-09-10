@@ -1,6 +1,6 @@
 <header class="top">
   <div class="topin">
-    <a class="logo" href="{{ "/" | relURL }}">
+    <a class="logo" href="{{ site.Home.RelPermalink }}">
       <svg class="glyph" viewBox="0 0 24 24" role="presentation" aria-hidden="true">
         <!-- Vogel spiral: successive points at the golden angle, r = c*sqrt(n).
              The same construction as the coded-aperture membranes we put in the beam. -->
@@ -51,7 +51,7 @@
       {{ end }}
       {{ if site.Data.openings }}
         {{ $live := where site.Data.openings "status" "open" }}
-        {{ if $live }}<a class="cta" href="{{ "/people/#openings" | relURL }}">We&rsquo;re hiring</a>{{ end }}
+        {{ if $live }}<a class="cta" href="{{ "people/" | relURL }}#openings">We&rsquo;re hiring</a>{{ end }}
       {{ end }}
     </nav>
   </div>

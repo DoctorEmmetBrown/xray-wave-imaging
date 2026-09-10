@@ -14,7 +14,7 @@
 {{ $wide := .Get "wide" }}
 <figure class="fig{{ if $wide }} fig-wide{{ end }}">
   {{ if hasPrefix $src "/" }}
-    <img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy">
+    <img src="{{ strings.TrimPrefix "/" $src | relURL }}" alt="{{ $alt }}" loading="lazy">
   {{ else }}
     {{ $res := resources.Get (printf "img/%s" $src) }}
     {{ if $res }}

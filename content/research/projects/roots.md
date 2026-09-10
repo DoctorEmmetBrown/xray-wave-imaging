@@ -26,4 +26,4 @@ The methodological programme is described on the [directional dark-field](../../
 
 ## Outputs
 
-Publications and released code produced under ROOTS are tagged on the [publications](/publications/) and [code and data](/code-and-data/) pages.
+Publications and released code produced under ROOTS are tagged on the [publications](../../../publications/) and [code and data](../../../code-and-data/) pages.

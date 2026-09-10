@@ -23,7 +23,7 @@
   <section id="research">
     <div class="sechead">
       <h2>What we work on</h2>
-      <p class="side">{{ $p.researchSide }} <a href="{{ "/research/" | relURL }}">All research &rarr;</a></p>
+      <p class="side">{{ $p.researchSide }} <a href="{{ "research/" | relURL }}">All research &rarr;</a></p>
     </div>
     <div class="axes">
       {{ range $i, $a := . }}
@@ -92,7 +92,7 @@
   <section id="papers">
     <div class="sechead">
       <h2>Recent papers</h2>
-      <p class="side">Pulled from ORCID <span class="mono">{{ site.Params.orcid }}</span> — the one-line takeaways are written by hand. <a href="{{ "/publications/" | relURL }}">All publications &rarr;</a></p>
+      <p class="side">Pulled from ORCID <span class="mono">{{ site.Params.orcid }}</span> — the one-line takeaways are written by hand. <a href="{{ "publications/" | relURL }}">All publications &rarr;</a></p>
     </div>
     <div class="papers">
       {{ $recent := where (where . "hidden" "!=" true) "featured" true }}

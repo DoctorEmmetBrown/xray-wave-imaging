@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="wrap">
   <div class="pagehead">
-    <div class="crumb"><a href="{{ "/" | relURL }}">Home</a> / People</div>
+    <div class="crumb"><a href="{{ site.Home.RelPermalink }}">Home</a> / People</div>
     <h1>{{ .Title }}</h1>
     {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
   </div>
@@ -15,7 +15,7 @@
       {{ range . }}
       <article class="member">
         <div class="ph">
-          {{ if .photo }}<img src="{{ .photo | relURL }}" alt="{{ .name }}" loading="lazy">
+          {{ if .photo }}<img src="{{ strings.TrimPrefix "/" .photo | relURL }}" alt="{{ .name }}" loading="lazy">
           {{ else }}<span>{{ substr .name 0 1 }}</span>{{ end }}
         </div>
         <span class="role">{{ .role }}</span>
@@ -68,7 +68,7 @@
           {{ range . }}
           <div class="alum">
             <div class="who">
-              {{ with .photo }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+              {{ with .photo }}<img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="" loading="lazy">{{ end }}
               <span>{{ .name }}{{ with .years }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ . }}</span>{{ end }}</span>
             </div>
             <div class="now">{{ with .now }}{{ . }}{{ else }}<span class="todo">where are they now?</span>{{ end }}</div>

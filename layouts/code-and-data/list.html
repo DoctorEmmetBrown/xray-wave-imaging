@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="wrap">
   <div class="pagehead">
-    <div class="crumb"><a href="{{ "/" | relURL }}">Home</a> / Code &amp; Data</div>
+    <div class="crumb"><a href="{{ site.Home.RelPermalink }}">Home</a> / Code &amp; Data</div>
     <h1>{{ .Title }}</h1>
     {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
   </div>

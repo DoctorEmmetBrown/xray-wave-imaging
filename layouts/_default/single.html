@@ -2,7 +2,7 @@
 <div class="wrap">
   <div class="pagehead">
     <div class="crumb">
-      <a href="{{ "/" | relURL }}">Home</a> / <a href="{{ "/research/" | relURL }}">Research</a>
+      <a href="{{ site.Home.RelPermalink }}">Home</a> / <a href="{{ "research/" | relURL }}">Research</a>
       {{ if eq .Params.ptype "project" }} / Projects{{ end }}
     </div>
     <h1>{{ .Title }}</h1>
@@ -74,8 +74,8 @@
       <div class="railbox">
         <h4>Elsewhere</h4>
         <ul>
-          <li><a href="{{ "/publications/" | relURL }}">Publications</a></li>
-          <li><a href="{{ "/code-and-data/" | relURL }}">Code &amp; data</a></li>
+          <li><a href="{{ "publications/" | relURL }}">Publications</a></li>
+          <li><a href="{{ "code-and-data/" | relURL }}">Code &amp; data</a></li>
           <li><a href="mailto:{{ site.Params.email }}">Get in touch</a></li>
         </ul>
       </div>

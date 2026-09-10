@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="wrap">
   <div class="pagehead">
-    <div class="crumb"><a href="{{ "/" | relURL }}">Home</a> / Publications</div>
+    <div class="crumb"><a href="{{ site.Home.RelPermalink }}">Home</a> / Publications</div>
     <h1>{{ .Title }}</h1>
     {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
   </div>
@@ -43,7 +43,7 @@
   <section id="all">
     <div class="sechead">
       <h2>Everything</h2>
-      <p class="side">{{ len $papers }} entries, newest first. Datasets are listed separately under <a href="{{ "/code-and-data/" | relURL }}">code and data</a>.</p>
+      <p class="side">{{ len $papers }} entries, newest first. Datasets are listed separately under <a href="{{ "code-and-data/" | relURL }}">code and data</a>.</p>
     </div>
 
     {{ $years := slice }}

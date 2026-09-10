@@ -24,7 +24,7 @@
     <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
          alt="{{ $alt }}" loading="lazy">
   {{ else }}
-    <img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy">
+    <img src="{{ strings.TrimPrefix "/" $src | relURL }}" alt="{{ $alt }}" loading="lazy">
   {{ end }}
 {{ else }}
 {{ $m := .motif | default "speckle" }}

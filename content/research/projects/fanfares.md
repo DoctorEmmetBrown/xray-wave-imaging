@@ -43,7 +43,7 @@ Two three-year contracts run from October 2026 to September 2029:
 - **XRF ghost tomography** — element-specific three-dimensional maps from a compressive acquisition
   and a single-element fluorescence detector. Hosted at CREATIS in Lyon.
 
-Both students appear on the [people](/people/) page.
+Both students appear on the [people](../../../people/) page.
 
 ## Why it matters beyond the chair
 
