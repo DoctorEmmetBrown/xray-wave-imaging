@@ -14,7 +14,7 @@
   orcid: "0000-0002-0332-4903"
   scholar: "https://scholar.google.com/citations?user=5QmSCc4AAAAJ"
   email: "emmanuel.brun@inserm.fr"
-  photo: ""
+  photo: "/img/people/brun-emmanuel.jpg"
 
 - name: "Sam Bayat"
   role: "Professor of Medicine, UGA · CHU Grenoble Alpes"
@@ -65,21 +65,21 @@
   topic: "Statistical retrieval of the directional dark-field signal — MUSITOX"
   orcid: ""
   scholar: ""
-  photo: ""
+  photo: "/img/people/kefs-samy.jpg"
 
 - name: "Kim Bazot"
   role: "PhD student"
   topic: "Directional dark-field beyond the tensor model — ROOTS"
   orcid: ""
   scholar: ""
-  photo: ""
+  photo: "/img/people/bazot-kim.jpg"
 
 - name: "Rémi Dupraz-Roget"
   role: "PhD student"
   topic: "Learned reconstruction — MIAI, co-supervised with TIMC"
   orcid: ""
   scholar: ""
-  photo: ""
+  photo: "/img/people/dupraz-roget-remi.jpg"
 
 - name: "Vicente Estopier-Castillo"
   role: "PhD student"

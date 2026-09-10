@@ -3,7 +3,7 @@ title: "Phase retrieval and inverse problems"
 ptype: "axis"
 short: "Inverse problems"
 motif: "grid"
-weight: 30
+weight: 40
 blurb: "Single-shot joint retrieval of phase and attenuation, variational solvers with the right regularisation, and learned priors where they genuinely beat the analytic ones."
 lead: "Every method on this site ends in the same place: an ill-posed inverse problem, a limited number of measurements, and a decision about what prior knowledge is legitimate to inject."
 ---

@@ -1,5 +1,5 @@
 ---
 title: "Research"
-lead: "One instrument philosophy: no gratings, no interferometer — a patterned mask in the beam and enough mathematics to turn what it does to the wavefront back into a picture of the sample. Physicists, mathematicians, biologists and medical doctors work on each of these axes together."
+lead: "One method runs through all of this: pattern the beam rather than the detector, put the physics in the forward model, and recover the picture by processing — whether what comes back is a wavefront, a scattering orientation or an elemental map. Physicists, mathematicians, biologists and medical doctors work on each of these axes together."
 weight: 10
 ---

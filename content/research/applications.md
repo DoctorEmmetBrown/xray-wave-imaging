@@ -3,7 +3,7 @@ title: "Applications: virtual histology and heritage"
 ptype: "axis"
 short: "Applications"
 motif: "tissue"
-weight: 40
+weight: 50
 blurb: "Lung, heart and fetal tissue imaged without sectioning or staining — and, when the beam is free, ink and text hidden inside objects nobody is allowed to open."
 lead: "Two application families that look unrelated and are in fact the same measurement: soft, weakly absorbing material, imaged without being cut, stained or unfolded."
 ---

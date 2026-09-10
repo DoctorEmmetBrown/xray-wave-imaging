@@ -67,7 +67,10 @@
         <div class="alumni">
           {{ range . }}
           <div class="alum">
-            <div>{{ .name }}{{ with .years }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ . }}</span>{{ end }}</div>
+            <div class="who">
+              {{ with .photo }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+              <span>{{ .name }}{{ with .years }} <span class="mono" style="color:var(--dim);font-size:.78rem">{{ . }}</span>{{ end }}</span>
+            </div>
             <div class="now">{{ with .now }}{{ . }}{{ else }}<span class="todo">where are they now?</span>{{ end }}</div>
           </div>
           {{ end }}

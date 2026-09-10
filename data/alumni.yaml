@@ -1,64 +1,82 @@
-# Former members. `role` groups them on the People page — the template renders
-# the groups in this order: Postdocs, Doctoral students, Medical research year.
+# Former members, grouped on the People page in this order: Postdocs, Doctoral
+# students, Medical research year.
 #
-# `now` is the most useful field on the whole page for a candidate weighing up
-# whether to join, so it is worth chasing people up to fill it in. Until it is
-# filled, the site shows a visible marker rather than a blank.
+# Portraits are the drawn ones from the group's own deck, in static/img/people/.
+# `now` is the most useful field on the page for a candidate weighing up whether
+# to join; until it is filled the site shows a visible marker rather than a blank.
 
 # ---- postdocs ----
 - name: "Jérôme Lesaint"
   role: "postdoc"
   years: ""
   now: ""
+  photo: "/img/people/lesaint-jerome.jpg"
 - name: "Luca Fardin"
   role: "postdoc"
   years: ""
   now: ""
+  photo: "/img/people/fardin-luca.jpg"
 - name: "Shifali Singh"
   role: "postdoc"
   years: ""
   now: ""
+  photo: "/img/people/singh-shifali.jpg"
 - name: "Jayde Livingstone"
   role: "postdoc"
   years: ""
   now: ""
+  photo: "/img/people/livingstone-jayde.jpg"
 - name: "Ludovic Broche"
   role: "postdoc"
   years: ""
   now: ""
+  photo: "/img/people/broche-ludovic.jpg"
 - name: "Jussi-Petteri Suuronen"
   role: "postdoc"
   years: ""
   now: ""
+  photo: "/img/people/suuronen-jussi-petteri.jpg"
 
 # ---- doctoral students ----
 - name: "Clara Magnin"
   role: "phd"
   years: ""
   now: ""      # co-founder of arXimed
+  photo: "/img/people/magnin-clara.jpg"
 - name: "Christopher Ninham"
   role: "phd"
   years: ""
   now: ""
+  photo: "/img/people/ninham-christopher.jpg"
 - name: "Laurène Quenot"
   role: "phd"
   years: ""
   now: ""
+  photo: "/img/people/quenot-laurene.jpg"
 - name: "Clément Tavakoli"
   role: "phd"
   years: ""
   now: ""
+  photo: "/img/people/tavakoli-clement.jpg"
 - name: "Hélène Rougé-Labriet"
   role: "phd"
   years: ""
   now: ""
+  photo: "/img/people/rouge-labriet-helene.jpg"
 
 # ---- medical research year ----
+- name: "Sarah Abdellaoui"
+  role: "med"
+  years: ""
+  now: ""
+  photo: "/img/people/abdellaoui-sarah.jpg"
 - name: "Kim Pasquier"
   role: "med"
   years: ""
   now: ""
-- name: "Pierre-Louis Verot"
+  photo: "/img/people/pasquier-kim.jpg"
+- name: "Pierre-Louis Vérot"
   role: "med"
   years: ""
   now: ""
+  photo: "/img/people/verot-pierre-louis.jpg"

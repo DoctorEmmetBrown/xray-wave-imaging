@@ -7,7 +7,9 @@ lead: "Who we are, where we sit, and what we can measure for you."
 ## The group
 
 The X-ray Wave Imaging Group develops wave-optical X-ray imaging methods — phase contrast,
-dark-field, and the inverse problems needed to turn either into a measurement. Physicists, applied
+dark-field, single-pixel sensing for fluorescence and scattering, and the inverse problems needed to
+turn any of them into a measurement. The **MIAI FANFARES chair**, held with CREATIS and CEA IRIG,
+anchors that computational side of the work. Physicists, applied
 mathematicians, image-processing specialists, biologists and medical doctors work side by side here,
 which is the only way a method ever makes it from an optical bench to a question someone actually
 asked. We are part of the **Translational Theranostics team (3T)** at the Institute for Advanced
