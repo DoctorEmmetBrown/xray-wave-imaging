@@ -44,6 +44,23 @@
   authors: ''
   sources:
   - site owner
+- title: A Customised Mechanical Ventilator for Combined Oscillometry and X-ray CT Ventilation Imaging
+  venue: IEEE Transactions on Instrumentation and Measurement
+  year: 2026
+  type: article
+  doi: 10.1109/TIM.2026.3674280
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Characterizing heterogeneity and subphenotyping acute respiratory distress syndrome with computed
+    tomography
+  venue: Intensive Care Medicine Experimental
+  year: 2026
+  type: article
+  doi: 10.1186/s40635-026-00880-x
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Clinical potential of phase contrast imaging in dentomaxillofacial radiology compared to cone
     beam CT
   venue: Diagnostic and Interventional Imaging
@@ -81,6 +98,15 @@
   axes:
   - modulation-based-imaging
   featured: true
+- title: Regional ventilation imaging in normal and bronchoconstricted in vivo rabbit lungs using dynamic
+    shuttle mode Xe-enhanced DECT imaging
+  venue: Physics in Medicine & Biology
+  year: 2026
+  type: article
+  doi: 10.1088/1361-6560/ae4164
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Single-exposure statistical retrieval of the directional dark-field signal
   venue: Optica 13(6)
   year: 2026
@@ -94,6 +120,14 @@
   featured: true
   axes:
   - directional-dark-field
+- title: 'The lung in acute respiratory failure: insights from synchrotron radiation imaging'
+  venue: Intensive Care Medicine Experimental
+  year: 2026
+  type: article
+  doi: 10.1186/s40635-026-00896-3
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: A self-healing radiopaque hyaluronic acid hydrogel as a new injectable biomaterial for precision
     medicine in osteoarthritis.
   venue: Theranostics
@@ -103,6 +137,40 @@
   authors: ''
   sources:
   - site owner
+- title: Air artifact suppression in phase contrast micro-CT using conditional generative adversarial
+    networks
+  venue: Journal of Synchrotron Radiation
+  year: 2025
+  type: article
+  doi: 10.1107/S1600577525001511
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Deformation-aided lung segmentation: Introducing the DALS network for efficient learning'
+  venue: Next Research
+  year: 2025
+  type: article
+  doi: 10.1016/j.nexres.2025.101005
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Early-life exposure to a mixture of phenols and respiratory health in preschool children
+  venue: European Respiratory Journal
+  year: 2025
+  type: article
+  doi: 10.1183/13993003.02265-2024
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Early-life exposures to phenols, parabens and phthalates and fat mass at 3 years of age in the
+    SEPAGES cohort
+  venue: Environmental Research
+  year: 2025
+  type: article
+  doi: 10.1016/j.envres.2024.120555
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: How X-ray dark-field imaging relates to small-angle X-ray scattering measurements.
   venue: Journal of applied crystallography
   year: 2025
@@ -116,6 +184,15 @@
   axes:
   - directional-dark-field
   featured: true
+- title: 'Imaging technologies in experimental pulmonary fibrosis research: essential tool for enhanced
+    translational relevance'
+  venue: European Respiratory Review
+  year: 2025
+  type: article
+  doi: 10.1183/16000617.0012-2025
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Longitudinal imaging with multicolour CT provides a surrogate marker of response to treatment
     with a novel iodine-labelled hydrogel in a murine model of osteoarthritis
   venue: ''
@@ -125,6 +202,24 @@
   authors: ''
   sources:
   - site owner
+- title: 'Prenatal phenol exposure and child behaviour: insights into the hypothalamic–pituitary–adrenal
+    axis from two prospective mother–child cohorts'
+  venue: The Lancet Planetary Health
+  year: 2025
+  type: article
+  doi: 10.1016/j.lanplh.2025.101330
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Relationship Between V̇A/Q̇ Mismatch and Capnogram Phase III Slope in Acute Bronchoconstriction
+    and Its Modulation by Salbutamol Assessed by Synchrotron Imaging in Rabbit Lung
+  venue: Anesthesiology
+  year: 2025
+  type: article
+  doi: 10.1097/ALN.0000000000005807
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Review and experimental comparison of speckle-tracking algorithms for X-ray phase contrast imaging
   venue: Journal of Synchrotron Radiation
   year: 2025
@@ -147,6 +242,15 @@
   authors: ''
   sources:
   - site owner
+- title: 3D quantification of the lacunocanalicular network on human femoral diaphysis through synchrotron
+    radiation-based nanoCT
+  venue: Journal of Structural Biology
+  year: 2024
+  type: article
+  doi: 10.1016/j.jsb.2024.108111
+  authors: ''
+  sources:
+  - Cécile Olivier
 - title: Combining Wave and Particle Effects in the Simulation of X-ray Phase Contrast—A Review
   venue: Instruments
   year: 2024
@@ -164,6 +268,23 @@
   authors: ''
   sources:
   - site owner
+- title: Parents’ Sleep Multi-Trajectory Modelling from 3 to 36 Months Postpartum in the SEPAGES Cohort
+  venue: Nature and Science of Sleep
+  year: 2024
+  type: article
+  doi: 10.2147/NSS.S430024
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Placental DNA methylation signatures of prenatal air pollution exposure and potential effects
+    on birth outcomes: an analysis of three prospective cohorts'
+  venue: The Lancet Planetary Health
+  year: 2024
+  type: article
+  doi: 10.1016/s2542-5196(24)00045-7
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Refraction simulation for optimisation of X-Ray Phase Contrast imaging
   venue: ''
   year: 2024
@@ -217,6 +338,15 @@
   axes:
   - directional-dark-field
   featured: true
+- title: 'Fractal dimension of pulmonary gas and blood distribution assessed by synchrotron K-edge subtraction
+    imaging: effect of bronchoconstriction'
+  venue: Journal of Applied Physiology
+  year: 2023
+  type: article
+  doi: 10.1152/japplphysiol.00051.2023
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: High-resolution synchrotron K-edge subtraction CT allows tracking and quantifying therapeutic
     cells and their scaffold in a rat model of focal cerebral injury and can serve as a reference for
     spectral photon counting CT.
@@ -227,6 +357,14 @@
   authors: ''
   sources:
   - site owner
+- title: Human femoral lacuno-canalicular network by X-ray nano-CT
+  venue: ''
+  year: 2023
+  type: conference-paper
+  doi: ''
+  authors: ''
+  sources:
+  - Cécile Olivier
 - title: Human fetal virtual histology with X-ray phase contrast imaging
   venue: ''
   year: 2023
@@ -252,6 +390,41 @@
   authors: ''
   sources:
   - site owner
+- title: In vivo targeting and multimodal imaging of cerebral amyloid-β aggregates using hybrid GdF 3
+    nanoparticles
+  venue: Nanomedicine
+  year: 2023
+  type: article
+  doi: 10.2217/nnm-2022-0252
+  authors: ''
+  sources:
+  - Cécile Olivier
+- title: Intracellular Fate of Sub-Toxic Concentration of Functionalized Selenium Nanoparticles in Aggressive
+    Prostate Cancer Cells
+  venue: Nanomaterials
+  year: 2023
+  type: article
+  doi: 10.3390/nano13232999
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Lung functional imaging
+  venue: Breathe
+  year: 2023
+  type: article
+  doi: 10.1183/20734735.0272-2022
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Quantification of cartilage and subchondral bone cysts on knee specimens based on a spectral
+    photon-counting computed tomography
+  venue: Scientific Reports
+  year: 2023
+  type: article
+  doi: 10.1038/s41598-023-38238-y
+  authors: ''
+  sources:
+  - Cécile Olivier
 - title: Taking into account wave effects in Monte Carlo simulation of phase contrast imaging using the
     Wigner Distribution Function
   venue: ''
@@ -279,6 +452,7 @@
   authors: ''
   sources:
   - site owner
+  - Cécile Olivier
 - title: 'Brain virtual histology with X-ray phase-contrast tomography Part I: whole-brain myelin mapping
     in white-matter injury models'
   venue: Biomedical Optics Express
@@ -302,6 +476,15 @@
   authors: ''
   sources:
   - site owner
+- title: CARTILAGE THICKNESS MEASUREMENTS FROM PHOTO-COUNTING SPECTRAL COMPUTED TOMOGRAPHY IMAGES COMPARED
+    WITH SYNCHROTRON RADIATION COMPUTED TOMOGRAPHY
+  venue: ''
+  year: 2022
+  type: other
+  doi: ''
+  authors: ''
+  sources:
+  - Cécile Olivier
 - title: Evaluating inflammations in high-resolution x-ray phase contrast images of SKG spondylarthritis
     mice models
   venue: Developments in X-Ray Tomography XIV
@@ -320,6 +503,14 @@
   authors: ''
   sources:
   - site owner
+- title: International consensus on lung function testing during the COVID-19 pandemic and beyond
+  venue: ERJ Open Research
+  year: 2022
+  type: article
+  doi: 10.1183/23120541.00602-2021
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Monitoring the fate of stem cells and encapsulating hydrogel intraarticularly injected in mice
     knees using Synchrotron K-edge subtraction computed tomography
   venue: ''
@@ -362,6 +553,15 @@
   authors: ''
   sources:
   - site owner
+- title: Virtual monoenergetic images from photon-counting spectral computed tomography to assess knee
+    osteoarthritis
+  venue: European Radiology Experimental
+  year: 2022
+  type: article
+  doi: 10.1186/s41747-021-00261-x
+  authors: ''
+  sources:
+  - Cécile Olivier
 - title: 'X-ray Phase Contrast Imaging from Synchrotron to Conventional Sources: A Review of the Existing
     Techniques for Biological Applications'
   venue: Applied Sciences
@@ -379,6 +579,14 @@
   authors: ''
   sources:
   - site owner
+- title: A Mouse Model for Microbeam Radiation Therapy of the Lung
+  venue: International Journal of Radiation Oncology Biology Physics
+  year: 2021
+  type: article
+  doi: 10.1016/J.IJROBP.2020.12.030
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'An iodine-labelled hyaluronic acid-based hydrogel : a radiopaque biopolymer to monitor the fate
     of bioscaffold in cell therapy applications'
   venue: ''
@@ -443,6 +651,14 @@
   authors: ''
   sources:
   - site owner
+- title: Fractal analysis reveals functional unit of ventilation in the lung
+  venue: The Journal of Physiology
+  year: 2021
+  type: article
+  doi: 10.1113/JP282093
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Imagerie en contraste de phase par source synchrotron appliquée à l’étude anatomique de la vascularisation
     de la main
   venue: Morphologie
@@ -452,6 +668,14 @@
   authors: ''
   sources:
   - site owner
+- title: Imaging atelectrauma in Ventilator-Induced Lung Injury using 4D X-ray microscopy
+  venue: Scientific Reports
+  year: 2021
+  type: article
+  doi: 10.1038/S41598-020-77300-X
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Implicit tracking approach for X-ray phase-contrast imaging with a random mask and a conventional
     system
   venue: Optica
@@ -474,6 +698,15 @@
   authors: ''
   sources:
   - site owner
+- title: Micrometer-resolution X-ray tomographic full-volume reconstruction of an intact post-mortem juvenile
+    rat lung
+  venue: Histochemistry and Cell Biology
+  year: 2021
+  type: article
+  doi: 10.1007/s00418-020-01868-8
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Multimodal Imaging with NanoGd Reveals Spatiotemporal Features of Neuroinflammation after Experimental
     Stroke
   venue: Advanced Science
@@ -483,6 +716,24 @@
   authors: ''
   sources:
   - site owner
+- title: 'Nasal High Flow at 25 L/min or Expiratory Resistive Load Do Not Improve Regional Lung Function
+    in Patients With COPD: A Functional CT Imaging Study'
+  venue: Frontiers in Physiology
+  year: 2021
+  type: article
+  doi: 10.3389/FPHYS.2021.683316
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Regional lung viscoelastic properties in supine and prone position in a porcine model of acute
+    respiratory distress syndrome
+  venue: Journal of Applied Physiology
+  year: 2021
+  type: article
+  doi: 10.1152/japplphysiol.00104.2021
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Synchrotron phase-contrast imaging applied to the anatomical study of the hand and its vascularization
   venue: Journal of Anatomy
   year: 2021
@@ -509,6 +760,15 @@
   authors: ''
   sources:
   - site owner
+- title: A novel approach for automated alveolar morphometry using synchrotron X-ray microtomography in
+    intact rat lung
+  venue: European Respiratory Journal
+  year: 2020
+  type: article
+  doi: 10.1183/13993003.CONGRESS-2020.1932
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Comparison of X-ray speckle based imaging deflection retrieval algorithms for the optimization
     of radiation dose.
   venue: Physics in medicine and biology
@@ -518,6 +778,57 @@
   authors: ''
   sources:
   - site owner
+- title: Comparison of pleural and esophageal pressure in supine and prone positions in a porcine model
+    of acute respiratory distress syndrome
+  venue: 'Journal of Applied Physiology: Respiratory, Environmental and Exercise Physiology'
+  year: 2020
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.00251.2020
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Effect Of Nasal Airway Nonlinearities On Oscillometric Resistance Measurements In Infants
+  venue: 'Journal of Applied Physiology: Respiratory, Environmental and Exercise Physiology'
+  year: 2020
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.00128.2020
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Feasibility and reproducibility of oscillometry for measuring respiratory function in young
+    children: the SEPAGES cohort'
+  venue: European Respiratory Journal
+  year: 2020
+  type: article
+  doi: 10.1183/13993003.CONGRESS-2020.1934
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Functional lung imaging with synchrotron radiation: Methods and preclinical applications'
+  venue: Physica Medica
+  year: 2020
+  type: article
+  doi: 10.1016/j.ejmp.2020.10.001
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Multiscale pink-beam microCT imaging at the ESRF-ID17 biomedical beamline
+  venue: Journal of Synchrotron Radiation
+  year: 2020
+  type: article
+  doi: 10.1107/S160057752000911X
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Physiologically variable ventilation reduces regional lung inflammation in a pediatric model
+    of acute respiratory distress syndrome
+  venue: Respiratory Research
+  year: 2020
+  type: article
+  doi: 10.1186/S12931-020-01559-X
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Synchrotron X-ray boost delivered by Microbeam Radiation Therapy after conventional X-ray therapy
     fractionated in time improves F98 glioma control.
   venue: International journal of radiation oncology, biology, physics
@@ -527,6 +838,15 @@
   authors: ''
   sources:
   - site owner
+- title: Within-breath dynamics of atelectrauma during mechanical ventilation studied by in vivo 4D microscopy
+    in injured rabbit lung
+  venue: European Respiratory Journal
+  year: 2020
+  type: article
+  doi: 10.1183/13993003.CONGRESS-2020.1933
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'X-ray Phase Contrast osteo-articular imaging: a pilot study on cadaveric human hands'
   venue: Scientific Reports
   year: 2020
@@ -535,6 +855,15 @@
   authors: ''
   sources:
   - site owner
+- title: X-ray Tomographic In Situ Imaging of an Entire Post Mortem Juvenile Rat Lung at Microscopical
+    Resolution
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2020
+  type: article
+  doi: 10.1164/AJRCCM-CONFERENCE.2020.201.1_MEETINGABSTRACTS.A2342
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: X-ray multi-modal intrinsic-speckle-tracking
   venue: Journal of Optics
   year: 2020
@@ -557,6 +886,88 @@
   authors: ''
   sources:
   - site owner
+  - Sam Bayat
+- title: 'Benefits of physiological variable ventilation during asthma exacerbations: a randomised experimental
+    study'
+  venue: Schweizerische Medizinische Wochenschrift
+  year: 2019
+  type: article
+  doi: 10.1183/13993003.CONGRESS-2019.PA778
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Change in capnogram waveform is associated with bronchodilator response and asthma control in
+    children
+  venue: Pediatric Pulmonology
+  year: 2019
+  type: article
+  doi: 10.1002/ppul.24282
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Deciphering the Impact of Early-Life Exposures to Highly Variable Environmental Factors on Foetal
+    and Child Health: Design of SEPAGES Couple-Child Cohort'
+  venue: International Journal of Environmental Research and Public Health
+  year: 2019
+  type: article
+  doi: 10.3390/IJERPH16203888
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Effect of PEEP and I:E ratio on cerebral oxygenation in ARDS: an experimental study in anesthetized
+    rabbit'
+  venue: BMC Anesthesiology
+  year: 2019
+  type: article
+  doi: 10.1186/s12871-019-0782-y
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'High inspired oxygen fraction impairs lung volume and ventilation heterogeneity in healthy children:
+    a double-blind randomised controlled trial'
+  venue: British Journal of Anaesthesia
+  year: 2019
+  type: article
+  doi: 10.1016/J.BJA.2019.01.036
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Individual Airway Closure Characterized In Vivo by Phase-Contrast CT Imaging in Injured Rabbit
+    Lung
+  venue: Critical Care Medicine
+  year: 2019
+  type: article
+  doi: 10.1097/CCM.0000000000003838
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Regional distribution of lung inflammation in a multiple-hit model of ARDS assessed by micro-PET-CT
+    imaging in juvenile rabbits
+  venue: European Respiratory Journal
+  year: 2019
+  type: article
+  doi: 10.1183/13993003.CONGRESS-2019.PA3166
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Regional distribution of lung inflammation in an animal model of multiple-hit ARDS assessed by
+    micro-PET-CT imaging
+  venue: Schweizerische Medizinische Wochenschrift
+  year: 2019
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Reversing Cholinergic Bronchoconstriction by Common Inotropic Agents: A Randomized Experimental
+    Trial on Isolated Perfused Rat Lungs'
+  venue: Anesthesia & Analgesia
+  year: 2019
+  type: article
+  doi: 10.1213/ANE.0000000000003502
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Single-shot x-ray speckle-based imaging of a single-material object
   venue: ''
   year: 2019
@@ -565,6 +976,42 @@
   authors: ''
   sources:
   - site owner
+- title: The Effect of Positive End-Expiratory Pressure on Lung Micromechanics Assessed by Synchrotron
+    Radiation Computed Tomography in an Animal Model of ARDS
+  venue: Journal of Clinical Medicine
+  year: 2019
+  type: article
+  doi: 10.3390/JCM8081117
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Variable Ventilation Is Equally Effective as Conventional Pressure Control Ventilation for Optimizing
+    Lung Function in a Rabbit Model of ARDS
+  venue: Frontiers in Physiology
+  year: 2019
+  type: article
+  doi: 10.3389/FPHYS.2019.00803
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: t Regional Behavior of Airspaces During Positive Pressure Reduction Assessed by Synchrotron Radiation
+    Computed Tomography
+  venue: Frontiers in Physiology
+  year: 2019
+  type: article
+  doi: 10.3389/FPHYS.2019.00719
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Comparison between neurally-assisted, controlled, and physiologically variable ventilation in
+    healthy rabbits
+  venue: British Journal of Anaesthesia
+  year: 2018
+  type: article
+  doi: 10.1016/J.BJA.2018.01.020
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Dosimetry for synchrotron imaging techniques
   venue: ''
   year: 2018
@@ -573,6 +1020,24 @@
   authors: ''
   sources:
   - site owner
+- title: High-Resolution Time-Resolved Phase-Contrast Synchrotron CT for Mapping Cardiac-Induced Lung
+    Motion
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2018
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Lung responses in murine models of experimental asthma: Value of house dust mite over ovalbumin
+    sensitization'
+  venue: Respiratory Physiology and Neurobiology
+  year: 2018
+  type: article
+  doi: 10.1016/J.RESP.2017.09.001
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'Quantitative Assessment of Degenerative Cartilage and Subchondral Bony Lesions in a Preserved
     Cadaveric Knee: Propagation-Based Phase-Contrast CT Versus Conventional MRI and CT.'
   venue: AJR. American journal of roentgenology
@@ -582,6 +1047,15 @@
   authors: ''
   sources:
   - site owner
+- title: Quantitative Imaging of Regional Aerosol Deposition, Lung Ventilation and Morphology by Synchrotron
+    Radiation CT
+  venue: Scientific Reports
+  year: 2018
+  type: article
+  doi: 10.1038/S41598-018-20986-X
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Rule-based model for smart building supervision and management
   venue: Proceedings - 2018 IEEE International Conference on Services Computing, SCC 2018 - Part of the
     2018 IEEE World Congress on Services
@@ -614,6 +1088,14 @@
   authors: ''
   sources:
   - site owner
+- title: Synchrotron X-Ray-Based Functional and Anatomical Lung Imaging Techniques
+  venue: 'Intracellular Delivery: Fundamentals and Applications'
+  year: 2018
+  type: article
+  doi: 10.1007/978-3-030-00368-5_10
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Virtual histology of animal and human brains with Alzheimer's disease
   venue: ''
   year: 2018
@@ -622,6 +1104,24 @@
   authors: ''
   sources:
   - site owner
+- title: Volumetric but Not Time Capnography Detects Ventilation/Perfusion Mismatch in Injured Rabbit
+    Lung
+  venue: Frontiers in Physiology
+  year: 2018
+  type: article
+  doi: 10.3389/FPHYS.2018.01805
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Bronchodilation potentials of inotropic drugs: comparison of dopamine, dobutamine, milrinone,
+    adrenaline and levosimendan'
+  venue: Swiss Medical Weekly
+  year: 2017
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Cartilage Imaging using HR Propagation-Based Phase-contrast CT in a Guinea Pig Knee Joint Model
     of Different Age Groups
   venue: ''
@@ -631,6 +1131,24 @@
   authors: ''
   sources:
   - site owner
+- title: Comparison of physiologically and mathematically variable ventilations in an animal model of
+    acute lung injury
+  venue: Swiss Medical Weekly
+  year: 2017
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Enhancing Lung Tumor Visibility Using In-Vivo Analyzer-Based X-Ray Phase Contrast Imaging In
+    Mouse: A Feasibility Study'
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2017
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Fast Granulometry Operator for the 3D Identification of Cell Structures
   venue: Fundamenta Informaticae
   year: 2017
@@ -648,6 +1166,15 @@
   authors: ''
   sources:
   - site owner
+- title: 'Imaging Intra-Breath Cyclic Changes In Regional Pulmonary Blood Volume: Effect Of Peep, Tidal
+    Volume And Gravity Gravity'
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2017
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Ontology-based model for trusted critical site supervision in FUSE-IT
   venue: Proceedings of the 2017 20th Conference on Innovations in Clouds, Internet and Networks, ICIN
     2017
@@ -658,6 +1185,24 @@
   sources:
   - site owner
   hidden: true
+- title: Spatial distribution of ventilator induced lung injury at the acinar level. An in-vivo synchrotron
+    phase-contrast microscopy study in BALB/c mice
+  venue: Acta Anaesthesiologica Scandinavica
+  year: 2017
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Synchrotron Imaging Shows Effect of Ventilator Settings on Intrabreath Cyclic Changes in Pulmonary
+    Blood Volume
+  venue: American Journal of Respiratory Cell and Molecular Biology
+  year: 2017
+  type: article
+  doi: 10.1165/RCMB.2017-0007OC
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'The ID21 X-ray and infrared microscopy beamline at the ESRF: Status and recent applications
     to artistic materials'
   venue: Journal of Analytical Atomic Spectrometry
@@ -667,6 +1212,14 @@
   authors: ''
   sources:
   - site owner
+- title: The value of capnogram parameters in the detection of acute lung injury
+  venue: Schweizerische Medizinische Wochenschrift
+  year: 2017
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: X-ray tomography investigations of mono-sized sphere packing structures in cylindrical containers
   venue: Powder Technology
   year: 2017
@@ -701,6 +1254,32 @@
   authors: ''
   sources:
   - site owner
+- title: Dynamic mechanical interactions between neighboring airspaces determine cyclic opening and closure
+    in injured lung
+  venue: Acta Physiologica
+  year: 2016
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Fluid replacement and respiratory function: comparison of whole blood with colloid and crystalloid
+    A randomised animal study'
+  venue: European Journal of Anaesthesiology
+  year: 2016
+  type: article
+  doi: 10.1097/EJA.0000000000000251
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Imaging dynamic lung strain and specific elastance by K-edge subtraction computed tomography
+  venue: Acta Physiologica
+  year: 2016
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: In vivo pink-beam imaging and fast alignment procedure for rat brain tumor radiation therapy.
   venue: ''
   year: 2016
@@ -709,6 +1288,31 @@
   authors: ''
   sources:
   - site owner
+- title: Oscillatory Measurements Of Upper Airway Casts Reconstructed From CT Images
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2016
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Pressure-regulated volume control vs. volume control ventilation in healthy and injured rabbit
+    lung: An experimental study'
+  venue: European Journal of Anaesthesiology
+  year: 2016
+  type: article
+  doi: 10.1097/EJA.0000000000000485
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Respiratory Effects of Sarafotoxins from the Venom of Different Atractaspis Genus Snake Species
+  venue: Toxins
+  year: 2016
+  type: article
+  doi: 10.3390/toxins8070215
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Revealing metallic ink in Herculaneum papyri
   venue: Proceedings of the National Academy of Sciences
   year: 2016
@@ -731,6 +1335,15 @@
   authors: ''
   sources:
   - site owner
+- title: Zero expiratory pressure and low oxygen concentration promote heterogeneity of regional ventilation
+    and lung densities
+  venue: Acta Anaesthesiologica Scandinavica
+  year: 2016
+  type: article
+  doi: 10.1111/AAS.12719
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: A single-image method for x-ray refractive index CT
   venue: Physics in Medicine and Biology
   year: 2015
@@ -739,6 +1352,41 @@
   authors: ''
   sources:
   - site owner
+- title: Alveolar deflation dynamics before and after lung injury assessed by synchrotron radiation computed
+    tomography
+  venue: Intensive Care Medicine Experimental
+  year: 2015
+  type: article
+  doi: 10.1186/2197-425X-3-S1-A567
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'CT Density Distribution Analysis in Patients with Cystic Fibrosis: Correlation with Pulmonary
+    Function and Radiologic Scores'
+  venue: Academic Radiology
+  year: 2015
+  type: article
+  doi: 10.1016/J.ACRA.2014.09.003
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Diffusion-Convection Interaction As A Cause Of Uneven Gas Distribution In Rabbit Lung
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2015
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Effect of surfactant on regional lung function in an experimental model of respiratory distress
+    syndrome in rabbit
+  venue: 'Journal of Applied Physiology: Respiratory, Environmental and Exercise Physiology'
+  year: 2015
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.00047.2015
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: High contrast microstructural visualization of natural acellular matrices by means of phase-based
     x-ray tomography
   venue: Sci. Rep.
@@ -748,6 +1396,14 @@
   authors: ''
   sources:
   - site owner
+- title: Holographic laser Doppler imaging of pulsatile blood flow
+  venue: Journal of Biomedical Optics
+  year: 2015
+  type: article
+  doi: 10.1117/1.JBO.20.6.066006
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Microstructure of out-of-pile annealed neutron irradiated beryllium studied by X-ray tomography
   venue: Acta Materialia
   year: 2015
@@ -777,6 +1433,15 @@
   axes:
   - applications
   featured: true
+- title: 'Role Of Parenchymal Interdependence In The Short-Term Dynamics Of Recruitment/derecruitment
+    In Injured Lung: A Modelling Study'
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2015
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Single-image phase retrieval using an edge illumination X-ray phase-contrast imaging setup
   venue: J Synchrotron Radiat
   year: 2015
@@ -794,6 +1459,24 @@
   authors: ''
   sources:
   - site owner
+- title: Validation of airway resistance models for predicting pressure loss through anatomically realistic
+    conducting airway replicas of adults and children
+  venue: Journal of Biomechanics
+  year: 2015
+  type: article
+  doi: 10.1016/J.JBIOMECH.2015.03.035
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 0897. Mechanisms of pulmonary inflation during lung injury assessed by synchrotron radiation
+    computed tomography
+  venue: Intensive Care Medicine Experimental
+  year: 2014
+  type: article
+  doi: 10.1186/2197-425X-2-S1-O23
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: A dictionary learning approach with overlap for the low dose computed tomography reconstruction
     and its vectorial application to differential phase tomography
   venue: PLoS ONE
@@ -803,6 +1486,15 @@
   authors: ''
   sources:
   - site owner
+- title: 'Alveolar Recruitment And Distension During Mechanical Ventilation: Synchrotron Radiation Computed
+    Tomography In An In-Vivo Model Of Acute Lung Injury'
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2014
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Breast tumor segmentation in high resolution x-ray phase contrast analyzer based computed tomography
   venue: Medical Physics
   year: 2014
@@ -820,6 +1512,42 @@
   authors: ''
   sources:
   - site owner
+- title: 'Changes in regional distribution of gas and blood volumes within a single respiratory cycle:
+    Effect of tidal volume, PEEP and respiratory pattern'
+  venue: European Respiratory Journal
+  year: 2014
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'Fluid resuscitation of acute blood loss with colloid or crystalloid solutions: Effects on the
+    respiratory mechanics'
+  venue: European Respiratory Journal
+  year: 2014
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Individual Airway Narrowing And Closure Studied By Phase-Contrast CT Imaging In Injured Rabbit
+    Lung
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2014
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Low End-Expiratory Pressure Promotes Heterogeneity Of Regional Specific Ventilation And Lung
+    Densities During Mechanical Ventilation
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2014
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'PyHST2: an hybrid distributed code for high speed tomographic reconstruction with iterative
     reconstruction and a priori knowledge capabilities'
   venue: 'Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials
@@ -830,6 +1558,23 @@
   authors: ''
   sources:
   - site owner
+- title: Radiation dose and image quality in K-edge subtraction computed tomography of lung in vivo
+  venue: Journal of Synchrotron Radiation
+  year: 2014
+  type: article
+  doi: 10.1107/S160057751401697X
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Short-Term Recruitment/derecruitment Demonstrated By Phase-Contrast CT Imaging In Injured Rabbit
+    Lung
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2014
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: The PyHST2 hybrid distributed code for high speed tomographic reconstruction with iterative reconstruction
     and a priori knowledge capabilities
   venue: 'Nuclear Instruments and Methods in Physics Research, Section B: Beam Interactions with Materials
@@ -867,6 +1612,33 @@
   authors: ''
   sources:
   - site owner
+- title: 'Correction: Effet of Combined Nitrogen Dioxide and Carbon Nanoparticle Exposure on Lung Function
+    During Ovalbumin Sensitization in Brown Norway Rat'
+  venue: Plos One
+  year: 2013
+  type: article
+  doi: 10.1371/ANNOTATION/D271D9C1-5588-4B43-85C3-D3DE58AB61A4
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Differences in the pattern of bronchoconstriction induced by intravenous and inhaled methacholine
+    in rabbit
+  venue: Respiratory Physiology and Neurobiology
+  year: 2013
+  type: article
+  doi: 10.1016/J.RESP.2013.08.024
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Effect of Positive End-expiratory Pressure on Regional Ventilation Distribution during Mechanical
+    Ventilation after Surfactant Depletion
+  venue: Anesthesiology
+  year: 2013
+  type: article
+  doi: 10.1097/ALN.0B013E318291C165
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: New imaging technology lowers radiation dose in breast scans
   venue: SPIE Newsroom
   year: 2013
@@ -884,6 +1656,14 @@
   authors: ''
   sources:
   - site owner
+- title: Role of cellular effectors in the emergence of ventilation defects during allergic bronchoconstriction
+  venue: 'Journal of Applied Physiology: Respiratory, Environmental and Exercise Physiology'
+  year: 2013
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.00844.2012
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Synchrotron microbeam radiation therapy induces hypoxia in intracerebral gliosarcoma but not
     in the normal brain
   venue: Radiotherapy and Oncology
@@ -901,6 +1681,14 @@
   authors: ''
   sources:
   - site owner
+- title: Correlative Nanoscale 3D Imaging of Structure and Composition in Extended Objects
+  venue: Plos One
+  year: 2012
+  type: article
+  doi: 10.1371/JOURNAL.PONE.0050124
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'Determination of effective transport properties of metallic foams: Morphology and flow laws'
   venue: Single and Two-Phase Flows on Chemical and Biomedical Engineering
   year: 2012
@@ -909,6 +1697,15 @@
   authors: ''
   sources:
   - site owner
+- title: Feasibility of K-edge subtraction (KES) synchrotron imaging for the measurement of regional aerosol
+    deposition, lung ventilation and airway morphology in rabbit
+  venue: Fundamental & Clinical Pharmacology
+  year: 2012
+  type: article
+  doi: 10.1164/AJRCCM-CONFERENCE.2012.185.1_MEETINGABSTRACTS.A5577
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'High-resolution breast tomography at high energy: A feasibility study of phase contrast imaging
     on a whole breast'
   venue: Physics in Medicine and Biology
@@ -940,6 +1737,15 @@
   authors: ''
   sources:
   - site owner
+- title: In-Vivo Synchrotron Imaging Of Regional Ventilation And Blood Volume After Methacholine Provocation
+    In Rabbit
+  venue: American Thoracic Society International Conference
+  year: 2012
+  type: conference-paper
+  doi: 10.1164/AJRCCM-CONFERENCE.2012.185.1_MEETINGABSTRACTS.A3679
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Numerical prediction of the radiative behavior of metallic foams from the microscopic to macroscopic
     scale
   venue: 'Journal of Physics: Conference Series'
@@ -949,6 +1755,15 @@
   authors: ''
   sources:
   - site owner
+- title: Quasi-simultaneous in-vivo synchrotron imaging of regional ventilation and blood volume distributions
+    after methacholine provocation in rabbit
+  venue: Fundamental & Clinical Pharmacology
+  year: 2012
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Structural properties of rutile TiO 2 nanoparticles accumulated in a model of gastrointestinal
     epithelium elucidated by micro-beam x-ray absorption fine structure spectroscopy
   venue: Applied Physics Letters
@@ -958,6 +1773,31 @@
   authors: ''
   sources:
   - site owner
+- title: 'Ventilation heterogeneity: small length scales, big challenges'
+  venue: Journal of Applied Physiology
+  year: 2012
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.00713.2012
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Acute hemorrhagic shock decreases airway resistance in anesthetized rat
+  venue: Journal of Applied Physiology
+  year: 2011
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.00024.2011
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Effect of positive end-expiratory pressure on regional ventilation distribution during bronchoconstriction
+    in rabbit studied by synchrotron radiation imaging
+  venue: Critical Care Medicine
+  year: 2011
+  type: article
+  doi: 10.1097/CCM.0B013E318218A375
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'Imaging of the angular-dependent coherent-scatter cross section with analyzer crystal: A Monte
     Carlo simulation'
   venue: Optics Letters
@@ -984,6 +1824,24 @@
   authors: ''
   sources:
   - site owner
+- title: 'Acute cigarette smoke inhalation blunts lung responsiveness to methacholine and allergen in
+    rabbit: differentiation of central and peripheral effects'
+  venue: American Journal of Physiology-Lung Cellular and Molecular Physiology
+  year: 2010
+  type: article
+  doi: 10.1152/AJPLUNG.00033.2010
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Airway Response To Inhaled Allergen Assessed By High-Resolution Synchrotron Imaging And Forced
+    Oscillation Technique In Sensitized Brown Norway Rat
+  venue: American Thoracic Society International Conference
+  year: 2010
+  type: conference-paper
+  doi: 10.1164/AJRCCM-CONFERENCE.2010.181.1_MEETINGABSTRACTS.A5029
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'Conjugate heat and mass transfer in metal foams: A numerical study for heat exchangers design'
   venue: Defect and Diffusion Forum
   year: 2010
@@ -1001,6 +1859,24 @@
   authors: ''
   sources:
   - site owner
+- title: High-resolution in-vivo synchrotron imaging of lung structure and regional ventilation in rat
+    using the K-edge subtraction technique
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2010
+  type: article
+  doi: 10.1164/AJRCCM-CONFERENCE.2010.181.1_MEETINGABSTRACTS.A6626
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'LPS-induced Lung Inflammation Is Modulated By Chronic Iron Overload: Role Of Proinflammatory
+    Cytokines'
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2010
+  type: article
+  doi: 10.1164/AJRCCM-CONFERENCE.2010.181.1_MEETINGABSTRACTS.A1354
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'Volumetric segmentation of trabecular bone into rods and plates: A new method based on local
     shape classification'
   venue: Progress in Biomedical Optics and Imaging - Proceedings of SPIE
@@ -1010,6 +1886,58 @@
   authors: ''
   sources:
   - site owner
+- title: Distinctive Bronchoconstriction Induced by Intravenous or Inhaled Methacholine in Rabbits Studied
+    by Synchrotron Radiation CT
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2009
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Estimation of the Distribution of Specific Ventilation in Histamine-Challenged Rabbit Based on
+    Single Xe-Enhanced Synchrotron CT Images
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2009
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: 'High Resolution CT in Children with Cystic Fibrosis: Correlation between Lung Attenuation, Radiological
+    Score and Respiratory Function'
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2009
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Increased cardiac index due to terbutaline treatment aggravates capillary-alveolar macromolecular
+    leakage in oleic acid lung injury in dogs
+  venue: Critical Care
+  year: 2009
+  type: article
+  doi: 10.1186/CC8137
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Mechanisms of Altered Airway Mechanics Following Acute Cigarette Smoke Inhalation in Rabbits
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2009
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Methacholine and Ovalbumin Challenges Assessed by Forced Oscillations and Synchrotron Lung Imaging
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 2009
+  type: article
+  doi: 10.1164/RCCM.200808-1211OC
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: 'Microstructure and transport properties of cellular materials: Representative volume element'
   venue: Advanced Engineering Materials
   year: 2009
@@ -1018,6 +1946,24 @@
   authors: ''
   sources:
   - site owner
+- title: Paradoxical conducting airway responses and heterogeneous regional ventilation after histamine
+    inhalation in rabbit studied by synchrotron radiation CT
+  venue: Journal of Applied Physiology
+  year: 2009
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.90550.2008
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: QUANTITATIVE FUNCTIONAL IMAGING AND KINETIC STUDIES WITH HIGH-Z CONTRAST AGENTS USING SYNCHROTRON
+    RADIATION COMPUTED TOMOGRAPHY
+  venue: Clinical and Experimental Pharmacology and Physiology
+  year: 2009
+  type: article
+  doi: 10.1111/J.1440-1681.2008.05043.X
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Characterization of the full thermal conductivity tensor of anisotropic metal foams - influence
     of the fluid phase
   venue: MetFoam 2007 - Proceedings of the 5th International Conference on Porous Metals and Metallic
@@ -1045,6 +1991,31 @@
   authors: ''
   sources:
   - site owner
+- title: 'Imaging of lung function using synchrotron radiation computed tomography: What''s new?'
+  venue: European Journal of Radiology
+  year: 2008
+  type: article
+  doi: 10.1016/J.EJRAD.2008.04.043
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Monitoring the capillary-alveolar leakage in an ARDS model using Broncho-Alveolar lavage
+  venue: Microcirculation
+  year: 2008
+  type: article
+  doi: 10.1080/10739680701647410
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Simultaneous in vivo synchrotron radiation computed tomography of regional ventilation and blood
+    volume in rabbit lung using combined K-edge and temporal subtraction
+  venue: Physics in Medicine and Biology
+  year: 2008
+  type: article
+  doi: 10.1088/0031-9155/53/3/016
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Restoration of variable area soundtracks
   venue: Proceedings - International Conference on Image Processing, ICIP
   year: 2007
@@ -1053,6 +2024,111 @@
   authors: ''
   sources:
   - site owner
+- title: Synchrotron radiation computed tomography station at the ESRF biomedical beamline
+  venue: AIP Conference Proceedings
+  year: 2007
+  type: conference-paper
+  doi: 10.1063/1.2436440
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Differences in the time course of proximal and distal airway response to inhaled histamine studied
+    by synchrotron radiation CT
+  venue: Journal of Applied Physiology
+  year: 2006
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.00594.2005
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: In vivo imaging of bone micro-architecture in mice with 3D synchrotron radiation micro-tomography
+  venue: 'Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers,
+    Detectors and Associated Equipment'
+  year: 2005
+  type: article
+  doi: 10.1016/J.NIMA.2005.03.097
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Quantitative measurement of regional lung gas volume by synchrotron radiation computed tomography
+  venue: Physics in Medicine and Biology
+  year: 2005
+  type: article
+  doi: 10.1088/0031-9155/50/1/001
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: The association of rolipram and salmeterol reduces capillary-alveolar permeability to macromolecules
+    (CAMP) in endotoxin-induced acute lung injury in dog
+  venue: The FASEB Journal
+  year: 2005
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Comparison of <SUP>99m</SUP>Tc-DTPA and urea for measuring cefepime concentrations in epithelial
+    fining fluid
+  venue: European Respiratory Journal
+  year: 2004
+  type: article
+  doi: 10.1183/09031936.04.00106803
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Effect of tidal volume on distribution of ventilation assessed by synchrotron radiation CT in
+    rabbit
+  venue: 'Journal of Applied Physiology: Respiratory, Environmental and Exercise Physiology'
+  year: 2004
+  type: article
+  doi: 10.1152/JAPPLPHYSIOL.00866.2003
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Estimation of diffusive and convective macromolecular transport through the capillary-alveolar
+    barrier by bronchoalveolar lavage
+  venue: The FASEB Journal
+  year: 2004
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Vascular reactivity to norepinephrine and acetylcholine after chronic intermittent hypoxia in
+    mice
+  venue: Respiratory Physiology and Neurobiology
+  year: 2003
+  type: article
+  doi: 10.1016/J.RESP.2003.09.005
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Effect of histamine on regional lung ventilation studied by synchrotron radiation computed tomography
+    (SRCT)
+  venue: The FASEB Journal
+  year: 2002
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Terbutaline treatment has no effect on capillary-alveolar macromolecular permeability in oleic
+    acid lung injury
+  venue: The FASEB Journal
+  year: 2002
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Alveolar and tracheal epithelial lining fluid ion concentrations in anesthetized dogs
+  venue: The FASEB Journal
+  year: 2001
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Assignment of selectively 1<sup>3C</sup>-labeled cellopentaose synthesized using an engineered
     glycosynthase [2]
   venue: Journal of Biomolecular NMR
@@ -1063,6 +2139,15 @@
   sources:
   - site owner
   hidden: true
+- title: Quantitative functional lung imaging with synchrotron radiation using inhaled xenon as contrast
+    agent
+  venue: Physics in Medicine and Biology
+  year: 2001
+  type: article
+  doi: 10.1088/0031-9155/46/12/315
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Alteration of a single tryptophan residue of the cellulose-binding domain blocks secretion of
     the Erwinia chrysanthemi Cel5 cellulase (ex-EGZ) via the type II system
   venue: Journal of Molecular Biology
@@ -1083,6 +2168,15 @@
   sources:
   - site owner
   hidden: true
+- title: In vivo measurement of lung capillary-alveolar macromolecule permeability by saturation bronchoalveolar
+    lavage
+  venue: Critical Care Medicine
+  year: 2000
+  type: article
+  doi: 10.1097/00003246-200008000-00042
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Structure and binding specificity of the second N-terminal cellulose- binding domain from Cellulomonas
     fimi endoglucanase C
   venue: Biochemistry
@@ -1093,6 +2187,23 @@
   sources:
   - site owner
   hidden: true
+- title: Comparison of Tc-99m-DTPA and fluorescein for the quantitation of epithelial lining fluid (ELF)
+    volume using saturation bronchoalveolar lavage
+  venue: The FASEB Journal
+  year: 1999
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Pulmonary capillary pressure measurement in zone 2 lung
+  venue: British Journal of Anaesthesia
+  year: 1999
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: The cellulose-binding domains from cellulomonas fimi β-1,4-glucanase CenC bind nitroxide spin-labeled
     cellooligosaccharides in multiple orientations
   venue: Journal of Molecular Biology
@@ -1103,6 +2214,14 @@
   sources:
   - site owner
   hidden: true
+- title: Blood flow vs. venous pressure effects on filtration coefficient in oleic acid-injured lung
+  venue: Journal of Applied Physiology
+  year: 1998
+  type: article
+  doi: 10.1152/JAPPL.1998.84.3.1011
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Calcium binding by the N-terminal cellulose-binding domain from Cellulomonas fimi β-1,4-glucanase
     CenC
   venue: Biochemistry
@@ -1113,6 +2232,31 @@
   sources:
   - site owner
   hidden: true
+- title: Experimental and clinical measurement of pulmonary edema
+  venue: Methods in Pulmonary Research
+  year: 1998
+  type: article
+  doi: 10.1007/978-3-0348-8855-4_8
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: In vivo quantitation of epithelial lining fluid in dog lung
+  venue: American Journal of Respiratory and Critical Care Medicine
+  year: 1998
+  type: article
+  doi: 10.1164/AJRCCM.158.6.9803016
+  authors: ''
+  sources:
+  - Sam Bayat
+- title: Measurement of capillary-alveolar transport of a high and a low molecular weight indicator by
+    saturation bronchoalveolar lavage
+  venue: The FASEB Journal
+  year: 1998
+  type: article
+  doi: ''
+  authors: ''
+  sources:
+  - Sam Bayat
 - title: Solution structure of the cellulose-binding domain of the endoglucanase Z secreted by Erwinia
     chrysanthemi
   venue: Biochemistry

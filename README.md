@@ -53,9 +53,14 @@ again. To show someone's ORCID link without pulling in their bibliography, add
 full `https://orcid.org/…` URL; both are accepted.
 
 Papers appearing in more than one member's record are merged into a single
-entry — matched on DOI, falling back to a normalised title — and the fuller
-metadata wins. Each entry keeps a `sources` field naming whose record it came
-from, which is how you find out why something is on the list.
+entry and the fuller metadata wins. Matching is on the DOI, normalised first —
+members deposit through different tools, so the same paper arrives as
+`10.1038/x`, `https://doi.org/10.1038/X` or `doi:10.1038/x`, and comparing the
+raw strings would leave visible duplicates. Where a DOI is missing or differs
+between deposits, a normalised title is the fallback. Each entry keeps a
+`sources` field naming whose records it came from, which is how you find out
+why something is on the list, and the run prints how many duplicates it merged
+so you can see it working.
 
 The script **preserves** everything written by hand — `takeaway`, `featured`,
 `hidden`, `axes`, `code`, `data` — matching on DOI, so resyncing is always safe.

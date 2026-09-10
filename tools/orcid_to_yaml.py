@@ -88,6 +88,19 @@ def norm(title):
     return re.sub(r"[^a-z0-9]+", "", (title or "").lower())
 
 
+def norm_doi(value):
+    """A DOI, however it was deposited, reduced to a comparable key.
+
+    Different members deposit through different tools, so the same paper turns
+    up as 10.1038/x, https://doi.org/10.1038/X, doi:10.1038/x, or with trailing
+    punctuation. Comparing the raw strings would leave duplicates on the page.
+    """
+    d = (value or "").strip().lower()
+    d = re.sub(r"^https?://(dx\.)?doi\.org/", "", d)
+    d = re.sub(r"^doi:\s*", "", d)
+    return d.strip().rstrip(".,;")
+
+
 def extract(summary):
     title = (summary.get("title") or {}).get("title", {}).get("value", "").strip()
     venue = (summary.get("journal-title") or {}).get("value", "") or ""
@@ -95,7 +108,7 @@ def extract(summary):
     doi = ""
     for eid in ((summary.get("external-ids") or {}).get("external-id") or []):
         if eid.get("external-id-type") == "doi":
-            doi = (eid.get("external-id-value") or "").strip()
+            doi = norm_doi(eid.get("external-id-value"))
             break
     return {
         "title": title,
@@ -128,7 +141,7 @@ def fetch_records(orcid, who):
         if rec["venue"].strip().lower() == "openalex":
             continue
         rec["sources"] = [who]
-        key = rec["doi"].lower() or norm(rec["title"])
+        key = norm_doi(rec["doi"]) or norm(rec["title"])
         if key in by_key:
             kept = by_key[key]
             if richness(rec) > richness(kept):
@@ -143,9 +156,9 @@ def fetch_records(orcid, who):
 
 def merge(all_records):
     """One entry per paper across every ORCID, remembering who contributed it."""
-    merged, by_doi, by_title = [], {}, {}
+    merged, by_doi, by_title, dupes = [], {}, {}, [0]
     for rec in all_records:
-        doi = rec["doi"].lower()
+        doi = norm_doi(rec["doi"])
         kept = by_doi.get(doi) if doi else None
         if kept is None:
             kept = by_title.get(norm(rec["title"]))
@@ -156,12 +169,17 @@ def merge(all_records):
             if richness(rec) > richness(kept):          # upgrade the metadata in place
                 sources = kept["sources"]
                 kept.clear(); kept.update(rec); kept["sources"] = sources
+            # index the alternative spellings too, so a third copy also lands here
+            if doi and doi not in by_doi:
+                by_doi[doi] = kept
+            by_title.setdefault(norm(rec["title"]), kept)
+            dupes[0] += 1
             continue
         merged.append(rec)
         if doi:
             by_doi[doi] = rec
         by_title[norm(rec["title"])] = rec
-    return merged
+    return merged, dupes[0]
 
 
 def main():
@@ -173,7 +191,7 @@ def main():
     existing = []
     if OUT.exists():
         existing = yaml.safe_load(OUT.read_text(encoding="utf-8")) or []
-    by_doi = {e["doi"].lower(): e for e in existing if e.get("doi")}
+    by_doi = {norm_doi(e["doi"]): e for e in existing if e.get("doi")}
     by_title = {norm(e.get("title")): e for e in existing}
 
     print(f"Reading {len(sources)} ORCID record(s) …")
@@ -190,12 +208,14 @@ def main():
     if failed and len(failed) == len(sources):
         sys.exit("Every ORCID request failed — not overwriting publications.yaml.")
 
-    records = merge(collected)
+    records, dupes = merge(collected)
+    print(f"\n  {len(collected)} works collected -> {len(records)} distinct "
+          f"({dupes} duplicate{'' if dupes == 1 else 's'} merged)")
 
     # carry the hand-written fields across
     seen = set()
     for rec in records:
-        prior = by_doi.get(rec["doi"].lower()) if rec["doi"] else None
+        prior = by_doi.get(norm_doi(rec["doi"])) if rec["doi"] else None
         if prior is None:
             prior = by_title.get(norm(rec["title"]))
         if prior:
