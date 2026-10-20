@@ -1,0 +1,21 @@
+# ============================================================================
+#  TEACHING — drives the "Teaching" list on /talks/
+#
+#  Fields (leave "" for anything you don't have):
+#    title     course title
+#    where     programme and institution, e.g. "Master 2 Physics, UGA"
+#    years     "2021 – present"
+#    hours     "12 h lectures + 6 h practicals"
+#    summary   one or two sentences on what the course covers
+#    url       course page, slides or notebooks
+#
+#  Example — copy, uncomment, edit:
+#
+# - title: "Noise in images"
+#   where: "Master 2, Université Grenoble Alpes"
+#   years: "2023 – present"
+#   hours: ""
+#   summary: "Where noise comes from, how to model it, and how to remove it without a clean reference."
+#   url: ""
+# ============================================================================
+[]

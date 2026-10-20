@@ -1,6 +1,7 @@
 ---
 title: "MUSITOX"
 ptype: "project"
+aliases: ["/research/projects/musitox/"]
 weight: 40
 funder: "UGA — Cross-Disciplinary Program"
 role: "Coordinator"

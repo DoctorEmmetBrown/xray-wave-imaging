@@ -1,12 +1,8 @@
 {{ define "main" }}
 <div class="wrap">
-  <div class="pagehead">
-    <div class="crumb"><a href="{{ site.Home.RelPermalink }}">Home</a> / Code &amp; Data</div>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
-  </div>
+  {{ partial "pagehead.html" . }}
 
-  {{ with .Content }}<div class="pagebody" style="grid-template-columns:minmax(0,1fr)"><article class="prose">{{ . }}</article></div>{{ end }}
+  {{ with .Content }}<div class="prose solo">{{ . }}</div>{{ end }}
 
   {{ with site.Data.software }}
   <section id="software">

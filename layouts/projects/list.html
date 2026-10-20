@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="wrap">
+  {{ partial "pagehead.html" . }}
+
+  {{ with .Content }}<div class="prose solo">{{ . }}</div>{{ end }}
+
+  {{ with .RegularPages.ByWeight }}
+  <section>
+    <h2 class="sec">Funded projects</h2>
+    <div class="projects">
+      {{ range . }}
+      <article class="proj" id="{{ .File.ContentBaseName }}">
+        <header>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="meta">
+            {{ with .Params.funder }}<span>{{ . }}</span>{{ end }}
+            {{ with .Params.role }}<span>{{ . }}</span>{{ end }}
+            {{ with .Params.period }}<span>{{ . }}</span>{{ end }}
+          </p>
+        </header>
+        <p class="desc">{{ .Params.blurb | markdownify }}</p>
+        {{ with .Params.partners }}
+          {{ $real := slice }}
+          {{ range . }}{{ if not (hasPrefix . "TODO") }}{{ $real = $real | append . }}{{ end }}{{ end }}
+          {{ with $real }}<p class="partners"><b>With</b> {{ delimit . " · " }}</p>{{ end }}
+        {{ end }}
+        <a class="more" href="{{ .RelPermalink }}">Full description &rarr;</a>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .Params.transfer }}
+  <section>
+    <h2 class="sec">Innovation &amp; transfer</h2>
+    {{ range . }}
+    <article class="transfer">
+      <h3>{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</h3>
+      {{ with .kind }}<p class="meta"><span>{{ . }}</span></p>{{ end }}
+      <p class="desc">{{ .text | markdownify }}</p>
+      {{ with .todo }}<p class="desc"><span class="todo">{{ . }}</span></p>{{ end }}
+    </article>
+    {{ end }}
+  </section>
+  {{ end }}
+</div>
+{{ end }}

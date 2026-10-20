@@ -1,5 +1,5 @@
 # ============================================================================
-#  CURRENT MEMBERS — this file drives the "The group" section of /people/
+#  CURRENT MEMBERS — this file drives the "The group" section of /group/
 #
 #  Down to doctoral level. Interns and Master students are deliberately absent.
 #  Order in this file = order on the page.
@@ -14,9 +14,8 @@
 #    orcid     the identifier or the full https://orcid.org/… URL — either works.
 #              This is ALSO the publication source: tools/orcid_to_yaml.py reads
 #              every id in this file, so filling it in adds that person's papers
-#              to the publications page — including ones nobody else here wrote.
-#              Add `pubs: false` under it to show the link but skip the papers,
-#              or `pubs: xray` to keep only their X-ray imaging work.
+#              to the publications page — including ones Emmanuel did not co-author.
+#              Add `pubs: false` under it to show the link but skip the papers.
 #    email     only for whoever should receive enquiries; everyone else "" 
 # ============================================================================
 
@@ -29,38 +28,6 @@
   scholar: "https://scholar.google.com/citations?user=5QmSCc4AAAAJ"
   orcid: "0000-0002-0332-4903"
   email: "emmanuel.brun@inserm.fr"
-
-- name: "Sam Bayat"
-  role: "Professor of Medicine, UGA · CHU Grenoble Alpes"
-  topic: "Lung imaging and respiratory physiology"
-  # Sam's bibliography is largely respiratory physiology and epidemiology. Only
-  # the work involving an X-ray image belongs on this site.
-  # `python3 tools/orcid_to_yaml.py --show-dropped` lists what the filter removes.
-  pubs: xray
-  pubs_also: []          # DOIs to keep anyway, for X-ray work whose title hides it
-  photo: "/img/people/bayat-sam.jpg"
-  linkedin: "https://www.linkedin.com/in/linkd-sam-bayat/"
-  scholar: "https://scholar.google.com/citations?user=Eisw4DYAAAAJ&hl=fr&oi=ao"
-  orcid: "0000-0002-8565-0293"
-  email: ""
-
-- name: "François Le Naour"
-  role: "Research Director, Inserm"
-  topic: "Infrared and X-ray imaging of liver tissue"
-  photo: ""
-  linkedin: ""
-  scholar: ""
-  orcid: ""
-  email: ""
-
-- name: "Pierre-Yves Rabattu"
-  role: "Associate Professor · Surgeon, CHU Grenoble Alpes"
-  topic: "Paediatric surgery, anatomical applications of virtual histology"
-  photo: ""
-  linkedin: ""
-  scholar: ""
-  orcid: ""
-  email: ""
 
 # ---- engineers and postdocs ----
 - name: "Cécile Olivier"

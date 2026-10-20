@@ -2,8 +2,7 @@
 <div class="wrap">
   <div class="pagehead">
     <div class="crumb">
-      <a href="{{ site.Home.RelPermalink }}">Home</a> / <a href="{{ "research/" | relURL }}">Research</a>
-      {{ if eq .Params.ptype "project" }} / Projects{{ end }}
+      {{ with .Parent }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
     </div>
     <h1>{{ .Title }}</h1>
     {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
@@ -27,16 +26,20 @@
         <h4>At a glance</h4>
         <dl>
           {{ with .Params.funder }}<dt>Funder</dt><dd>{{ . }}</dd>{{ end }}
-          {{ with .Params.grantId }}<dt>Reference</dt><dd class="mono" style="font-size:.8rem">{{ . }}</dd>{{ end }}
+          {{ with .Params.grantId }}<dt>Reference</dt><dd class="mono">{{ . }}</dd>{{ end }}
           {{ with .Params.period }}<dt>Period</dt><dd>{{ . }}</dd>{{ end }}
-          {{ with .Params.role }}<dt>Our role</dt><dd>{{ . }}</dd>{{ end }}
+          {{ with .Params.role }}<dt>Role</dt><dd>{{ . }}</dd>{{ end }}
         </dl>
       </div>
       {{ with .Params.partners }}
-      <div class="railbox">
-        <h4>Consortium</h4>
-        <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
-      </div>
+        {{ $real := slice }}
+        {{ range . }}{{ if not (hasPrefix . "TODO") }}{{ $real = $real | append . }}{{ end }}{{ end }}
+        {{ with $real }}
+        <div class="railbox">
+          <h4>Consortium</h4>
+          <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+        </div>
+        {{ end }}
       {{ end }}
       {{ end }}
 
@@ -48,19 +51,16 @@
             {{ $slug := . }}
             {{ with site.GetPage (printf "/research/%s" $slug) }}
               <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ else }}
-              <li>{{ $slug }}</li>
             {{ end }}
           {{ end }}
         </ul>
       </div>
       {{ end }}
 
-      {{ $rel := where (where site.RegularPages "Section" "research") "Params.ptype" "project" }}
       {{ if eq .Params.ptype "axis" }}
-        {{ $slug := path.Base .File.TranslationBaseName }}
+        {{ $slug := .File.ContentBaseName }}
         {{ $hits := slice }}
-        {{ range $rel }}
+        {{ range where site.RegularPages "Section" "projects" }}
           {{ if in (.Params.axes | default slice) $slug }}{{ $hits = $hits | append . }}{{ end }}
         {{ end }}
         {{ with $hits }}

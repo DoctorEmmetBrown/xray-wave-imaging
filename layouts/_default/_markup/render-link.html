@@ -1,0 +1,11 @@
+{{- /* Markdown links written from the site root ("/research/…") would lose the
+       /xray-wave-imaging/ prefix on GitHub Pages, because relURL leaves a leading
+       slash alone. Strip it and let relURL add the prefix. External links, anchors
+       and relative links pass through unchanged. */ -}}
+{{- $u := .Destination -}}
+{{- $ext := or (hasPrefix $u "http://") (hasPrefix $u "https://") (hasPrefix $u "mailto:") -}}
+{{- if and (hasPrefix $u "/") (not (hasPrefix $u "//")) -}}
+  {{- $u = strings.TrimPrefix "/" $u | relURL -}}
+{{- end -}}
+<a href="{{ $u | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $ext }} rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- /* */ -}}

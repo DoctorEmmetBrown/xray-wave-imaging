@@ -1,0 +1,4 @@
+<div class="pagehead">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+</div>

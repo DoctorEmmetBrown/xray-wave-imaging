@@ -31,7 +31,7 @@ recovered by solving the resulting inverse problem. Choose the patterns well —
 regulariser well — and far fewer measurements are needed than the number of pixels you recover.
 
 This is the same intellectual move as everything else in the group. In
-[modulation-based imaging](../modulation-based-imaging/) a mask encodes the wavefront so a camera
+[modulation-based imaging](/research/modulation-based-imaging/) a mask encodes the wavefront so a camera
 can read phase; here a patterned beam encodes position so a bucket detector can read chemistry. In
 both cases the physics is put in the forward model and the pixels are recovered by inversion.
 
@@ -43,7 +43,7 @@ a single-element fluorescence detector, replacing the raster scan with a compres
 **SAXS tensor tomography** — full reconstruction of the orientation of sub-pixel structure in a
 volume, from projections that mix scattering directions together.
 
-Both run under the [MIAI FANFARES chair](../projects/fanfares/), held jointly with Nicolas Ducros
+Both run under the [MIAI FANFARES chair](/projects/fanfares/), held jointly with Nicolas Ducros
 at CREATIS — whose group built much of the single-pixel imaging methodology — and Nicola Viganò at
 CEA IRIG. Two doctoral contracts run on these questions until 2029.
 

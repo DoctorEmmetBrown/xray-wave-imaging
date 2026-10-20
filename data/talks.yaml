@@ -1,0 +1,22 @@
+# ============================================================================
+#  TALKS — drives the "Talks" list on /talks/
+#  Newest first is not required: the page sorts by year itself.
+#
+#  Fields (leave "" for anything you don't have):
+#    year    2026
+#    title   title of the talk
+#    event   conference, workshop or seminar series
+#    place   city, country
+#    kind    invited | keynote | seminar | contributed   (shown as a small tag)
+#    url     slides, video or event page
+#
+#  Example — copy, uncomment, edit:
+#
+# - year: 2026
+#   title: "Dark-field imaging beyond the tensor"
+#   event: "International Conference on X-ray Imaging"
+#   place: "Grenoble, France"
+#   kind: invited
+#   url: ""
+# ============================================================================
+[]

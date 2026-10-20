@@ -1,0 +1,10 @@
+{{- /* URL for a file under static/, with a short content hash appended.
+       Replacing a portrait under the same name then changes its URL, so no
+       browser keeps showing the old one from cache. */ -}}
+{{- $p := strings.TrimPrefix "/" . -}}
+{{- $u := $p | relURL -}}
+{{- $f := printf "static/%s" $p -}}
+{{- if fileExists $f -}}
+  {{- $u = printf "%s?v=%s" $u (substr (os.ReadFile $f | md5) 0 8) -}}
+{{- end -}}
+{{- return $u -}}

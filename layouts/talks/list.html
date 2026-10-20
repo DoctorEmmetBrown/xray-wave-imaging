@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="wrap">
+  {{ partial "pagehead.html" . }}
+  {{ with .Content }}<div class="prose solo">{{ . }}</div>{{ end }}
+
+  <section id="talks">
+    <h2 class="sec">Talks</h2>
+    {{ with site.Data.talks }}
+      {{ $years := slice }}
+      {{ range . }}{{ if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}{{ end }}
+      {{ range sort $years "value" "desc" }}
+        {{ $y := . }}
+        <div class="pubyear">
+          <h3>{{ $y }}</h3>
+          <ol class="publist">
+            {{ range where site.Data.talks "year" $y }}
+            <li>
+              <span class="t">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+                {{ with .kind }}<span class="tag">{{ . }}</span>{{ end }}</span>
+              <span class="v">{{ .event }}{{ with .place }} · {{ . }}{{ end }}</span>
+            </li>
+            {{ end }}
+          </ol>
+        </div>
+      {{ end }}
+    {{ else }}
+      <p class="empty"><span class="todo">No talks listed yet — add them to data/talks.yaml.</span></p>
+    {{ end }}
+  </section>
+
+  <section id="teaching">
+    <h2 class="sec">Teaching</h2>
+    {{ with site.Data.teaching }}
+    <div class="courses">
+      {{ range . }}
+      <article class="course">
+        <h3>{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3>
+        <p class="meta">
+          {{ with .where }}<span>{{ . }}</span>{{ end }}
+          {{ with .years }}<span>{{ . }}</span>{{ end }}
+          {{ with .hours }}<span>{{ . }}</span>{{ end }}
+        </p>
+        {{ with .summary }}<p class="desc">{{ . | markdownify }}</p>{{ end }}
+      </article>
+      {{ end }}
+    </div>
+    {{ else }}
+      <p class="empty"><span class="todo">No courses listed yet — add them to data/teaching.yaml.</span></p>
+    {{ end }}
+  </section>
+</div>
+{{ end }}

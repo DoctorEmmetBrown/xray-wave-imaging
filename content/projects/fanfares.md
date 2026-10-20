@@ -1,6 +1,7 @@
 ---
 title: "FANFARES"
 ptype: "project"
+aliases: ["/research/projects/fanfares/"]
 weight: 5
 funder: "MIAI Grenoble Alpes chair"
 role: "Co-holder"
@@ -32,7 +33,7 @@ That combination is why the chair sits where it does. Nicolas Ducros' group at C
 of the single-pixel imaging methodology and its learned reconstruction; Nicola Viganò at CEA IRIG
 works on tensor tomography and the inversion of scattering data; this group brings the X-ray
 wave-optics and the experimental platforms. The method work is described on the
-[single-pixel sensing](../../single-pixel/) page.
+[single-pixel sensing](/research/single-pixel/) page.
 
 ## Doctoral contracts
 
@@ -42,8 +43,6 @@ Two three-year contracts run from October 2026 to September 2029:
   structure from projections that mix scattering directions. Based at IAB in Grenoble.
 - **XRF ghost tomography** — element-specific three-dimensional maps from a compressive acquisition
   and a single-element fluorescence detector. Hosted at CREATIS in Lyon.
-
-Both students appear on the [people](../../../people/) page.
 
 ## Why it matters beyond the chair
 

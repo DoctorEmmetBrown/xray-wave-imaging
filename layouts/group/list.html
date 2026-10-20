@@ -1,0 +1,82 @@
+{{ define "main" }}
+<div class="wrap">
+  {{ partial "pagehead.html" . }}
+  {{ with .Content }}<div class="prose solo">{{ . }}</div>{{ end }}
+
+  {{ with site.Data.people }}
+  <section>
+    <h2 class="sec">Current members</h2>
+    <div class="members">
+      {{ range . }}
+      <article class="member">
+        <div class="ph">
+          {{ if .photo }}<img src="{{ partial "imgurl.html" .photo }}" alt="{{ .name }}" loading="lazy">
+          {{ else }}<span>{{ substr .name 0 1 }}</span>{{ end }}
+        </div>
+        <span class="role">{{ .role }}</span>
+        <h3>{{ .name }}</h3>
+        {{ with .topic }}<p>{{ . }}</p>{{ end }}
+        {{ partial "personlinks.html" (dict "p" .) }}
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with site.Data.openings }}
+  <section id="openings">
+    <h2 class="sec">Open positions</h2>
+    <div class="openings">
+      {{ range . }}
+      <div class="open{{ if ne .status "open" }} closed{{ end }}">
+        <span class="dot"></span>
+        <span class="t">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</span>
+        <span class="d">{{ .detail }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <p class="note">Speculative applications welcome: <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a> — tell me which of our papers you would want to argue with.</p>
+  </section>
+  {{ end }}
+
+  {{ with site.Data.alumni }}
+  {{ $people := . }}
+  <section id="alumni">
+    <h2 class="sec">Alumni</h2>
+    {{ range slice (slice "postdoc" "Postdocs") (slice "phd" "Doctoral students") (slice "med" "Medical research year") }}
+      {{ $key := index . 0 }}
+      {{ $label := index . 1 }}
+      {{ with where $people "role" $key }}
+      <div class="alumgroup">
+        <h3>{{ $label }}</h3>
+        <ul class="alumni">
+          {{ range . }}
+          <li class="alum">
+            {{ if .photo }}<img src="{{ partial "imgurl.html" .photo }}" alt="" loading="lazy">{{ else }}<span class="ini" aria-hidden="true">{{ substr .name 0 1 }}</span>{{ end }}
+            <div class="nm">
+              <p class="l1"><b>{{ .name }}</b>{{ with .years }} <span class="yrs">({{ . }})</span>{{ end }}
+                {{ if .defended }} — {{ if .thesis }}<a href="{{ .thesis }}">defended</a>{{ else }}defended{{ end }} {{ .defended }}{{ else if .thesis }} — <a href="{{ .thesis }}">thesis</a>{{ end }}</p>
+              {{ with .topic }}<p class="l2">{{ . }}</p>{{ end }}
+              {{ with .cosup }}<p class="l2">co-supervised with {{ . }}</p>{{ end }}
+              <p class="l2 now">{{ with .now }}Now: {{ . }}{{ else }}<span class="todo">where are they now?</span>{{ end }}</p>
+              {{ partial "personlinks.html" (dict "p" . "quiet" true) }}
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    {{ end }}
+  </section>
+  {{ end }}
+
+  {{ with site.Data.collaborators }}
+  <section id="collaborators">
+    <h2 class="sec">Collaborators</h2>
+    <p class="collabs">
+      {{ range $i, $c := . }}{{ if $i }} · {{ end }}<span>{{ if $c.url }}<a href="{{ $c.url }}">{{ $c.name }}</a>{{ else }}{{ $c.name }}{{ end }}{{ with $c.where }} <i>({{ . }})</i>{{ end }}</span>{{ end }}
+    </p>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

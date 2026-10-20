@@ -1,12 +1,8 @@
 {{ define "main" }}
 <div class="wrap">
-  <div class="pagehead">
-    <div class="crumb"><a href="{{ site.Home.RelPermalink }}">Home</a> / Publications</div>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
-  </div>
+  {{ partial "pagehead.html" . }}
 
-  {{ with .Content }}<div class="pagebody" style="grid-template-columns:minmax(0,1fr)"><article class="prose">{{ . }}</article></div>{{ end }}
+  {{ with .Content }}<div class="prose solo">{{ . }}</div>{{ end }}
 
   {{ $all := where site.Data.publications "hidden" "!=" true }}
   {{ $papers := where $all "type" "not in" (slice "data-set" "other") }}
@@ -16,7 +12,7 @@
   <section id="selected">
     <div class="sechead">
       <h2>Selected work</h2>
-      <p class="side">Fifteen papers that between them describe what the group does and why.</p>
+      <p class="side">Papers that between them describe what the group does and why.</p>
     </div>
     {{ $anyfig := false }}
     {{ range . }}{{ if .image }}{{ $anyfig = true }}{{ end }}{{ end }}

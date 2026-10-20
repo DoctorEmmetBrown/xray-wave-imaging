@@ -1,0 +1,21 @@
+# ============================================================================
+#  COLLABORATORS — one line at the bottom of /group/. Names and institutions
+#  only: their own work is not pulled onto this site.
+#  Order in this file = order on the page. `url` is optional.
+# ============================================================================
+- name: "Lucie Sancey"
+  where: "IAB — co-lead of the 3T team"
+- name: "Sam Bayat"
+  where: "CHU Grenoble Alpes / UGA"
+- name: "François Le Naour"
+  where: "Inserm"
+- name: "Pierre-Yves Rabattu"
+  where: "CHU Grenoble Alpes"
+- name: "Nicolas Ducros"
+  where: "CREATIS, INSA Lyon"
+- name: "Nicola Viganò"
+  where: "CEA IRIG"
+- name: "Monash University & University of Canterbury"
+  where: "IRP LINX"
+- name: "Xenocs"
+  where: "industrial partner"

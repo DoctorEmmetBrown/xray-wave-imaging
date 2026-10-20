@@ -1,19 +1,28 @@
 baseURL = 'https://doctoremmetbrown.github.io/xray-wave-imaging/'
 languageCode = 'en-gb'
-title = 'X-ray Wave Imaging Group'
+title = 'Emmanuel Brun – X-ray Wave Imaging'
 enableRobotsTXT = true
 enableEmoji = false
 summaryLength = 24
 
 [params]
-  shortName    = 'XWI'
-  parentLine   = 'a group in the 3T team · IAB Grenoble'
-  tagline      = 'Wave-optical X-ray imaging at the Institute for Advanced Biosciences, Grenoble.'
+  name         = 'Emmanuel Brun'
+  shortName    = 'X-ray Wave Imaging'
+  position     = 'Research Director (DR2), Inserm'
+  groupLine    = 'X-ray Wave Imaging group · Translational Theranostics team (3T)'
+  parentLine   = 'Institute for Advanced Biosciences, Grenoble'
+  tagline      = 'Emmanuel Brun, Inserm — wave-optical X-ray imaging: phase contrast, dark-field, single-pixel sensing and the inverse problems behind them.'
   email        = 'emmanuel.brun@inserm.fr'
   orcid        = '0000-0002-0332-4903'
   scholar      = 'https://scholar.google.com/citations?user=5QmSCc4AAAAJ&hl=fr'
+  github       = 'https://github.com/DoctorEmmetBrown'
+  linkedin     = 'https://www.linkedin.com/in/emmanuel-brun-8157a418/'
+  # Drop the PDF in static/cv/ and put its path here, e.g. 'cv/brun-cv.pdf'.
+  # While empty, no CV link is shown anywhere.
+  cv           = ''
   address      = 'Allée des Alpes, 38700 La Tronche, France'
   institutions = 'Inserm U1209 / CNRS UMR 5309 / Université Grenoble Alpes'
+  iabURL       = 'https://iab.univ-grenoble-alpes.fr/'
 
 [menu]
   [[menu.main]]
@@ -21,21 +30,25 @@ summaryLength = 24
     url = '/research/'
     weight = 10
   [[menu.main]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 20
+  [[menu.main]]
     name = 'Publications'
     url = '/publications/'
-    weight = 20
+    weight = 30
+  [[menu.main]]
+    name = 'Group'
+    url = '/group/'
+    weight = 40
   [[menu.main]]
     name = 'Code & Data'
     url = '/code-and-data/'
-    weight = 30
-  [[menu.main]]
-    name = 'People'
-    url = '/people/'
-    weight = 40
-  [[menu.main]]
-    name = 'About'
-    url = '/about/'
     weight = 50
+  [[menu.main]]
+    name = 'Talks & Teaching'
+    url = '/talks/'
+    weight = 60
 
 [markup]
   [markup.goldmark.renderer]

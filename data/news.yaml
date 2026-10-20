@@ -1,0 +1,13 @@
+# ============================================================================
+#  NEWS — the short list on the home page. Newest first; the home page shows
+#  the first six. Keep each item to one or two lines; `text` takes Markdown,
+#  so links work: "[the workshop](/projects/linx/)".
+# ============================================================================
+- date: "2027-01"
+  text: "The **Translational Theranostics team (3T)** opens at IAB, co-led with Lucie Sancey; the X-ray Wave Imaging group is part of it."
+- date: "2026-10"
+  text: "Two doctoral contracts start under the [MIAI FANFARES chair](/projects/fanfares/): SAXS tensor tomography in Grenoble, XRF ghost tomography at CREATIS in Lyon."
+- date: "2026-09"
+  text: "We are hiring a two-year postdoc on virtual-histology image processing for [DREAMLAND](/projects/dreamland/) — see [open positions](/group/#openings)."
+- date: "2026-09"
+  text: "The [IRP LINX](/projects/linx/) workshop on phase imaging by modulation is booked for late May / early June 2027 in Aussois."
