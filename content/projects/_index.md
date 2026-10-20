@@ -12,5 +12,4 @@ transfer:
     kind: "Start-up project · in incubation"
     url: ""
     text: "arXimed takes modulation-based imaging out of the synchrotron hall and onto laboratory and clinical X-ray systems: one inexpensive coded membrane in the beam, and a conventional source delivers phase and dark-field images alongside the usual radiograph. The project grew out of the group's MoBI work, was matured with SATT Linksium, and won the i-PhD Grand Prix in 2025."
-    todo: "Wording to validate before going public — and the co-founders you want named."
 ---

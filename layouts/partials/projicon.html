@@ -1,0 +1,42 @@
+{{- /* A small line icon per project, used on the Projects page when the
+       project has no `image:` of its own. Pick one with `icon:` in the
+       project's front matter: pattern | orientation | slices | multiscale | link.
+       Colours come from the stylesheet (.ic-*), so the icons follow the theme. */ -}}
+{{- $i := . | default "pattern" -}}
+<svg viewBox="0 0 64 64" role="presentation" aria-hidden="true" class="projicon">
+{{- if eq $i "pattern" }}
+  <!-- structured illumination: a coded pattern, and a single-pixel detector -->
+  <rect class="ic-line" x="7" y="15" width="27" height="27" rx="2"/>
+  <g class="ic-acc">
+    <rect x="7" y="15" width="9" height="9"/><rect x="16" y="15" width="9" height="9"/>
+    <rect x="16" y="24" width="9" height="9"/><rect x="25" y="24" width="9" height="9"/>
+    <rect x="7" y="33" width="9" height="9"/><rect x="25" y="33" width="9" height="9"/>
+  </g>
+  <path class="ic-line" d="M37 28.5H49M45 24.5l4 4-4 4"/>
+  <circle class="ic-ink" cx="55" cy="28.5" r="4"/>
+{{- else if eq $i "orientation" }}
+  <!-- directional dark-field: an orientation field -->
+  <rect class="ic-faint" x="5" y="5" width="54" height="54" rx="6"/>
+  <path class="ic-accline" d="M9.8 12.1L18.2 15.9M10.4 23.1L17.6 28.9M11.2 34.3L16.8 41.7M12.2 45.8L15.8 54.2M22.6 10.9L29.4 17.1M23.0 22.5L29.0 29.5M23.4 34.2L28.6 41.8M23.8 46.0L28.2 54.0M35.8 10.0L40.2 18.0M35.6 22.1L40.4 29.9M35.5 34.1L40.5 41.9M35.4 46.2L40.6 53.8M49.1 9.5L50.9 18.5M48.4 21.7L51.6 30.3M47.6 34.1L52.4 41.9M47.0 46.5L53.0 53.5"/>
+{{- else if eq $i "slices" }}
+  <!-- virtual histology: a stack of virtual sections -->
+  <path class="ic-line ic-fillg" d="M8 44l24-8 24 8-24 8z"/>
+  <path class="ic-line ic-fillg" d="M8 32l24-8 24 8-24 8z"/>
+  <path class="ic-line ic-fillacc" d="M8 20l24-8 24 8-24 8z"/>
+  <ellipse class="ic-ink" cx="32" cy="20" rx="6" ry="2.6"/>
+{{- else if eq $i "multiscale" }}
+  <!-- multiscale tomography: a sample, and a zoom on a region of it -->
+  <circle class="ic-line" cx="23" cy="40" r="16"/>
+  <circle class="ic-line" cx="29" cy="34" r="4.5"/>
+  <path class="ic-faint" d="M32 30.5L41 21M33.3 35.5L46.5 30"/>
+  <circle class="ic-line ic-fillg" cx="48" cy="19" r="11"/>
+  <g class="ic-acc"><circle cx="44" cy="15" r="2.4"/><circle cx="51" cy="14" r="1.8"/><circle cx="47" cy="21" r="2.8"/><circle cx="53" cy="22" r="1.6"/><circle cx="43" cy="22.5" r="1.4"/></g>
+{{- else }}
+  <!-- international link: two places joined across the globe -->
+  <circle class="ic-line" cx="32" cy="36" r="20"/>
+  <ellipse class="ic-faint" cx="32" cy="36" rx="8" ry="20"/>
+  <path class="ic-faint" d="M12 36h40M15 26h34M15 46h34"/>
+  <path class="ic-accline ic-dash" d="M19 30C24 6 44 8 47 44"/>
+  <circle class="ic-ink" cx="19" cy="30" r="3"/><circle class="ic-ink" cx="47" cy="44" r="3"/>
+{{- end }}
+</svg>

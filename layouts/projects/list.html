@@ -9,7 +9,15 @@
     <h2 class="sec">Funded projects</h2>
     <div class="projects">
       {{ range . }}
-      <article class="proj" id="{{ .File.ContentBaseName }}">
+      <article class="proj hasthumb" id="{{ .File.ContentBaseName }}">
+        <a class="thumb" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+          {{ with .Params.image }}
+            {{ $res := resources.Get (printf "img/%s" (strings.TrimPrefix "/" .)) }}
+            {{ if $res }}{{ $t := $res.Fill "240x240 webp q82 Center" }}<img src="{{ $t.RelPermalink }}" width="120" height="120" alt="" loading="lazy">
+            {{ else }}{{ errorf "project image not found: assets/img/%s" . }}{{ end }}
+          {{ else }}{{ partial "projicon.html" .Params.icon }}{{ end }}
+        </a>
+        <div class="body">
         <header>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p class="meta">
@@ -25,6 +33,7 @@
           {{ with $real }}<p class="partners"><b>With</b> {{ delimit . " · " }}</p>{{ end }}
         {{ end }}
         <a class="more" href="{{ .RelPermalink }}">Full description &rarr;</a>
+        </div>
       </article>
       {{ end }}
     </div>

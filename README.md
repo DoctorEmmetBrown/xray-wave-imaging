@@ -129,10 +129,17 @@ Copy an existing file in `content/projects/`. The front matter drives both the
 project page and its entry on the Projects page (`blurb` is the description shown
 there, `partners` the "With" line):
 
+Each project shows a square picture beside its description. By default it is a
+line icon chosen with `icon:` — `pattern`, `orientation`, `slices`, `multiscale`
+or `link`. To use a real figure or a logo instead, drop the file in
+`assets/img/projects/` and add `image: "projects/<file>.jpg"`; it is cropped to
+a square automatically, and the icon disappears.
+
 ```yaml
 ---
 title: "ACRONYM"
 ptype: "project"          # required, do not rename
+icon: "orientation"       # or image: "projects/acronym.jpg"
 weight: 60                # ordering, low first
 funder: "ANR"
 role: "Coordinator"

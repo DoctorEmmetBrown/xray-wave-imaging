@@ -1,6 +1,7 @@
 ---
 title: "FANFARES"
 ptype: "project"
+icon: "pattern"          # pattern | orientation | slices | multiscale | link — or set image: below
 aliases: ["/research/projects/fanfares/"]
 weight: 5
 funder: "MIAI Grenoble Alpes chair"
@@ -51,6 +52,3 @@ belongs in the reconstruction rather than in place of the physics. A learned pri
 what a compressive acquisition could not measure is doing legitimate work; a network that replaces
 the forward model is not. Keeping that line clear is part of the scientific programme, not a
 caveat to it.
-
-<span class="todo">To add once the first results are in: a figure of the pattern sequence and a
-reconstructed elemental map.</span>

@@ -1,6 +1,7 @@
 ---
 title: "LINX"
 ptype: "project"
+icon: "link"          # pattern | orientation | slices | multiscale | link — or set image: below
 aliases: ["/research/projects/linx/"]
 weight: 50
 funder: "Inserm IRP"
@@ -25,5 +26,3 @@ LINX formalises a long-standing collaboration with the groups that developed muc
 An international workshop on phase imaging by modulation — at every wavelength, not only X-rays —
 will take place in late May / early June 2027 at the CNRS Paul-Langevin centre in Aussois, in the
 French Alps.
-
-<span class="todo">Add the final dates and a registration link once they are public.</span>

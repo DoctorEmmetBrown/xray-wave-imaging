@@ -1,6 +1,7 @@
 ---
 title: "DREAMLAND"
 ptype: "project"
+icon: "slices"          # pattern | orientation | slices | multiscale | link — or set image: below
 aliases: ["/research/projects/dreamland/"]
 weight: 30
 funder: "ANR"
@@ -32,5 +33,3 @@ the acquisition but the analysis.
 ## Approach
 
 Samples are imaged by synchrotron phase-contrast tomography and by MRI, and the two modalities are registered so that the microscopic architecture can be read against the macroscopic anatomy. A postdoctoral position, co-funded between 3T at IAB and the GIN, develops the deep-learning segmentation pipeline; it is written to be reused across the whole consortium rather than for one study.
-
-<span class="todo">Confirm the period, the ANR reference, and whether the EDAIA name should appear alongside DREAMLAND.</span>

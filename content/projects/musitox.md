@@ -1,6 +1,7 @@
 ---
 title: "MUSITOX"
 ptype: "project"
+icon: "multiscale"          # pattern | orientation | slices | multiscale | link — or set image: below
 aliases: ["/research/projects/musitox/"]
 weight: 40
 funder: "UGA — Cross-Disciplinary Program"
@@ -50,13 +51,3 @@ Around fifty researchers from nine Grenoble laboratories take part, with the CMT
 platforms, spanning the PEM, PAGE and CBS research clusters. For our group it is the project
 that keeps the methods honest: an algorithm tuned on soft tissue meets a metal foam and a wet
 granular medium, and its hidden assumptions surface quickly.
-
-<span class="todo">To confirm: the exact period, the phase-2 renewal status, and whether the
-list of laboratories above should be trimmed to those you actually work with.</span>
-
-## Instrumentation
-
-The motion control system developed for the multiscale acquisitions is documented here rather
-than on the methods pages, since it is specific to this setup.
-
-<span class="todo">A paragraph on the motion control design, and a figure, to add.</span>
