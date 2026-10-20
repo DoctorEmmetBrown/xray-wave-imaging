@@ -67,6 +67,14 @@
   authors: ''
   sources:
   - site owner
+- title: Implicit Single-Exposure Retrieval of X-ray Phase, Absorption, and Directional Dark-Field
+  venue: IRBM
+  year: 2026
+  type: article
+  doi: 10.1016/j.irbm.2026.100962
+  authors: Kefs et al.
+  sources:
+  - site owner
 - title: 'On the optimization of the geometric pattern for structured illumination based X-ray phase contrast
     and dark-field imaging: a simulation study and its experimental validation'
   venue: Journal of Synchrotron Radiation
@@ -94,6 +102,23 @@
   featured: true
   axes:
   - directional-dark-field
+- title: Universal and quantitative statistical approach to retrieve X-ray directional dark-field using
+    a single exposure
+  venue: Optica
+  year: 2026
+  type: article
+  doi: 10.1364/optica.599643
+  authors: Kefs et al.
+  sources:
+  - site owner
+- title: X-ray dark-field contrast as a function of the sample-to-detector propagation distance
+  venue: Optica
+  year: 2026
+  type: article
+  doi: 10.1364/optica.599441
+  authors: Magnin et al.
+  sources:
+  - site owner
 - title: A self-healing radiopaque hyaluronic acid hydrogel as a new injectable biomaterial for precision
     medicine in osteoarthritis.
   venue: Theranostics
