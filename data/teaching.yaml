@@ -17,5 +17,13 @@
 #   hours: ""
 #   summary: "Where noise comes from, how to model it, and how to remove it without a clean reference."
 #   url: ""
+#
+#  url may point to a page of this site, e.g. "/courses/<slug>/" — that is
+#  where tools/pptx_to_web.py puts a course with its animations.
 # ============================================================================
-[]
+- title: "Reconstruction tomographique"
+  where: ""
+  years: ""
+  hours: ""
+  summary: "From projections to images: the sinogram and Fourier space, filtered back-projection, iterative reconstruction (ART, OSEM) and the origin of common artefacts. Slides in French, with their animations."
+  url: "/courses/reconstruction-tomographique/"

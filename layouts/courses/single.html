@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{ $d := index site.Data.courses .Params.deck }}
+{{ $base := printf "courses/%s/" .Params.deck }}
+<div class="wrap">
+  <div class="pagehead">
+    <div class="crumb"><a href="{{ "talks/" | relURL }}#teaching">Talks &amp; Teaching</a></div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+    <p class="meta">
+      {{ with .Params.language }}<span>{{ . }}</span>{{ end }}
+      {{ with $d }}<span>{{ len .slides }} slides</span>{{ end }}
+      {{ with $d.pdf }}<span><a href="{{ printf "%s%s" $base . | relURL }}">PDF (without animations)</a></span>{{ end }}
+    </p>
+  </div>
+
+  {{ with $d }}
+  <section class="deckwrap">
+    <div class="deck" id="deck" tabindex="0" style="aspect-ratio:{{ .ratio }}" aria-roledescription="slide deck" aria-label="{{ $.Title }}">
+      {{ range $i, $s := .slides }}
+        {{ range $k, $st := $s.steps }}
+        <figure class="frame" data-n="{{ $s.slide }}" hidden>
+          <img src="{{ printf "%s%s" $base $st | relURL }}" alt="Slide {{ $s.slide }}, step {{ add $k 1 }}" loading="lazy" decoding="async">
+        </figure>
+        {{ end }}
+        <figure class="frame" data-n="{{ $s.slide }}" hidden>
+          <img src="{{ printf "%s%s" $base $s.img | relURL }}" alt="Slide {{ $s.slide }}" loading="lazy" decoding="async">
+          {{ range $s.videos }}
+            {{ $fw := sub 100.0 (add .crop.l .crop.r) }}
+            {{ $fh := sub 100.0 (add .crop.t .crop.b) }}
+            <div class="anim" style="left:{{ .left }}%;top:{{ .top }}%;width:{{ .width }}%;height:{{ .height }}%">
+              <video muted loop playsinline preload="none" aria-hidden="true"
+                     style="width:{{ div 10000.0 $fw }}%;height:{{ div 10000.0 $fh }}%;left:{{ div (mul -100.0 .crop.l) $fw }}%;top:{{ div (mul -100.0 .crop.t) $fh }}%">
+                <source src="{{ printf "%s%s.webm" $base .src | relURL }}" type="video/webm">
+                <source src="{{ printf "%s%s.mp4" $base .src | relURL }}" type="video/mp4">
+              </video>
+            </div>
+          {{ end }}
+        </figure>
+      {{ end }}
+      <button class="zone prev" type="button" aria-label="Previous slide"></button>
+      <button class="zone next" type="button" aria-label="Next slide"></button>
+    </div>
+
+    <div class="deckbar">
+      <button type="button" class="db" data-act="first" aria-label="First slide">&#x21E4;</button>
+      <button type="button" class="db" data-act="prev" aria-label="Previous">&larr;</button>
+      <span class="count" aria-live="polite"><b id="cur">1</b> / {{ len .slides }}</span>
+      <button type="button" class="db" data-act="next" aria-label="Next">&rarr;</button>
+      <button type="button" class="db" data-act="last" aria-label="Last slide">&#x21E5;</button>
+      <button type="button" class="db wide" data-act="full">Full screen</button>
+    </div>
+    <p class="note">Arrow keys or space to advance · swipe on a phone · <kbd>F</kbd> for full screen. Animated figures play by themselves.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">All slides</h2>
+    <ol class="thumbs">
+      {{ range .slides }}
+      <li><a href="#{{ .slide }}" data-go="{{ .slide }}"><img src="{{ printf "%s%s" $base .img | relURL }}" alt="Slide {{ .slide }}" loading="lazy" decoding="async"><span>{{ .slide }}</span></a></li>
+      {{ end }}
+    </ol>
+  </section>
+  {{ else }}
+  <p class="empty"><span class="todo">Slides not generated yet — run tools/pptx_to_web.py.</span></p>
+  {{ end }}
+
+  {{ with .Params.credits }}<p class="note credits">{{ . }}</p>{{ end }}
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ with resources.Get "js/deck.js" }}
+    {{ $js := . | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  {{ end }}
+{{ end }}

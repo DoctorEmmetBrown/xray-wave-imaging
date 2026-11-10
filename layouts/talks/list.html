@@ -15,7 +15,7 @@
           <ol class="publist">
             {{ range where site.Data.talks "year" $y }}
             <li>
-              <span class="t">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+              <span class="t">{{ if .url }}<a href="{{ if hasPrefix .url "/" }}{{ strings.TrimPrefix "/" .url | relURL }}{{ else }}{{ .url }}{{ end }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
                 {{ with .kind }}<span class="tag">{{ . }}</span>{{ end }}</span>
               <span class="v">{{ .event }}{{ with .place }} · {{ . }}{{ end }}</span>
             </li>
@@ -34,13 +34,14 @@
     <div class="courses">
       {{ range . }}
       <article class="course">
-        <h3>{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3>
+        <h3>{{ if .url }}<a href="{{ if hasPrefix .url "/" }}{{ strings.TrimPrefix "/" .url | relURL }}{{ else }}{{ .url }}{{ end }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3>
         <p class="meta">
           {{ with .where }}<span>{{ . }}</span>{{ end }}
           {{ with .years }}<span>{{ . }}</span>{{ end }}
           {{ with .hours }}<span>{{ . }}</span>{{ end }}
         </p>
         {{ with .summary }}<p class="desc">{{ . | markdownify }}</p>{{ end }}
+        {{ with .url }}<p class="desc"><a href="{{ if hasPrefix . "/" }}{{ strings.TrimPrefix "/" . | relURL }}{{ else }}{{ . }}{{ end }}">{{ if hasPrefix . "/courses/" }}Open the slides &rarr;{{ else }}Course page &rarr;{{ end }}</a></p>{{ end }}
       </article>
       {{ end }}
     </div>

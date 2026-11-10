@@ -13,7 +13,7 @@ Personal academic site of Emmanuel Brun and his X-ray Wave Imaging group
 | Publications | `content/publications/_index.md` | `data/publications.yaml` (generated, see below) |
 | Group | `content/group/_index.md` | `data/people.yaml`, `data/alumni.yaml`, `data/openings.yaml`, `data/collaborators.yaml` |
 | Code & Data | `content/code-and-data/_index.md` | `data/software.yaml`, `data/datasets.yaml` |
-| Talks & Teaching | `content/talks/_index.md` | `data/talks.yaml`, `data/teaching.yaml` |
+| Talks & Teaching | `content/talks/_index.md` | `data/talks.yaml`, `data/teaching.yaml`; course decks in `content/courses/` (see *A course* below) |
 
 **CV:** put the PDF in `static/cv/` and set `cv = 'cv/<file>.pdf'` in `hugo.toml`.
 The CV button appears on the home page as soon as the value is not empty.
@@ -233,6 +233,26 @@ the same file name shows the new one immediately — no browser-cache surprise.
 Both files draw that link row from the same template partial
 (`layouts/partials/personlinks.html`), so the two lists cannot drift apart, and
 `orcid` accepts either the bare identifier or the full URL in both.
+
+### A course, with its animations
+
+```bash
+python3 tools/pptx_to_web.py ~/Desktop/cours.pptx my-course-slug
+```
+
+turns a PowerPoint file into a web slide deck: one image per slide, every
+animated GIF converted to a small looping video laid exactly over its place on
+the slide, and click-by-click entrances ("Appear", "Fade") reproduced as extra
+steps. It writes `static/courses/<slug>/` and `data/courses/<slug>.yaml`, plus a
+PDF copy for download. Then create `content/courses/<slug>.md` (copy
+`reconstruction-tomographique.md`: title, `deck: "<slug>"`, language, lead,
+credits) and add an entry to `data/teaching.yaml` with
+`url: "/courses/<slug>/"`.
+
+The script needs LibreOffice, poppler (`pdftoppm`) and ffmpeg — on a Mac,
+`brew install --cask libreoffice && brew install poppler ffmpeg`. Motion paths,
+morph and slide transitions are not reproduced; those slides show their final
+state.
 
 ### Software, datasets, openings
 

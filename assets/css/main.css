@@ -383,3 +383,35 @@ footer .addr b{color:var(--ink); font-weight:600; font-family:var(--disp); font-
   .thumb{width:64px; height:64px; border-radius:10px}
   .thumb .projicon{padding:8px}
 }
+
+/* ---------------------------- course decks ---------------------------- */
+.deckwrap{padding-top:34px}
+.deck{position:relative; width:100%; max-width:100%; background:#fff; border:1px solid var(--line-strong);
+  border-radius:8px; overflow:hidden; box-shadow:0 14px 40px rgba(45,34,22,.14); outline:none}
+.deck:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.deck:fullscreen{border:0; border-radius:0; background:#000; display:flex; align-items:center; justify-content:center}
+.deck .frame{position:absolute; inset:0; margin:0}
+.deck:fullscreen .frame{inset:auto; position:absolute; width:min(100vw, calc(100vh * 1.7778)); aspect-ratio:16/9; left:50%; top:50%; transform:translate(-50%,-50%)}
+.deck .frame img{width:100%; height:100%; display:block; object-fit:contain; background:#fff}
+.deck .anim{position:absolute; overflow:hidden}
+.deck .anim video{position:absolute; display:block; object-fit:fill; background:transparent}
+.deck .zone{position:absolute; top:0; bottom:0; width:30%; border:0; background:transparent; cursor:pointer; z-index:5; padding:0}
+.deck .zone.prev{left:0; cursor:w-resize}
+.deck .zone.next{right:0; width:70%; cursor:e-resize}
+.deckbar{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; flex-wrap:wrap}
+.deckbar .db{appearance:none; border:1px solid var(--line-strong); background:#fff; color:var(--ink); border-radius:100px;
+  min-width:40px; height:36px; padding:0 12px; font-size:1rem; cursor:pointer}
+.deckbar .db:hover{border-color:var(--gold); color:var(--link)}
+.deckbar .db.wide{font-size:.82rem; margin-left:10px}
+.deckbar .count{font-family:var(--mono); font-size:.85rem; color:var(--dim); min-width:72px; text-align:center}
+.deckbar .count b{color:var(--ink); font-weight:500}
+.deckwrap .note{text-align:center}
+kbd{font-family:var(--mono); font-size:.8em; border:1px solid var(--line-strong); border-bottom-width:2px; border-radius:3px; padding:0 4px}
+.thumbs{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:14px}
+.thumbs a{display:block; position:relative; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:#fff}
+.thumbs a:hover{border-color:var(--gold)}
+.thumbs img{width:100%; aspect-ratio:16/9; object-fit:cover; display:block}
+.thumbs span{position:absolute; left:6px; bottom:5px; font-family:var(--mono); font-size:.62rem; color:var(--ink);
+  background:rgba(251,248,243,.9); padding:0 5px; border-radius:2px}
+.credits{margin-top:30px; font-style:italic}
+@media (max-width:520px){ .thumbs{grid-template-columns:repeat(3,1fr); gap:8px} }
